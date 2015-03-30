@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 class CrudController extends Controller {
 
 	protected $model="Models\CrudModel"; // TODO: this should do something
+	public $crud = array(
+						"entity_name" => "entry",
+						"entity_name_plural" => "entries"
+						);
+
+	public function __construct()
+	{
+		$this->data['crud'] = $this->crud;
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -19,7 +28,7 @@ class CrudController extends Controller {
 		// TODO: get all results for that entity
 
 		// TODO: use a datatable in the view
-		return view('crud/list');
+		return view('crud/list', $this->data);
 	}
 
 	/**
@@ -31,7 +40,7 @@ class CrudController extends Controller {
 	{
 		// TODO: get the fields you need to show
 
-		return view('crud/create');
+		return view('crud/create', $this->data);
 	}
 
 	/**
@@ -54,7 +63,7 @@ class CrudController extends Controller {
 	{
 		// TODO: get the info for that entry
 
-		return view('crud/show');
+		return view('crud/show', $this->data);
 	}
 
 	/**
@@ -67,7 +76,7 @@ class CrudController extends Controller {
 	{
 		// TODO: get the info for that entry
 
-		return view('crud/edit');
+		return view('crud/edit', $this->data);
 	}
 
 	/**
