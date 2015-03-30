@@ -12,7 +12,7 @@
 	    <small>All <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span> in the database.</small>
 	  </h1>
 	  <ol class="breadcrumb">
-	    <li><a href="{{ url('admin') }}">Admin</a></li>
+	    <li><a href="{{ url('admin/dashboard') }}">Admin</a></li>
 	    <li><a href="{{ url('article') }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
 	    <li class="active">List</li>
 	  </ol>

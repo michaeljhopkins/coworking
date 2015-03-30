@@ -6,7 +6,7 @@
 	    Add <span class="text-lowercase">{{ $crud['entity_name'] }}</span>
 	  </h1>
 	  <ol class="breadcrumb">
-	    <li><a href="{{ url('admin') }}">Admin</a></li>
+	    <li><a href="{{ url('admin/dashboard') }}">Admin</a></li>
 	    <li><a href="{{ url('article') }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
 	    <li class="active">Add</li>
 	  </ol>
