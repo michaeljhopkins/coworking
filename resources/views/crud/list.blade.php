@@ -41,6 +41,7 @@
                     <tbody>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -53,6 +54,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -65,6 +67,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -77,6 +80,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -89,6 +93,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -100,6 +105,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -111,6 +117,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -122,6 +129,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -133,6 +141,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -144,6 +153,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -155,6 +165,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -166,6 +177,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -177,6 +189,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -188,6 +201,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -199,6 +213,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -210,6 +225,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -221,6 +237,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -232,6 +249,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -243,6 +261,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -254,6 +273,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -265,6 +285,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -276,6 +297,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -287,6 +309,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -298,6 +321,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -309,6 +333,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -320,6 +345,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -331,6 +357,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -342,6 +369,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -353,6 +381,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -364,6 +393,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -375,6 +405,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -386,6 +417,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -397,6 +429,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -408,6 +441,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -419,6 +453,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -430,6 +465,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -441,6 +477,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -452,6 +489,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -463,6 +501,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -474,6 +513,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -485,6 +525,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -496,6 +537,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -507,6 +549,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -518,6 +561,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -529,6 +573,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -540,6 +585,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -551,6 +597,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -562,6 +609,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -573,6 +621,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -584,6 +633,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -595,6 +645,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -606,6 +657,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -617,6 +669,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -628,6 +681,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -639,6 +693,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -650,6 +705,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>
@@ -661,6 +717,7 @@
                       </tr>
                       <tr>
                       	<td>
+                          <a href="{{ url('admin/article/1') }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                       		<a href="{{ url('admin/article/1/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
                       		<a href="#" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
                       	</td>

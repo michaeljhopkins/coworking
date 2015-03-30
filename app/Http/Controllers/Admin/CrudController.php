@@ -2,12 +2,11 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 
 class CrudController extends Controller {
 
-	protected $model="Models\CrudModel"; // TODO: this should do something
+	public $model = "\App\Models\Entity";
 	public $crud = array(
 						"entity_name" => "entry",
 						"entity_name_plural" => "entries"
@@ -25,9 +24,11 @@ class CrudController extends Controller {
 	 */
 	public function index()
 	{
-		// TODO: get all results for that entity
+		// get all results for that entity
+		$model = $this->model;
+		$this->data['entries'] = $model::all();
 
-		// TODO: use a datatable in the view
+		// TODO: populate the datatable with real information
 		return view('crud/list', $this->data);
 	}
 
@@ -61,7 +62,9 @@ class CrudController extends Controller {
 	 */
 	public function show($id)
 	{
-		// TODO: get the info for that entry
+		// get the info for that entry
+		$model = $this->model;
+		$this->data['entry'] = $model::find($id);
 
 		return view('crud/show', $this->data);
 	}
@@ -74,7 +77,9 @@ class CrudController extends Controller {
 	 */
 	public function edit($id)
 	{
-		// TODO: get the info for that entry
+		// get the info for that entry
+		$model = $this->model;
+		$this->data['entry'] = $model::find($id);
 
 		return view('crud/edit', $this->data);
 	}

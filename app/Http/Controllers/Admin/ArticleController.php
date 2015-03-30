@@ -8,10 +8,12 @@ use Illuminate\Http\Request;
 
 class ArticleController extends CrudController {
 
-	protected $model="Models\Article"; // TODO: this should do something
+	public $model = "App\Models\Article";
 	public $crud = array(
 						"entity_name" => "article",
-						"entity_name_plural" => "articles"
+						"entity_name_plural" => "articles",
+						"columns" => "title,slug", 			// TODO: this does nothing right now and it should
+						"create_fields" => "title,slug", 	// TODO: this does nothing right now and it should
+						"edit_fields" => "title,slug" 		// TODO: this does nothing right now and it should
 						);
-
 }
