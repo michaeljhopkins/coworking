@@ -11,3 +11,8 @@
 .text-capitalize {
     text-transform: capitalize;
 }
+
+/*		ADMIN LTE OVERWRITES	*/
+.main-header .navbar .nav>li.active>a {
+	font-weight: bold;
+}
