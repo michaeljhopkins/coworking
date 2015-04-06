@@ -145,6 +145,11 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		/*
+		 * Dick Service Providers...
+		 */
+		'Prologue\Alerts\AlertsServiceProvider',
+
 	],
 
 	/*
@@ -192,6 +197,11 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+		/*
+		 * Dick Aliases...
+		 */
+		'Alert' => 'Prologue\Alerts\Facades\Alert',
 
 	],
 

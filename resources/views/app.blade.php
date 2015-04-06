@@ -16,6 +16,8 @@
          folder instead of downloading all of them to reduce the load. -->
     <link href="{{ asset('AdminLTE/dist/css/skins/_all-skins.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admin/main.css') }}" rel="stylesheet" type="text/css" />
+    <!-- Pines Notify -->
+    <link href="{{ asset('admin/js/vendor/pnotify/pnotify.custom.css') }}" rel="stylesheet" type="text/css" />
 
     @yield('head')
 
@@ -27,8 +29,6 @@
     <![endif]-->
   </head>
   <body class="skin-blue layout-top-nav">
-
-
 
 	@if (Auth::guest())
 		{{-- <li><a href="{{ url('/auth/login') }}">Login</a></li>
@@ -93,10 +93,29 @@
     <script src="{{ asset('AdminLTE/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
     <!-- SlimScroll -->
     <script src="{{ asset('AdminLTE/plugins/slimScroll/jquery.slimScroll.min.js') }}" type="text/javascript"></script>
+    <!-- Pines Notify -->
+    <script src="{{ asset('admin/js/vendor/pnotify/pnotify.custom.js') }}"></script>
     <!-- FastClick -->
     <script src="{{ asset('AdminLTE/plugins/fastclick/fastclick.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('AdminLTE/dist/js/app.min.js') }}" type="text/javascript"></script>
+
+    {{-- Bootstrap Notifications using Prologue Alerts --}}
+    <script type="text/javascript">
+    @foreach (Alert::getMessages() as $type => $messages)
+        @foreach ($messages as $message)
+
+            $(function(){
+              new PNotify({
+                // title: 'Regular Notice',
+                text: "{{ $message }}",
+                type: "{{ $type }}"
+              });
+            });
+
+        @endforeach
+    @endforeach
+    </script>
 
     @yield('scripts')
 

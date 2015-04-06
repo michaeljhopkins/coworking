@@ -5,13 +5,14 @@
 
             {{-- if it's a single item --}}
             @if (!isset($item['children']) || $item['children']==false)
-              <li class="{{ (Request::url() == $item['url'])?'active':'' }}">
-                <a href="{{ $item['url'] }}">
+
+              <li class="{{ (Route::current()->uri() == $item['route'])?'active':'' }}">
+                <a href="{{ ($item['route'] ? url($item['route']) : $item['url'] ) }}">
                   @if (isset($item['icon']) && $item['icon']!='' && $item['icon']!=' ')
                     <i class="{{ $item['icon'] }}"></i>
                   @endif
                   {{ $item['label'] }}
-                  @if (Request::url() == $item['url'])
+                  @if (Route::current()->uri() == $item['route'])
                     <span class="sr-only">(current)</span>
                   @endif
                   </a>
@@ -29,8 +30,8 @@
               </a>
               <ul class="dropdown-menu" role="menu">
                 @foreach ($item['children'] as $subitem)
-                  <li class="{{ (Request::url() == $subitem['url'])?'active':'' }}">
-                    <a href="{{ $subitem['url'] }}">
+                  <li class="{{ (Route::current()->uri() == $subitem['route'])?'active':'' }}">
+                    <a href="{{ ($subitem['route'] ? url($subitem['route']) : $subitem['url'] ) }}">
                       @if (isset($subitem['icon']) && $subitem['icon']!='' && $subitem['icon']!=' ')
                         <i class="{{ $subitem['icon'] }}"></i>
                       @endif

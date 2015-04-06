@@ -13,7 +13,7 @@ return [
 	| Level 1. Links
 	| 	[
 	|		'label' => "Dashboard",
-	|		'url' => url('admin/dashboard'),
+	|		'route' => 'admin/dashboard', 	or 		'url' => "http://google.com"
 	|		'icon' => 'fa fa-dashboard',
 	|	],
 	|
@@ -36,18 +36,20 @@ return [
 	'menu' => [
 		[
 			'label' => "Dashboard",
-			'url' => url('admin/dashboard'),
+			'route' => "admin/dashboard",
+			// 'url' => null,
 			'icon' => 'fa fa-dashboard',
 		],
 
 		[
 			'label' => "CRUD",
-			'url' => url(),
+			'route' => "",
+			// 'url' => null,
 			'icon' => 'fa fa-table',
 			'children' => [
 							[
 								'label' => "Articles",
-								'url' => url('admin/article'),
+								'route' => 'admin/article',
 								'icon' => 'fa fa-file',
 							],
 						]

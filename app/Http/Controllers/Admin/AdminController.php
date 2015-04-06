@@ -13,6 +13,7 @@ class AdminController extends Controller {
 
 	public function index()
 	{
+		\Alert::add('error', 'Your message has NOT been sent.');
 		return view("admin/dashboard", $this->data);
 	}
 }
