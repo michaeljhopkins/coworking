@@ -19,6 +19,7 @@
 		<!-- Default box -->
 		<a href="{{ url($crud['route']) }}"><i class="fa fa-angle-double-left"></i> back to all <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span></a><br><br>
 
+		  {!! Form::open(array('url' => $crud['route'].'/'.$entry->id, 'method' => 'put')) !!}
 		  <div class="box">
 		    <div class="box-header with-border">
 		      <h3 class="box-title">Edit</h3>
@@ -27,10 +28,12 @@
 		      @include('crud/form_content')
 		    </div><!-- /.box-body -->
 		    <div class="box-footer">
-		      <a href="#" class="btn btn-success"><i class="fa fa-save"></i> Save</a>
+
+			  <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
 		      <a href="{{ url($crud['route']) }}" class="btn btn-default">Cancel</a>
 		    </div><!-- /.box-footer-->
 		  </div><!-- /.box -->
+		  {!! Form::close() !!}
 	</div>
 </div>
 @endsection

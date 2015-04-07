@@ -148,6 +148,7 @@ return [
 		/*
 		 * Dick Service Providers...
 		 */
+		'Illuminate\Html\HtmlServiceProvider',
 		'Prologue\Alerts\AlertsServiceProvider',
 
 	],
@@ -201,6 +202,8 @@ return [
 		/*
 		 * Dick Aliases...
 		 */
+		'Form'=> 'Illuminate\Html\FormFacade',
+		'HTML'=> 'Illuminate\Html\HtmlFacade',
 		'Alert' => 'Prologue\Alerts\Facades\Alert',
 
 	],

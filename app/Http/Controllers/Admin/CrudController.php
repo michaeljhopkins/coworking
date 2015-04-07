@@ -54,13 +54,27 @@ class CrudController extends Controller {
 
 
 	/**
-	 * Store a newly created resource in storage.
+	 * Store a newly created resource in the database.
 	 *
 	 * @return Response
 	 */
 	public function crudStore()
 	{
-		//
+		$model = $this->model;
+		$item = $model::create(\Request::all());
+
+		\Alert::success("The ".$this->crud['entity_name']." has been added successfully.")->flash();
+
+		// redirect the user where he chose to be redirected
+		switch (\Request::input('redirect_after_save')) {
+			case 'current_item_edit':
+				return \Redirect::to($this->crud['route'].'/'.$item->id.'/edit');
+				break;
+
+			default:
+				return \Redirect::to(\Request::input('redirect_after_save'));
+				break;
+		}
 	}
 
 
@@ -94,7 +108,12 @@ class CrudController extends Controller {
 	 */
 	public function crudUpdate($id)
 	{
-		//
+		$model = $this->model;
+		$item = $model::find(\Request::input('id'))
+						->update(\Request::all());
+
+		\Alert::success("The ".$this->crud['entity_name']." has been updated successfully.")->flash();
+		return \Redirect::to($this->crud['route']);
 	}
 
 
