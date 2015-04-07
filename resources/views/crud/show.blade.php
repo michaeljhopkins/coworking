@@ -7,7 +7,7 @@
 	  </h1>
 	  <ol class="breadcrumb">
 	    <li><a href="{{ url('admin/dashboard') }}">Admin</a></li>
-	    <li><a href="{{ url('admin/article') }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
+	    <li><a href="{{ url($crud['route']) }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
 	    <li class="active">Show</li>
 	  </ol>
 	</section>

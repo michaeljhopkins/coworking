@@ -7,7 +7,7 @@
 	  </h1>
 	  <ol class="breadcrumb">
 	    <li><a href="{{ url('admin/dashboard') }}">Admin</a></li>
-	    <li><a href="{{ url('admin/article') }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
+	    <li><a href="{{ url($crud['route']) }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
 	    <li class="active">Add</li>
 	  </ol>
 	</section>
@@ -17,7 +17,7 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<!-- Default box -->
-			<a href="{{ url('admin/article') }}"><i class="fa fa-angle-double-left"></i> back to all <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span></a><br><br>
+			<a href="{{ url($crud['route']) }}"><i class="fa fa-angle-double-left"></i> back to all <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span></a><br><br>
 
 		  <div class="box">
 		    <div class="box-header with-border">
@@ -50,7 +50,7 @@
 		        </div>
 
 		      <a href="#" class="btn btn-success"><i class="fa fa-save"></i> Add</a>
-		      <a href="#" class="btn btn-default">Cancel</a>
+		      <a href="{{ url($crud['route']) }}" class="btn btn-default">Cancel</a>
 		    </div><!-- /.box-footer-->
 		  </div><!-- /.box -->
 	</div>

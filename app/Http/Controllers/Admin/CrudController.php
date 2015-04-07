@@ -42,7 +42,10 @@ class CrudController extends Controller {
 	public function crudCreate()
 	{
 		// get the fields you need to show
-		$this->crud['fields'] = $this->data['crud']['create_fields'];
+		if (isset($this->data['crud']['create_fields']))
+		{
+			$this->crud['fields'] = $this->data['crud']['create_fields'];
+		}
 		$this->_prepare_fields(); // TODO: prepare the fields you need to show
 
 		$this->data['crud'] = $this->crud;
@@ -72,7 +75,10 @@ class CrudController extends Controller {
 		// get the info for that entry
 		$model = $this->model;
 		$this->data['entry'] = $model::find($id);
-		$this->crud['fields'] = $this->data['crud']['update_fields'];
+		if (isset($this->data['crud']['update_fields']))
+		{
+			$this->crud['fields'] = $this->data['crud']['update_fields'];
+		}
 		$this->_prepare_fields($this->data['entry']); // prepare the fields you need to show and prepopulate the values
 
 		$this->data['crud'] = $this->crud;
@@ -170,8 +176,28 @@ class CrudController extends Controller {
 
 	public function _prepare_fields($entry = false)
 	{
-		// TODO: if the fields aren't set, trigger error
-		// TODO: if the fields are defined as a string, transform it to a proper array
+		// if the fields aren't set, trigger error
+		if (!isset($this->crud['fields']))
+		{
+			abort(500, "The CRUD fields are not defined.");
+		}
+
+		// if the fields are defined as a string, transform it to a proper array
+		if (!is_array($this->crud['fields']))
+		{
+			$current_fields_array = explode(",", $this->crud['fields']);
+			$proper_fields_array = array();
+
+			foreach ($current_fields_array as $key => $field) {
+				$proper_fields_array[] = [
+								'name' => $field,
+								'title' => ucfirst($field), // TODO: also replace _ with space
+								'type' => 'text' // TODO: choose different types of fields depending on the MySQL column type
+							];
+			}
+
+			$this->crud['fields'] = $proper_fields_array;
+		}
 
 		// if an entry was passed, we're preparing for the update form, not create
 		if ($entry) {
