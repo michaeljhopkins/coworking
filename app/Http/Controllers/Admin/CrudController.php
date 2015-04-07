@@ -18,41 +18,45 @@ class CrudController extends Controller {
 	}
 
 	/**
-	 * Display a listing of the resource.
+	 * Display all rows in the database for this entity.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function crudTable()
 	{
 		// get all results for that entity
 		$model = $this->model;
 		$this->data['entries'] = $model::all();
 
-		// TODO: populate the datatable with real information
+		$this->_validate_columns(); //TODO
+
+		// show only the chosen columns
 		return view('crud/list', $this->data);
 	}
 
 	/**
-	 * Show the form for creating a new resource.
+	 * Show the form for creating inserting a new row.
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function crudCreate()
 	{
 		// TODO: get the fields you need to show
 
 		return view('crud/create', $this->data);
 	}
 
+
 	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function crudStore()
 	{
 		//
 	}
+
 
 	/**
 	 * Display the specified resource.
@@ -60,7 +64,7 @@ class CrudController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function crudPreview($id)
 	{
 		// get the info for that entry
 		$model = $this->model;
@@ -69,13 +73,14 @@ class CrudController extends Controller {
 		return view('crud/show', $this->data);
 	}
 
+
 	/**
 	 * Show the form for editing the specified resource.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function crudEdit($id)
 	{
 		// get the info for that entry
 		$model = $this->model;
@@ -84,16 +89,18 @@ class CrudController extends Controller {
 		return view('crud/edit', $this->data);
 	}
 
+
 	/**
 	 * Update the specified resource in storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function crudUpdate($id)
 	{
 		//
 	}
+
 
 	/**
 	 * Remove the specified resource from storage.
@@ -101,7 +108,35 @@ class CrudController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function crudDelete($id)
+	{
+		//
+	}
+
+
+	/**
+	 * ALIASES
+	 *
+	 * Used to make the CRUD Entity Controller work even if no methods are defined.
+	 * Respects the Laravel resource url convention.
+	 */
+	public function index() 		{ return $this->crudTable(); }
+	public function create()		{ return $this->crudCreate(); }
+	public function store()			{ return $this->crudStore(); }
+	public function show()			{ return $this->crudPreview(); }
+	public function edit()			{ return $this->crudEdit(); }
+	public function update()		{ return $this->crudUpdate(); }
+	public function destroy()		{ return $this->crudDelete(); }
+
+
+
+	/**
+	 * COMMODITY FUNCTIONS
+	 */
+
+	// TODO: check the columns definition.
+	// If it's not an array of array and it's a simple array, create a proper array of arrays for it
+	public function _validate_columns()
 	{
 		//
 	}
