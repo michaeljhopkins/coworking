@@ -12,20 +12,21 @@ class ArticleController extends CrudController {
 	public $crud = array(
 						"entity_name" => "article",
 						"entity_name_plural" => "articles",
-						"columns" => [
-										[
-											'name' => 'title',
-											'title' => "The Title"
-										],
-										[
-											'name' => 'slug',
-											'title' => "The Slug"
-										],
-										[
-											'name' => 'content',
-											'title' => "The Content"
-										],
-									],
+						// "columns" => [
+						// 				[
+						// 					'name' => 'title',
+						// 					'title' => "The Title"
+						// 				],
+						// 				[
+						// 					'name' => 'slug',
+						// 					'title' => "The Slug"
+						// 				],
+						// 				[
+						// 					'name' => 'content',
+						// 					'title' => "The Content"
+						// 				],
+						// 			],
+						"columns" => "title,slug,content",
 						"create_fields" => "title,slug", 	// TODO: this does nothing right now and it should
 						"update_fields" => "title,slug" 		// TODO: this does nothing right now and it should
 						);

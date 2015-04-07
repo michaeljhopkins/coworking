@@ -12,11 +12,6 @@ class CrudController extends Controller {
 						"entity_name_plural" => "entries"
 						);
 
-	public function __construct()
-	{
-		$this->data['crud'] = $this->crud;
-	}
-
 	/**
 	 * Display all rows in the database for this entity.
 	 *
@@ -28,9 +23,9 @@ class CrudController extends Controller {
 		$model = $this->model;
 		$this->data['entries'] = $model::all();
 
-		$this->_validate_columns(); //TODO
+		$this->_prepare_columns(); // checks that the columns are defined and makes sure the response is proper
 
-		// show only the chosen columns
+		$this->data['crud'] = $this->crud;
 		return view('crud/list', $this->data);
 	}
 
@@ -134,11 +129,31 @@ class CrudController extends Controller {
 	 * COMMODITY FUNCTIONS
 	 */
 
-	// TODO: check the columns definition.
 	// If it's not an array of array and it's a simple array, create a proper array of arrays for it
-	public function _validate_columns()
+	public function _prepare_columns()
 	{
-		//
+		// if the columns aren't set, we can't show this page
+		// TODO: instead of dying, show the columns defined as visible on the model
+		if (!isset($this->crud['columns']))
+		{
+			abort(500, "CRUD columns are not defined.");
+		}
+
+		// if columns are defined as a string, transform them to a proper array
+		if (!is_array($this->crud['columns']))
+		{
+			$current_columns_array = explode(",", $this->crud['columns']);
+			$proper_columns_array = array();
+
+			foreach ($current_columns_array as $key => $col) {
+				$proper_columns_array[] = [
+								'name' => $col,
+								'title' => ucfirst($col) //TODO: also replace _ with space
+							];
+			}
+
+			$this->crud['columns'] = $proper_columns_array;
+		}
 	}
 
 }
