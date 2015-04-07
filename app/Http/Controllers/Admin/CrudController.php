@@ -12,6 +12,11 @@ class CrudController extends Controller {
 						"entity_name_plural" => "entries"
 						);
 
+	public function __construct()
+	{
+		$this->data['crud'] = $this->crud;
+	}
+
 	/**
 	 * Display all rows in the database for this entity.
 	 *
@@ -36,8 +41,11 @@ class CrudController extends Controller {
 	 */
 	public function crudCreate()
 	{
-		// TODO: get the fields you need to show
+		// get the fields you need to show
+		$this->_prepare_fields(); // TODO: prepare the fields you need to show
+		$this->crud['fields'] = $this->data['crud']['create_fields'];
 
+		$this->data['crud'] = $this->crud;
 		return view('crud/create', $this->data);
 	}
 
@@ -65,6 +73,7 @@ class CrudController extends Controller {
 		$model = $this->model;
 		$this->data['entry'] = $model::find($id);
 
+		$this->data['crud'] = $this->crud;
 		return view('crud/show', $this->data);
 	}
 
@@ -81,6 +90,7 @@ class CrudController extends Controller {
 		$model = $this->model;
 		$this->data['entry'] = $model::find($id);
 
+		$this->data['crud'] = $this->crud;
 		return view('crud/edit', $this->data);
 	}
 
@@ -118,10 +128,10 @@ class CrudController extends Controller {
 	public function index() 		{ return $this->crudTable(); }
 	public function create()		{ return $this->crudCreate(); }
 	public function store()			{ return $this->crudStore(); }
-	public function show()			{ return $this->crudPreview(); }
-	public function edit()			{ return $this->crudEdit(); }
-	public function update()		{ return $this->crudUpdate(); }
-	public function destroy()		{ return $this->crudDelete(); }
+	public function show($id)		{ return $this->crudPreview($id); }
+	public function edit($id)		{ return $this->crudEdit($id); }
+	public function update($id)		{ return $this->crudUpdate($id); }
+	public function destroy($id)	{ return $this->crudDelete($id); }
 
 
 
@@ -154,6 +164,11 @@ class CrudController extends Controller {
 
 			$this->crud['columns'] = $proper_columns_array;
 		}
+	}
+
+	public function _prepare_fields()
+	{
+		//
 	}
 
 }

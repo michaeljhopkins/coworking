@@ -21,23 +21,30 @@
 
 		  <div class="box">
 		    <div class="box-header with-border">
-		      <h3 class="box-title">Create</h3>
+		      <h3 class="box-title">Add a new {{ $crud['entity_name'] }}</h3>
 		    </div>
 		    <div class="box-body">
 		      @include('crud/form_content')
 		    </div><!-- /.box-body -->
 		    <div class="box-footer">
 		    	<div class="form-group">
+		    	  <span>After saving:</span>
 		          <div class="radio">
 		            <label>
 		              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-		              After saving, go to the table view.
+		              go to the table view
 		            </label>
 		          </div>
 		          <div class="radio">
 		            <label>
 		              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-		              After saving, let me add another item.
+		              let me add another item
+		            </label>
+		          </div>
+		          <div class="radio">
+		            <label>
+		              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+		              edit the new item
 		            </label>
 		          </div>
 		        </div>
