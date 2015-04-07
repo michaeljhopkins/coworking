@@ -42,8 +42,8 @@ class CrudController extends Controller {
 	public function crudCreate()
 	{
 		// get the fields you need to show
-		$this->_prepare_fields(); // TODO: prepare the fields you need to show
 		$this->crud['fields'] = $this->data['crud']['create_fields'];
+		$this->_prepare_fields(); // TODO: prepare the fields you need to show
 
 		$this->data['crud'] = $this->crud;
 		return view('crud/create', $this->data);
@@ -56,6 +56,37 @@ class CrudController extends Controller {
 	 * @return Response
 	 */
 	public function crudStore()
+	{
+		//
+	}
+
+
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function crudEdit($id)
+	{
+		// get the info for that entry
+		$model = $this->model;
+		$this->data['entry'] = $model::find($id);
+		$this->crud['fields'] = $this->data['crud']['update_fields'];
+		$this->_prepare_fields($this->data['entry']); // prepare the fields you need to show and prepopulate the values
+
+		$this->data['crud'] = $this->crud;
+		return view('crud/edit', $this->data);
+	}
+
+
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function crudUpdate($id)
 	{
 		//
 	}
@@ -75,35 +106,6 @@ class CrudController extends Controller {
 
 		$this->data['crud'] = $this->crud;
 		return view('crud/show', $this->data);
-	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function crudEdit($id)
-	{
-		// get the info for that entry
-		$model = $this->model;
-		$this->data['entry'] = $model::find($id);
-
-		$this->data['crud'] = $this->crud;
-		return view('crud/edit', $this->data);
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function crudUpdate($id)
-	{
-		//
 	}
 
 
@@ -149,7 +151,7 @@ class CrudController extends Controller {
 			abort(500, "CRUD columns are not defined.");
 		}
 
-		// if columns are defined as a string, transform them to a proper array
+		// if the columns are defined as a string, transform it to a proper array
 		if (!is_array($this->crud['columns']))
 		{
 			$current_columns_array = explode(",", $this->crud['columns']);
@@ -166,9 +168,26 @@ class CrudController extends Controller {
 		}
 	}
 
-	public function _prepare_fields()
+	public function _prepare_fields($entry = false)
 	{
-		//
+		// TODO: if the fields aren't set, trigger error
+		// TODO: if the fields are defined as a string, transform it to a proper array
+
+		// if an entry was passed, we're preparing for the update form, not create
+		if ($entry) {
+			// put the values in the save 'fields' variable
+			$fields = $this->crud['fields'];
+			foreach ($fields as $k => $field) {
+				$this->crud['fields'][$k]['value'] = $entry->$field['name'];
+			}
+
+			// always have a hidden input for the entry id
+			$this->crud['fields'][] = array(
+												'name' => 'id',
+												'value' => $entry->id,
+												'type' => 'hidden'
+											);
+		}
 	}
 
 }

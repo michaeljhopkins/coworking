@@ -41,8 +41,22 @@ class ArticleController extends CrudController {
 													'placeholder' => 'Your textarea text here'
 												],
 											],
-						// "create_fields" => "title,content",
-						"update_fields" => "title,slug" 		// TODO: this does nothing right now and it should
+						// "create_fields" => "title,content",   // TODO: this does nothing right now and it should
+						// "update_fields" => "title,slug" 		// TODO: this does nothing right now and it should
+						"update_fields" => [
+												[
+													'name' => 'title',
+													'title' => 'Title',
+													'type' => 'text',
+													'placeholder' => 'Your title here'
+												],
+												[
+													'name' => 'content',
+													'title' => 'Content',
+													'type' => 'textarea',
+													'placeholder' => 'Your textarea text here'
+												],
+											],
 						);
 
 	public function index()
