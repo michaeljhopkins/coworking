@@ -21,6 +21,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 
 	// Dick CRUD: Define the resources for the entities you want to CRUD.
 	Route::resource('article', 'Admin\ArticleController');
+	Route::resource('category', 'Admin\CategoryController');
 });
 
 Route::controllers([

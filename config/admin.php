@@ -52,6 +52,11 @@ return [
 								'route' => 'admin/article',
 								'icon' => 'fa fa-file',
 							],
+							[
+								'label' => "Categories",
+								'route' => 'admin/category',
+								'icon' => 'fa fa-list',
+							],
 						]
 		]
 	],

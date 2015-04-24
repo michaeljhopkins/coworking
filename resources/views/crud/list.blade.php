@@ -13,7 +13,7 @@
 	  </h1>
 	  <ol class="breadcrumb">
 	    <li><a href="{{ url('admin/dashboard') }}">Admin</a></li>
-	    <li><a href="{{ url('admin/article') }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
+	    <li><a href="{{ url($crud['route']) }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
 	    <li class="active">List</li>
 	  </ol>
 	</section>
@@ -23,7 +23,7 @@
 <!-- Default box -->
   <div class="box">
     <div class="box-header with-border">
-		<a href="{{ url('admin/article/create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add <span class="text-lowercase">{{ $crud['entity_name'] }}</span></a>
+		<a href="{{ url($crud['route'].'/create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add <span class="text-lowercase">{{ $crud['entity_name'] }}</span></a>
     </div>
     <div class="box-body">
 
