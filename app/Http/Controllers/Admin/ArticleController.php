@@ -104,7 +104,7 @@ class ArticleController extends CrudController {
 												[
 													'name' => 'content',
 													'title' => 'Content',
-													'type' => 'textarea',
+													'type' => 'wysiwyg',
 													'placeholder' => 'Your textarea text here'
 												],
 											],
