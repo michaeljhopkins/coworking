@@ -14,6 +14,7 @@
 @endsection
 
 @section('content')
+<a href="{{ url($crud['route']) }}"><i class="fa fa-angle-double-left"></i> back to all <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span></a><br><br>
 <!-- Default box -->
   <div class="box">
     <div class="box-header with-border">

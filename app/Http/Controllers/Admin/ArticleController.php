@@ -46,55 +46,7 @@ class ArticleController extends CrudController {
 						//
 						// Define the fields for the "Add new item" view as an array:
 						//
-						"create_fields" => [
-												[
-													'name' => 'title',
-													'title' => 'Title',
-													'type' => 'text',
-													'placeholder' => 'Your title here'
-												],
-												[
-													'name' => 'content',
-													'title' => 'Content',
-													'type' => 'textarea',
-													'placeholder' => 'Your textarea text here'
-												],
-											],
-						// or as a string:
-						// "create_fields" => "title,content",
-
-
-						// *****
-						// UPDATE FIELDS
-						// *****
-						//
-						// Define the fields for the "Edit item" view as an array:
-						//
-						"update_fields" => [
-												[
-													'name' => 'title',
-													'title' => 'Title',
-													'type' => 'text',
-													'placeholder' => 'Your title here'
-												],
-												[
-													'name' => 'content',
-													'title' => 'Content',
-													'type' => 'textarea',
-													'placeholder' => 'Your textarea text here'
-												],
-											],
-						// or as a string:
-						// "update_fields" => "title,content"
-
-
-						// *****
-						// FIELDS ALTERNATIVE
-						// *****
-						//
-						// Define both create_fields and update_fields in one array:
-						//
-						// "fields" => [
+						// "create_fields" => [
 						// 						[
 						// 							'name' => 'title',
 						// 							'title' => 'Title',
@@ -108,14 +60,58 @@ class ArticleController extends CrudController {
 						// 							'placeholder' => 'Your textarea text here'
 						// 						],
 						// 					],
+						// or as a string:
+						// "create_fields" => "title,content",
+
+
+						// *****
+						// UPDATE FIELDS
+						// *****
+						//
+						// Define the fields for the "Edit item" view as an array:
+						//
+						// "update_fields" => [
+						// 						[
+						// 							'name' => 'title',
+						// 							'title' => 'Title',
+						// 							'type' => 'text',
+						// 							'placeholder' => 'Your title here'
+						// 						],
+						// 						[
+						// 							'name' => 'content',
+						// 							'title' => 'Content',
+						// 							'type' => 'textarea',
+						// 							'placeholder' => 'Your textarea text here'
+						// 						],
+						// 					],
+						// or as a string:
+						// "update_fields" => "title,content"
+
+
+						// *****
+						// FIELDS ALTERNATIVE
+						// *****
+						//
+						// Define both create_fields and update_fields in one array:
+						//
+						"fields" => [
+												[
+													'name' => 'title',
+													'title' => 'Title',
+													'type' => 'text',
+													'placeholder' => 'Your title here'
+												],
+												[
+													'name' => 'content',
+													'title' => 'Content',
+													'type' => 'textarea',
+													'placeholder' => 'Your textarea text here'
+												],
+											],
 						//
 						// or as a string:
 						//
 						// "fields" => "title,content",
 						);
 
-	public function index()
-	{
-		return $this->crudTable();
-	}
 }

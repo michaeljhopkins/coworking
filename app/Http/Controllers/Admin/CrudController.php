@@ -22,7 +22,7 @@ class CrudController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function crudTable()
+	public function index()
 	{
 		// get all results for that entity
 		$model = $this->model;
@@ -39,7 +39,7 @@ class CrudController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function crudCreate()
+	public function create()
 	{
 		// get the fields you need to show
 		if (isset($this->data['crud']['create_fields']))
@@ -58,7 +58,7 @@ class CrudController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function crudStore()
+	public function store()
 	{
 		$model = $this->model;
 		$item = $model::create(\Request::all());
@@ -84,7 +84,7 @@ class CrudController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function crudEdit($id)
+	public function edit($id)
 	{
 		// get the info for that entry
 		$model = $this->model;
@@ -106,7 +106,7 @@ class CrudController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function crudUpdate($id)
+	public function update($id)
 	{
 		$model = $this->model;
 		$item = $model::find(\Request::input('id'))
@@ -123,7 +123,7 @@ class CrudController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function crudPreview($id)
+	public function show($id)
 	{
 		// get the info for that entry
 		$model = $this->model;
@@ -140,25 +140,10 @@ class CrudController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function crudDelete($id)
+	public function destroy($id)
 	{
 		//
 	}
-
-
-	/**
-	 * ALIASES
-	 *
-	 * Used to make the CRUD Entity Controller work even if no methods are defined.
-	 * Respects the Laravel resource url convention.
-	 */
-	public function index() 		{ return $this->crudTable(); }
-	public function create()		{ return $this->crudCreate(); }
-	public function store()			{ return $this->crudStore(); }
-	public function show($id)		{ return $this->crudPreview($id); }
-	public function edit($id)		{ return $this->crudEdit($id); }
-	public function update($id)		{ return $this->crudUpdate($id); }
-	public function destroy($id)	{ return $this->crudDelete($id); }
 
 
 
