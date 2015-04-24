@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Dick Admin</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    {{-- Encrypted CSRF token for Laravel, in order for Ajax requests to work --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset('AdminLTE/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
@@ -99,6 +101,9 @@
     <script src="{{ asset('AdminLTE/plugins/fastclick/fastclick.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('AdminLTE/dist/js/app.min.js') }}" type="text/javascript"></script>
+
+    <!-- Main js file for admin interface -->
+    <script src="{{ asset('admin/js/main.js') }}" type="text/javascript"></script>
 
     {{-- Bootstrap Notifications using Prologue Alerts --}}
     <script type="text/javascript">

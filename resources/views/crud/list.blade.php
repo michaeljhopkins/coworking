@@ -27,7 +27,7 @@
     </div>
     <div class="box-body">
 
-		<table id="example1" class="table table-bordered table-striped">
+		<table id="crudTable" class="table table-bordered table-striped">
                     <thead>
                       <tr>
                         {{-- Table columns --}}
@@ -43,12 +43,12 @@
                       @foreach ($entries as $k => $entry)
                       <tr>
                         @foreach ($crud['columns'] as $column)
-                          <td>{{ $entry->$column['name'] }}</td>
+                          <td>{{ str_limit(strip_tags($entry->$column['name']), 80, "[...]") }}</td>
                         @endforeach
                         <td>
                           <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
                           <a href="{{ Request::url().'/'.$entry->id }}/edit" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
-                          <a href="{{ Request::url().'/'.$entry->id }}/delete" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
+                          <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default" data-button-type="delete"><i class="fa fa-trash"></i> Delete</a>
                         </td>
                       </tr>
                       @endforeach
@@ -77,7 +77,54 @@
 
 	<script type="text/javascript">
 	  jQuery(document).ready(function($) {
-	  	$("#example1").dataTable();
+	  	$("#crudTable").dataTable();
+
+      $.ajaxPrefilter(function(options, originalOptions, xhr) {
+          var token = $('meta[name="csrf_token"]').attr('content');
+
+          if (token) {
+                return xhr.setRequestHeader('X-XSRF-TOKEN', token);
+          }
+    });
+
+      // CRUD Delete
+      // ask for confirmation before deleting an item
+      $("[data-button-type=delete]").click(function(e) {
+        e.preventDefault();
+        var delete_button = $(this);
+        var delete_url = $(this).attr('href');
+
+        if (confirm("Are you sure you want to delete this item?") == true) {
+            $.ajax({
+                url: delete_url,
+                type: 'DELETE',
+                success: function(result) {
+                    // Show an alert with the result
+                    new PNotify({
+                        title: 'Item Deleted',
+                        text: 'The item has been deleted successfully.',
+                        type: 'success'
+                    });
+                    // delete the row from the table
+                    delete_button.parentsUntil('tr').parent().remove();
+                },
+                error: function(result) {
+                    // Show an alert with the result
+                    new PNotify({
+                        title: 'NOT deleted',
+                        text: "There's been an error. Your item might not have been deleted.",
+                        type: 'warning'
+                    });
+                }
+            });
+        } else {
+            new PNotify({
+                title: 'Not deleted',
+                text: 'Nothing happened. Your item is safe.',
+                type: 'info'
+            });
+        }
+      });
 	  });
 	</script>
 @endsection

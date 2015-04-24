@@ -130,7 +130,8 @@ class CrudController extends Controller {
 		$this->data['entry'] = $model::find($id);
 
 		$this->data['crud'] = $this->crud;
-		return view('crud/show', $this->data);
+		\Alert::success("The ".$this->crud['entity_name']." has been updated successfully.")->flash();
+		return \Redirect::to($this->crud['route']);
 	}
 
 
@@ -142,7 +143,11 @@ class CrudController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$model = $this->model;
+		$item = $model::find($id);
+		$item->delete();
+
+		return 'true';
 	}
 
 
