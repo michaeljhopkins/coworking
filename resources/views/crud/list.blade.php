@@ -43,7 +43,14 @@
                       @foreach ($entries as $k => $entry)
                       <tr>
                         @foreach ($crud['columns'] as $column)
-                          <td>{{ str_limit(strip_tags($entry->$column['name']), 80, "[...]") }}</td>
+                          @if (isset($column['relation']) && $column['relation']=='1-n')
+                            {{-- 1-n relationship --}}
+                            <td>{{ $entry->{$column['entity']}()->first()->{$column['attribute']} }}</td>
+                          @else
+                            {{-- regular object attribute --}}
+                            <td>{{ str_limit(strip_tags($entry->$column['name']), 80, "[...]") }}</td>
+                          @endif
+
                         @endforeach
                         <td>
                           <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>

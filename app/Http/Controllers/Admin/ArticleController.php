@@ -33,6 +33,12 @@ class ArticleController extends CrudController {
 												'name' => 'content',
 												'title' => "The Content"
 											],
+											[
+												'title' => "Category",
+												'relation' => '1-n',
+												'entity' => 'category',
+												'attribute' => 'name'
+											],
 									],
 						//
 						// or as a string:
