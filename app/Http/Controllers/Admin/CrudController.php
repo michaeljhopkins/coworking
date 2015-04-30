@@ -130,8 +130,7 @@ class CrudController extends Controller {
 		$this->data['entry'] = $model::find($id);
 
 		$this->data['crud'] = $this->crud;
-		\Alert::success("The ".$this->crud['entity_name']." has been updated successfully.")->flash();
-		return \Redirect::to($this->crud['route']);
+		return view('crud/show', $this->data);
 	}
 
 
