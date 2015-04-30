@@ -27,7 +27,7 @@ class CategoryController extends CrudController {
 											],
 											[
 												'title' => "Parent",
-												'relation' => '1-n',
+												'type' => 'select',
 												'entity' => 'parent',
 												'attribute' => 'name'
 											],

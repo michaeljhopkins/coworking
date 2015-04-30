@@ -17,9 +17,9 @@ class Category extends Model {
         return $this->hasMany('App\Models\Category');
     }
 
-    public function parent_name()
+    public function articles()
     {
-    	return $this->parent->name;
+        return $this->hasMany('App\Models\Article');
     }
 
 }

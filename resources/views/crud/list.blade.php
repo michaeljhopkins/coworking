@@ -43,9 +43,13 @@
                       @foreach ($entries as $k => $entry)
                       <tr>
                         @foreach ($crud['columns'] as $column)
-                          @if (isset($column['relation']) && $column['relation']=='1-n')
-                            {{-- 1-n relationship --}}
-                            <td>{{ $entry->{$column['entity']}()->first()->{$column['attribute']} }}</td>
+                          @if (isset($column['type']) && $column['type']=='select')
+                            {{-- single relationships (1-1, 1-n) --}}
+                            <td><?php
+                            if ($entry->{$column['entity']}()->getResults()) {
+                                echo $entry->{$column['entity']}()->getResults()->{$column['attribute']};
+                              }
+                             ?></td>
                           @else
                             {{-- regular object attribute --}}
                             <td>{{ str_limit(strip_tags($entry->$column['name']), 80, "[...]") }}</td>

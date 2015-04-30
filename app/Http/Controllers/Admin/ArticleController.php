@@ -35,9 +35,11 @@ class ArticleController extends CrudController {
 											],
 											[
 												'title' => "Category",
-												'relation' => '1-n',
+												'type' => 'select',
+												'name' => 'category_id',
 												'entity' => 'category',
-												'attribute' => 'name'
+												'attribute' => 'name',
+												'model' => "App\Models\Category"
 											],
 									],
 						//
@@ -112,6 +114,14 @@ class ArticleController extends CrudController {
 													'title' => 'Content',
 													'type' => 'wysiwyg',
 													'placeholder' => 'Your textarea text here'
+												],
+												[
+													'title' => "Category",
+													'type' => 'select',
+													'name' => 'category_id',
+													'entity' => 'category',
+													'attribute' => 'name',
+													'model' => "App\Models\Category"
 												],
 											],
 						//
