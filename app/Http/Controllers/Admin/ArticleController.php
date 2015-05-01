@@ -8,10 +8,14 @@ use Illuminate\Http\Request;
 
 class ArticleController extends CrudController {
 
-	public $model = "App\Models\Article";
 	public $crud = array(
+						// what's the namespace for your entity's model
+						"model" => "App\Models\Article",
+						// what name will show up on the buttons, in singural (ex: Add entity)
 						"entity_name" => "article",
+						// what name will show up on the buttons, in plural (ex: Delete 5 entities)
 						"entity_name_plural" => "articles",
+						// what route have you defined for your entity? used for links.
 						"route" => "admin/article",
 
 						// *****
@@ -23,18 +27,18 @@ class ArticleController extends CrudController {
 						"columns" => [
 											[
 												'name' => 'title',
-												'title' => "The Title"
+												'label' => "The Title"
 											],
 											[
 												'name' => 'slug',
-												'title' => "The Slug"
+												'label' => "The Slug"
 											],
 											[
 												'name' => 'content',
-												'title' => "The Content"
+												'label' => "The Content"
 											],
 											[
-												'title' => "Category",
+												'label' => "Category",
 												'type' => 'select',
 												'name' => 'category_id',
 												'entity' => 'category',
@@ -105,18 +109,18 @@ class ArticleController extends CrudController {
 						"fields" => [
 												[
 													'name' => 'title',
-													'title' => 'Title',
+													'label' => 'Title',
 													'type' => 'text',
 													'placeholder' => 'Your title here'
 												],
 												[
 													'name' => 'content',
-													'title' => 'Content',
+													'label' => 'Content',
 													'type' => 'wysiwyg',
 													'placeholder' => 'Your textarea text here'
 												],
 												[
-													'title' => "Category",
+													'label' => "Category",
 													'type' => 'select',
 													'name' => 'category_id',
 													'entity' => 'category',

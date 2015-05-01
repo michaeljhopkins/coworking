@@ -32,7 +32,7 @@
                       <tr>
                         {{-- Table columns --}}
                         @foreach ($crud['columns'] as $column)
-                          <th>{{ $column['title'] }}</th>
+                          <th>{{ $column['label'] }}</th>
                         @endforeach
 
                         <th>Actions</th>
@@ -69,7 +69,7 @@
                       <tr>
                         {{-- Table columns --}}
                         @foreach ($crud['columns'] as $column)
-                          <th>{{ $column['title'] }}</th>
+                          <th>{{ $column['label'] }}</th>
                         @endforeach
 
                         <th>Actions</th>

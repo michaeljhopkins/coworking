@@ -1,6 +1,6 @@
 <!-- html5 url input -->
   <div class="form-group">
-    <label>{{ $field['title'] }}</label>
+    <label>{{ $field['label'] }}</label>
     <input
     	type="url"
     	class="form-control"

@@ -1,6 +1,6 @@
 <!-- text input -->
   <div class="form-group">
-    <label>{{ $field['title'] }}</label>
+    <label>{{ $field['label'] }}</label>
     <input
     	type="email"
     	class="form-control"

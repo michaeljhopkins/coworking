@@ -1,6 +1,6 @@
 <!-- html5 datetime input -->
   <div class="form-group">
-    <label>{{ $field['title'] }}</label>
+    <label>{{ $field['label'] }}</label>
     <input
     	type="datetime-local"
     	class="form-control"

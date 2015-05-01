@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class CrudController extends Controller {
 
-	public $model = "\App\Models\Entity";
 	public $crud = array(
+						"model" => "\App\Models\Entity",
 						"entity_name" => "entry",
 						"entity_name_plural" => "entries"
 						);
@@ -25,7 +25,7 @@ class CrudController extends Controller {
 	public function index()
 	{
 		// get all results for that entity
-		$model = $this->model;
+		$model = $this->crud['model'];
 		$this->data['entries'] = $model::all();
 
 		$this->_prepare_columns(); // checks that the columns are defined and makes sure the response is proper
@@ -60,7 +60,7 @@ class CrudController extends Controller {
 	 */
 	public function store()
 	{
-		$model = $this->model;
+		$model = $this->crud['model'];
 		$item = $model::create(\Request::all());
 
 		\Alert::success("The ".$this->crud['entity_name']." has been added successfully.")->flash();
@@ -87,7 +87,7 @@ class CrudController extends Controller {
 	public function edit($id)
 	{
 		// get the info for that entry
-		$model = $this->model;
+		$model = $this->crud['model'];
 		$this->data['entry'] = $model::find($id);
 		if (isset($this->data['crud']['update_fields']))
 		{
@@ -108,7 +108,7 @@ class CrudController extends Controller {
 	 */
 	public function update($id)
 	{
-		$model = $this->model;
+		$model = $this->crud['model'];
 		$item = $model::find(\Request::input('id'))
 						->update(\Request::all());
 
@@ -126,7 +126,7 @@ class CrudController extends Controller {
 	public function show($id)
 	{
 		// get the info for that entry
-		$model = $this->model;
+		$model = $this->crud['model'];
 		$this->data['entry'] = $model::find($id);
 
 		$this->data['crud'] = $this->crud;
@@ -142,7 +142,7 @@ class CrudController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$model = $this->model;
+		$model = $this->crud['model'];
 		$item = $model::find($id);
 		$item->delete();
 
@@ -174,7 +174,7 @@ class CrudController extends Controller {
 			foreach ($current_columns_array as $key => $col) {
 				$proper_columns_array[] = [
 								'name' => $col,
-								'title' => ucfirst($col) //TODO: also replace _ with space
+								'label' => ucfirst($col) //TODO: also replace _ with space
 							];
 			}
 
@@ -199,7 +199,7 @@ class CrudController extends Controller {
 			foreach ($current_fields_array as $key => $field) {
 				$proper_fields_array[] = [
 								'name' => $field,
-								'title' => ucfirst($field), // TODO: also replace _ with space
+								'label' => ucfirst($field), // TODO: also replace _ with space
 								'type' => 'text' // TODO: choose different types of fields depending on the MySQL column type
 							];
 			}

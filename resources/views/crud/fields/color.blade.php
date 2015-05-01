@@ -1,6 +1,6 @@
 <!-- html5 color input -->
   <div class="form-group">
-    <label>{{ $field['title'] }}</label>
+    <label>{{ $field['label'] }}</label>
     <input
     	type="color"
     	class="form-control"

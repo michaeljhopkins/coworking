@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class CategoryController extends CrudController {
 
-	public $model = "App\Models\Category";
 	public $crud = array(
-						"entity_name" => "Category",
+						"model" => "App\Models\Category",
+						"entity_name" => "category",
 						"entity_name_plural" => "categories",
 						"route" => "admin/category",
 
@@ -23,10 +23,10 @@ class CategoryController extends CrudController {
 						"columns" => [
 											[
 												'name' => 'name',
-												'title' => "Category Name"
+												'label' => "Category Name"
 											],
 											[
-												'title' => "Parent",
+												'label' => "Parent",
 												'type' => 'select',
 												'entity' => 'parent',
 												'attribute' => 'name'
@@ -95,7 +95,7 @@ class CategoryController extends CrudController {
 						"fields" => [
 												[
 													'name' => 'name',
-													'title' => 'Name',
+													'label' => 'Name',
 													'type' => 'text',
 													'placeholder' => 'Your category name here'
 												],

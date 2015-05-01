@@ -1,6 +1,6 @@
 <!-- select -->
   <div class="form-group">
-    <label>{{ $field['title'] }}</label>
+    <label>{{ $field['label'] }}</label>
     <select
     	class="form-control"
 
