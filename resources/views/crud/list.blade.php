@@ -43,7 +43,20 @@
                       @foreach ($entries as $k => $entry)
                       <tr>
                         @foreach ($crud['columns'] as $column)
-                          @if (isset($column['type']) && $column['type']=='select')
+                          @if (isset($column['type']) && $column['type']=='select_multiple')
+                            {{-- relationships with pivot table (n-n) --}}
+                            <td><?php
+                            $results = $entry->{$column['entity']}()->getResults();
+                            if ($results && $results->count()) {
+                                $results_array = $results->lists($column['attribute'], 'id');
+                                echo implode(', ', $results_array);
+                              }
+                              else
+                              {
+                                echo '-';
+                              }
+                             ?></td>
+                          @elseif (isset($column['type']) && $column['type']=='select')
                             {{-- single relationships (1-1, 1-n) --}}
                             <td><?php
                             if ($entry->{$column['entity']}()->getResults()) {

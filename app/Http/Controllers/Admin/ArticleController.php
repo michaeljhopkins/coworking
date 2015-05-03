@@ -45,6 +45,14 @@ class ArticleController extends CrudController {
 												'attribute' => 'name',
 												'model' => "App\Models\Category"
 											],
+											[
+												'label' => "Tags",
+												'type' => 'select_multiple',
+												'name' => 'tags',
+												'entity' => 'tags',
+												'attribute' => 'name',
+												'model' => "App\Models\Tag"
+											],
 									],
 						//
 						// or as a string:
@@ -126,6 +134,14 @@ class ArticleController extends CrudController {
 													'entity' => 'category',
 													'attribute' => 'name',
 													'model' => "App\Models\Category"
+												],
+												[
+													'label' => "Tags",
+													'type' => 'select_multiple',
+													'name' => 'tags',
+													'entity' => 'tag',
+													'attribute' => 'name',
+													'model' => "App\Models\Tag"
 												],
 											],
 						//
