@@ -57,6 +57,11 @@ return [
 								'route' => 'admin/category',
 								'icon' => 'fa fa-list',
 							],
+							[
+								'label' => "Tags",
+								'route' => 'admin/tag',
+								'icon' => 'fa fa-tag',
+							],
 						]
 		]
 	],
