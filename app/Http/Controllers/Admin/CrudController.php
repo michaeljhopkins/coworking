@@ -63,6 +63,15 @@ class CrudController extends Controller {
 		$model = $this->crud['model'];
 		$item = $model::create(\Request::all());
 
+		// if it's a relationship with a pivot table, also sync that
+		$this->_prepare_fields();
+		foreach ($this->crud['fields'] as $k => $field) {
+			if (isset($field['pivot']) && $field['pivot']==true)
+			{
+				$model::find($item->id)->$field['name']()->attach(\Request::input($field['name']));
+			}
+		}
+
 		\Alert::success("The ".$this->crud['entity_name']." has been added successfully.")->flash();
 
 		// redirect the user where he chose to be redirected
