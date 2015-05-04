@@ -38,21 +38,23 @@ class ArticleController extends CrudController {
 												'label' => "The Content"
 											],
 											[
+												// 1-n relationship
 												'label' => "Category",
 												'type' => 'select',
-												'name' => 'category_id',
-												'entity' => 'category',
-												'attribute' => 'name',
-												'model' => "App\Models\Category"
+												'name' => 'category_id', // the db column for the foreign key
+												'entity' => 'category', // the method that defines the relationship in your Model
+												'attribute' => 'name', // foreign key attribute that is shown to user
+												'model' => "App\Models\Category" // foreign key model
 											],
 											[
+												// n-n relationship (with pivot table)
 												'label' => "Tags",
 												'type' => 'select_multiple',
-												'name' => 'tags',
-												'entity' => 'tags',
-												'attribute' => 'name',
-												'model' => "App\Models\Tag",
-												'pivot' => true,
+												'name' => 'tags', // the method that defines the relationship in your Model
+												'entity' => 'tags', // the method that defines the relationship in your Model
+												'attribute' => 'name', // foreign key attribute that is shown to user
+												'model' => "App\Models\Tag", // foreign key model
+												'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
 											],
 									],
 						//
