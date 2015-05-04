@@ -5,7 +5,11 @@
     	class="form-control"
 
     	@foreach ($field as $attribute => $value)
-    		{{ $attribute }}="{{ $value }}"
+    		@if ($attribute=='name')
+    			{{ $attribute }}="{{ $value }}[]"
+    		@else
+    			{{ $attribute }}="{{ $value }}"
+    		@endif
     	@endforeach
     	multiple>
     	<option value="">-</option>
@@ -13,7 +17,7 @@
 	    	@if (isset($field['model']))
 	    		@foreach ($field['model']::all() as $connected_entity_entry)
 	    			<option value="{{ $connected_entity_entry->id }}"
-						@if (isset($field['value']) && $connected_entity_entry->id==$field['value'])
+						@if (isset($field['value']) && in_array($connected_entity_entry->id, $field['value']->lists('id', 'id')))
 							 selected
 						@endif
 	    			>{{ $connected_entity_entry->$field['attribute'] }}</option>

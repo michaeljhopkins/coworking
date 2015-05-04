@@ -51,7 +51,8 @@ class ArticleController extends CrudController {
 												'name' => 'tags',
 												'entity' => 'tags',
 												'attribute' => 'name',
-												'model' => "App\Models\Tag"
+												'model' => "App\Models\Tag",
+												'pivot' => true,
 											],
 									],
 						//
@@ -141,7 +142,8 @@ class ArticleController extends CrudController {
 													'name' => 'tags',
 													'entity' => 'tag',
 													'attribute' => 'name',
-													'model' => "App\Models\Tag"
+													'model' => "App\Models\Tag",
+													'pivot' => true,
 												],
 											],
 						//

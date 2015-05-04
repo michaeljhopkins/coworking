@@ -109,8 +109,18 @@ class CrudController extends Controller {
 	public function update($id)
 	{
 		$model = $this->crud['model'];
+		$this->_prepare_fields($model::find(\Request::input('id')));
+
 		$item = $model::find(\Request::input('id'))
 						->update(\Request::all());
+
+		// if it's a relationship with a pivot table, also sync that
+		foreach ($this->crud['fields'] as $k => $field) {
+			if (isset($field['pivot']) && $field['pivot']==true)
+			{
+				$model::find(\Request::input('id'))->$field['name']()->sync(\Request::input($field['name']));
+			}
+		}
 
 		\Alert::success("The ".$this->crud['entity_name']." has been updated successfully.")->flash();
 		return \Redirect::to($this->crud['route']);
