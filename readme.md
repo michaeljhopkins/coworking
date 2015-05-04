@@ -31,3 +31,5 @@ php artisan make:model Models/Article
 
 4. Create a route for it in routes.php:
 Route::resource('article', 'ArticleController');
+
+See detailed installation&use of the CRUD panel here: https://bitbucket.org/tabacitu/dick/wiki/CRUD
