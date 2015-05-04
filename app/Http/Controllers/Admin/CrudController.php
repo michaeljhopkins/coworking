@@ -4,12 +4,16 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+// VALIDATION: change the requests to match your own file names if you need form validation
+use App\Http\Requests\StoreCRUDRequest as StoreRequest;
+use App\Http\Requests\UpdateCRUDRequest as UpdateRequest;
+
 class CrudController extends Controller {
 
 	public $crud = array(
 						"model" => "\App\Models\Entity",
 						"entity_name" => "entry",
-						"entity_name_plural" => "entries"
+						"entity_name_plural" => "entries",
 						);
 
 	public function __construct()
@@ -58,7 +62,7 @@ class CrudController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(StoreRequest $request)
 	{
 		$model = $this->crud['model'];
 		$item = $model::create(\Request::all());
@@ -115,7 +119,7 @@ class CrudController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(UpdateRequest $request)
 	{
 		$model = $this->crud['model'];
 		$this->_prepare_fields($model::find(\Request::input('id')));
