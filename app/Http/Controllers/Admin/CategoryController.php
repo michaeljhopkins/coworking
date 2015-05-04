@@ -28,8 +28,10 @@ class CategoryController extends CrudController {
 											[
 												'label' => "Parent",
 												'type' => 'select',
+												'name' => 'parent_id',
 												'entity' => 'parent',
-												'attribute' => 'name'
+												'attribute' => 'name',
+												'model' => "App\Models\Category"
 											],
 									],
 						//
@@ -98,6 +100,14 @@ class CategoryController extends CrudController {
 													'label' => 'Name',
 													'type' => 'text',
 													'placeholder' => 'Your category name here'
+												],
+												[
+													'label' => "Parent",
+													'type' => 'select',
+													'name' => 'parent_id',
+													'entity' => 'parent',
+													'attribute' => 'name',
+													'model' => "App\Models\Category"
 												],
 											],
 						//
