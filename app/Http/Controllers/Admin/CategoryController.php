@@ -122,11 +122,11 @@ class CategoryController extends CrudController {
 
 	public function store(StoreRequest $request)
 	{
-		parent::store_crud();
+		return parent::store_crud();
 	}
 
 	public function update(UpdateRequest $request)
 	{
-		parent::update_crud();
+		return parent::update_crud();
 	}
 }
