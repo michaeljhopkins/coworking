@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class UpdateCRUDRequest extends Request {
+class CrudRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -11,7 +11,7 @@ class UpdateCRUDRequest extends Request {
 	 */
 	public function authorize()
 	{
-		// only allow updates if the user is logged in
+		// only allow creates if the user is logged in
 		return \Auth::check();
 	}
 
@@ -23,7 +23,7 @@ class UpdateCRUDRequest extends Request {
 	public function rules()
 	{
 		return [
-			'name' => 'required|min:3|max:255'
+			// 'name' => 'required|min:3|max:255'
 		];
 	}
 

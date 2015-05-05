@@ -6,6 +6,10 @@ use App\Http\Controllers\Admin\CrudController;
 
 use Illuminate\Http\Request;
 
+// VALIDATION: change the requests to match your own file names if you need form validation
+use App\Http\Requests\CrudRequest as StoreRequest;
+use App\Http\Requests\CrudRequest as UpdateRequest;
+
 class CategoryController extends CrudController {
 
 	public $crud = array(
@@ -116,4 +120,13 @@ class CategoryController extends CrudController {
 						// "fields" => "title,content",
 						);
 
+	public function store(StoreRequest $request)
+	{
+		parent::store_crud();
+	}
+
+	public function update(UpdateRequest $request)
+	{
+		parent::update_crud();
+	}
 }

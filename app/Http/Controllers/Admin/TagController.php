@@ -102,4 +102,14 @@ class TagController extends CrudController {
 						//
 						// "fields" => "title,content",
 						);
+
+	public function store(StoreRequest $request)
+	{
+		parent::store_crud();
+	}
+
+	public function update(UpdateRequest $request)
+	{
+		parent::update_crud();
+	}
 }
