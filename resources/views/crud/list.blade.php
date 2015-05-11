@@ -1,4 +1,4 @@
-@extends('app')
+@extends('admin.layout')
 
 @section('head')
 	<!-- DATA TABLES -->
