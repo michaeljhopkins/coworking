@@ -9,7 +9,10 @@
     		{{ $attribute }}="{{ $value }}"
     	@endforeach
     	>
-    	<option value="">-</option>
+
+        @if ($entity_model::isColumnNullable($field['name']))
+            <option value="">-</option>
+        @endif
 
 	    	@if (!empty($entity_model::getPossibleEnumValues($field['name'])))
 	    		@foreach ($entity_model::getPossibleEnumValues($field['name']) as $possible_value)
