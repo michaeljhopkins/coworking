@@ -1,6 +1,7 @@
 <!-- select -->
   <div class="form-group">
     <label>{{ $field['label'] }}</label>
+    <?php $entity_model = $crud['model']; ?>
     <select
     	class="form-control"
 
@@ -8,7 +9,10 @@
     		{{ $attribute }}="{{ $value }}"
     	@endforeach
     	>
-    	<option value="">-</option>
+
+    	@if ($entity_model::isColumnNullable($field['name']))
+            <option value="">-</option>
+        @endif
 
 	    	@if (isset($field['model']))
 	    		@foreach ($field['model']::all() as $connected_entity_entry)
