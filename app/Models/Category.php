@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model {
+class Category extends BaseModel {
 
 	protected $table = 'categories';
 	protected $fillable = ['name', 'parent_id'];

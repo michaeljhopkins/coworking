@@ -30,6 +30,10 @@ class ArticleController extends CrudController {
 						//
 						"columns" => [
 											[
+												'name' => 'status',
+												'label' => "Status"
+											],
+											[
 												'name' => 'title',
 												'label' => "The Title"
 											],
@@ -122,19 +126,19 @@ class ArticleController extends CrudController {
 						// Define both create_fields and update_fields in one array:
 						//
 						"fields" => [
-												[
+												[	// TEXT
 													'name' => 'title',
 													'label' => 'Title',
 													'type' => 'text',
 													'placeholder' => 'Your title here'
 												],
-												[
+												[	// WYSIWYG
 													'name' => 'content',
 													'label' => 'Content',
 													'type' => 'wysiwyg',
 													'placeholder' => 'Your textarea text here'
 												],
-												[
+												[	// SELECT
 													'label' => "Category",
 													'type' => 'select',
 													'name' => 'category_id',
@@ -142,7 +146,7 @@ class ArticleController extends CrudController {
 													'attribute' => 'name',
 													'model' => "App\Models\Category"
 												],
-												[
+												[	// SELECT_MULTIPLE
 													'label' => "Tags",
 													'type' => 'select_multiple',
 													'name' => 'tags',
@@ -150,6 +154,11 @@ class ArticleController extends CrudController {
 													'attribute' => 'name',
 													'model' => "App\Models\Tag",
 													'pivot' => true,
+												],
+												[	// ENUM
+													'name' => 'status',
+													'label' => "Status",
+													'type' => 'enum'
 												],
 											],
 						//
