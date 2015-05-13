@@ -150,6 +150,7 @@ return [
 		 */
 		'Illuminate\Html\HtmlServiceProvider',
 		'Prologue\Alerts\AlertsServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 	],
 
@@ -205,6 +206,7 @@ return [
 		'Form'=> 'Illuminate\Html\FormFacade',
 		'HTML'=> 'Illuminate\Html\HtmlFacade',
 		'Alert' => 'Prologue\Alerts\Facades\Alert',
+		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 	],
 
