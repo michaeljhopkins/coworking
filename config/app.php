@@ -151,6 +151,7 @@ return [
 		'Illuminate\Html\HtmlServiceProvider',
 		'Prologue\Alerts\AlertsServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
+		'Zizaco\Entrust\EntrustServiceProvider',
 
 	],
 
@@ -206,6 +207,7 @@ return [
 		'Form'=> 'Illuminate\Html\FormFacade',
 		'HTML'=> 'Illuminate\Html\HtmlFacade',
 		'Alert' => 'Prologue\Alerts\Facades\Alert',
+		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 	],

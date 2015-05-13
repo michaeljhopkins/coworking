@@ -8,6 +8,7 @@
 		"laravel/framework": "5.0.*",
 		"illuminate/html": "5.*",
 		"prologue/alerts": "dev-master",
+		"zizaco/entrust": "dev-laravel-5",
 		"barryvdh/laravel-debugbar": "~2.0"
 	},
 	"require-dev": {

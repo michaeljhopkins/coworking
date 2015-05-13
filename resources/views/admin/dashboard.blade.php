@@ -26,4 +26,35 @@
 
     </div><!-- /.box-body -->
   </div><!-- /.box -->
+
+  <div class="box">
+    <div class="box-header with-border">
+      <h3 class="box-title">About your account</h3>
+    </div>
+    <div class="box-body">
+      Roles:
+      <?php
+        $roles = Auth::user()->roles;
+
+        if ($roles) {
+          foreach ($roles->lists('name', 'id') as $k => $role) {
+            echo '<span class="label label-default">'.$role.'</span>';
+          }
+        }
+       ?>
+      <br>
+      Permissions:
+      <?php
+        $permissions = Auth::user()->permissions;
+
+        if ($permissions) {
+          foreach ($permissions->lists('name', 'id') as $k => $permission) {
+            echo '<span class="label label-default">'.$permission.'</span>';
+          }
+        }
+       ?>
+
+    </div><!-- /.box-body -->
+  </div><!-- /.box -->
+
 @endsection
