@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreTagRequest as StoreRequest;
 use App\Http\Requests\UpdateTagRequest as UpdateRequest;
 
-class TagController extends CrudController {
+class TagCrudController extends CrudController {
 
 	public $crud = array(
 						"model" => "App\Models\Tag",

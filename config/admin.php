@@ -42,6 +42,25 @@ return [
 		],
 
 		[
+			'label' => "Authentication",
+			'route' => "",
+			// 'url' => null,
+			'icon' => 'fa fa-group',
+			'children' => [
+							[
+								'label' => "Users",
+								'route' => 'admin/user',
+								'icon' => 'fa fa-user',
+							],
+							[
+								'label' => "Roles",
+								'route' => 'admin/role',
+								'icon' => 'fa fa-folder-open-o',
+							]
+						]
+		],
+
+		[
 			'label' => "CRUD",
 			'route' => "",
 			// 'url' => null,

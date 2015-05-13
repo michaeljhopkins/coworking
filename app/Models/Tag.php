@@ -9,7 +9,7 @@ class Tag extends BaseModel {
 
     public function articles()
     {
-        return $this->hasMany('App\Models\Article', 'articles_tags');
+        return $this->hasMany('App\Models\Article', 'article_tag');
     }
 
 }

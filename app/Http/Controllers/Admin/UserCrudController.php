@@ -3,24 +3,19 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Admin\CrudController;
-
 use Illuminate\Http\Request;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\CrudRequest as StoreRequest;
-use App\Http\Requests\CrudRequest as UpdateRequest;
+use App\Http\Requests\UserRequest as StoreRequest;
+use App\Http\Requests\UserRequest as UpdateRequest;
 
-class ArticleController extends CrudController {
+class UserCrudController extends CrudController {
 
 	public $crud = array(
-						// what's the namespace for your entity's model
-						"model" => "App\Models\Article",
-						// what name will show up on the buttons, in singural (ex: Add entity)
-						"entity_name" => "article",
-						// what name will show up on the buttons, in plural (ex: Delete 5 entities)
-						"entity_name_plural" => "articles",
-						// what route have you defined for your entity? used for links.
-						"route" => "admin/article",
+						"model" => "App\User",
+						"entity_name" => "user",
+						"entity_name_plural" => "users",
+						"route" => "admin/user",
 
 						// *****
 						// COLUMNS
@@ -30,38 +25,21 @@ class ArticleController extends CrudController {
 						//
 						"columns" => [
 											[
-												'name' => 'status',
-												'label' => "Status"
+												'name' => 'name',
+												'label' => "Name surname"
 											],
 											[
-												'name' => 'title',
-												'label' => "The Title"
-											],
-											[
-												'name' => 'slug',
-												'label' => "The Slug"
-											],
-											[
-												'name' => 'content',
-												'label' => "The Content"
-											],
-											[
-												// 1-n relationship
-												'label' => "Category",
-												'type' => 'select',
-												'name' => 'category_id', // the db column for the foreign key
-												'entity' => 'category', // the method that defines the relationship in your Model
-												'attribute' => 'name', // foreign key attribute that is shown to user
-												'model' => "App\Models\Category" // foreign key model
+												'name' => 'email',
+												'label' => "Email"
 											],
 											[
 												// n-n relationship (with pivot table)
-												'label' => "Tags",
+												'label' => "Roles",
 												'type' => 'select_multiple',
-												'name' => 'tags', // the method that defines the relationship in your Model
-												'entity' => 'tags', // the method that defines the relationship in your Model
-												'attribute' => 'name', // foreign key attribute that is shown to user
-												'model' => "App\Models\Tag", // foreign key model
+												'name' => 'roles', // the method that defines the relationship in your Model
+												'entity' => 'roles', // the method that defines the relationship in your Model
+												'attribute' => 'display_name', // foreign key attribute that is shown to user
+												'model' => "App\Role", // foreign key model
 												'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
 											],
 									],
@@ -126,39 +104,25 @@ class ArticleController extends CrudController {
 						// Define both create_fields and update_fields in one array:
 						//
 						"fields" => [
-												[	// TEXT
-													'name' => 'title',
-													'label' => 'Title',
+												[
+													'name' => 'name',
+													'label' => 'Name Surname',
 													'type' => 'text',
-													'placeholder' => 'Your title here'
 												],
-												[	// WYSIWYG
-													'name' => 'content',
-													'label' => 'Content',
-													'type' => 'wysiwyg',
-													'placeholder' => 'Your textarea text here'
+												[
+													'name' => 'email',
+													'type' => 'email',
+													'label' => "Email address"
 												],
-												[	// SELECT
-													'label' => "Category",
-													'type' => 'select',
-													'name' => 'category_id',
-													'entity' => 'category',
-													'attribute' => 'name',
-													'model' => "App\Models\Category"
-												],
-												[	// SELECT_MULTIPLE
-													'label' => "Tags",
+												[
+													// n-n relationship (with pivot table)
+													'label' => "Roles",
 													'type' => 'select_multiple',
-													'name' => 'tags',
-													'entity' => 'tag',
-													'attribute' => 'name',
-													'model' => "App\Models\Tag",
-													'pivot' => true,
-												],
-												[	// ENUM
-													'name' => 'status',
-													'label' => "Status",
-													'type' => 'enum'
+													'name' => 'roles', // the method that defines the relationship in your Model
+													'entity' => 'roles', // the method that defines the relationship in your Model
+													'attribute' => 'display_name', // foreign key attribute that is shown to user
+													'model' => "App\Role", // foreign key model
+													'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
 												],
 											],
 						//

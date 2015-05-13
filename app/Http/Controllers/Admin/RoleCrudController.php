@@ -3,20 +3,19 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Admin\CrudController;
-
 use Illuminate\Http\Request;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\CrudRequest as StoreRequest;
-use App\Http\Requests\CrudRequest as UpdateRequest;
+use App\Http\Requests\RoleRequest as StoreRequest;
+use App\Http\Requests\RoleRequest as UpdateRequest;
 
-class CategoryController extends CrudController {
+class RoleCrudController extends CrudController {
 
 	public $crud = array(
-						"model" => "App\Models\Category",
-						"entity_name" => "category",
-						"entity_name_plural" => "categories",
-						"route" => "admin/category",
+						"model" => "App\Role",
+						"entity_name" => "role",
+						"entity_name_plural" => "roles",
+						"route" => "admin/role",
 
 						// *****
 						// COLUMNS
@@ -27,15 +26,28 @@ class CategoryController extends CrudController {
 						"columns" => [
 											[
 												'name' => 'name',
-												'label' => "Category Name"
+												'type' => 'text',
+												'label' => "Key"
 											],
 											[
-												'label' => "Parent",
-												'type' => 'select',
-												'name' => 'parent_id',
-												'entity' => 'parent',
-												'attribute' => 'name',
-												'model' => "App\Models\Category"
+												'name' => 'display_name',
+												'type' => 'text',
+												'label' => "Name"
+											],
+											[
+												'name' => 'description',
+												'type' => 'text',
+												'label' => "Description"
+											],
+											[
+												// n-n relationship (with pivot table)
+												'label' => "Permissions",
+												'type' => 'select_multiple',
+												'name' => 'permissions', // the method that defines the relationship in your Model
+												'entity' => 'permissions', // the method that defines the relationship in your Model
+												'attribute' => 'display_name', // foreign key attribute that is shown to user
+												'model' => "App\Permission", // foreign key model
+												'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
 											],
 									],
 						//
@@ -101,17 +113,18 @@ class CategoryController extends CrudController {
 						"fields" => [
 												[
 													'name' => 'name',
-													'label' => 'Name',
 													'type' => 'text',
-													'placeholder' => 'Your category name here'
+													'label' => "Key"
 												],
 												[
-													'label' => "Parent",
-													'type' => 'select',
-													'name' => 'parent_id',
-													'entity' => 'parent',
-													'attribute' => 'name',
-													'model' => "App\Models\Category"
+													'name' => 'display_name',
+													'type' => 'text',
+													'label' => "Name"
+												],
+												[
+													'name' => 'description',
+													'label' => "Description",
+													'type' => 'text'
 												],
 											],
 						//

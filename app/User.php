@@ -6,8 +6,9 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use App\Models\BaseModel;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
+class User extends BaseModel implements AuthenticatableContract, CanResetPasswordContract {
 
 	use Authenticatable, CanResetPassword, EntrustUserTrait;
 
@@ -31,5 +32,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
+
+
+	public function roles()
+    {
+        return $this->belongsToMany(\Config::get('entrust.role'), 'role_user');
+    }
 
 }
