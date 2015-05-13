@@ -21,7 +21,7 @@ class CrudController extends Controller {
 		$this->data['crud'] = $this->crud;
 
 		// Check for the right roles to access these pages
-		if (!\Entrust::hasRole(['admin', 'superadmin'])) {
+		if (!\Entrust::can('view-admin-panel')) {
 	        abort(403, 'Unauthorized access - you do not have the necessary role to see this page.');
 	    }
 	}
