@@ -19,6 +19,11 @@ class CrudController extends Controller {
 	public function __construct()
 	{
 		$this->data['crud'] = $this->crud;
+
+		// Check for the right roles to access these pages
+		if (!\Entrust::hasRole(['admin', 'superadmin'])) {
+	        abort(403, 'Unauthorized access - you do not have the necessary role to see this page.');
+	    }
 	}
 
 	/**
