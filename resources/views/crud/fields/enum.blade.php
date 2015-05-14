@@ -14,7 +14,7 @@
             <option value="">-</option>
         @endif
 
-	    	@if (!empty($entity_model::getPossibleEnumValues($field['name'])))
+	    	@if (count($entity_model::getPossibleEnumValues($field['name'])))
 	    		@foreach ($entity_model::getPossibleEnumValues($field['name']) as $possible_value)
 	    			<option value="{{ $possible_value }}"
 						@if (isset($field['value']) && $field['value']==$possible_value)
