@@ -23,7 +23,7 @@ class RoleRequest extends CrudRequest {
 	public function rules()
 	{
 		return [
-			'name' => 'required|min:3|max:255',
+			// 'name' => 'required|min:3|max:255',
 			'display_name' => 'min:3|max:255',
 			'description' => 'min:3|max:255',
 		];

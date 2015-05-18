@@ -46,7 +46,8 @@ return array(
     | Filter callback to check the files
     |
     */
-    'access' => 'Barryvdh\Elfinder\Elfinder::checkAccess',
+    // 'access' => 'Barryvdh\Elfinder\Elfinder::checkAccess',
+    'access' => "Zizaco\Entrust\EntrustFacade\Entrust::can('use-file-manager')",
     /*
     |--------------------------------------------------------------------------
     | Roots
