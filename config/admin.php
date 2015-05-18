@@ -82,6 +82,20 @@ return [
 								'icon' => 'fa fa-tag',
 							],
 						]
+		],
+
+		[
+			'label' => "Advanced",
+			'route' => "",
+			// 'url' => null,
+			'icon' => 'fa fa-wrench',
+			'children' => [
+							[
+								'label' => "File manager",
+								'route' => 'admin/elfinder',
+								'icon' => 'fa fa-files-o',
+							],
+						]
 		]
 	],
 
