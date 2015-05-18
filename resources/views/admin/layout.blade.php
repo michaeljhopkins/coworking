@@ -81,9 +81,9 @@
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
         {{-- TODO: populate this with the package version --}}
-          <b>Version</b> 2.0
+          {{-- <b>Version</b> 2.0 --}}
         </div>
-        © 2014-2015. All rights reserved.
+        © 2014-2015.
       </footer>
     </div><!-- ./wrapper -->
 

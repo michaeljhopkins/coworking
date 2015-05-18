@@ -27,7 +27,7 @@
     </div><!-- /.box-body -->
   </div><!-- /.box -->
 
-  @if (Entrust::can('view-account-permissions'))
+  @if (Entrust::can('view-admin-panel'))
   <div class="box">
     <div class="box-header with-border">
       <h3 class="box-title">About your account</h3>

@@ -9,12 +9,12 @@
 	<section class="content-header">
 	  <h1>
 	    <span class="text-capitalize">{{ $crud['entity_name_plural'] }}</span>
-	    <small>All <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span> in the database.</small>
+	    <small>{{ trans('crud.all') }} <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span> {{ trans('crud.in_the_database') }}.</small>
 	  </h1>
 	  <ol class="breadcrumb">
 	    <li><a href="{{ url('admin/dashboard') }}">Admin</a></li>
 	    <li><a href="{{ url($crud['route']) }}" class="text-capitalize">{{ $crud['entity_name_plural'] }}</a></li>
-	    <li class="active">List</li>
+	    <li class="active">{{ trans('crud.list') }}</li>
 	  </ol>
 	</section>
 @endsection
@@ -23,7 +23,7 @@
 <!-- Default box -->
   <div class="box">
     <div class="box-header with-border">
-		<a href="{{ url($crud['route'].'/create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add <span class="text-lowercase">{{ $crud['entity_name'] }}</span></a>
+		<a href="{{ url($crud['route'].'/create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> {{ trans('crud.add') }} <span class="text-lowercase">{{ $crud['entity_name'] }}</span></a>
     </div>
     <div class="box-body">
 
@@ -35,7 +35,7 @@
                           <th>{{ $column['label'] }}</th>
                         @endforeach
 
-                        <th>Actions</th>
+                        <th>{{ trans('crud.actions') }}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -70,9 +70,9 @@
 
                         @endforeach
                         <td>
-                          <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> Preview</a>
-                          <a href="{{ Request::url().'/'.$entry->id }}/edit" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Edit</a>
-                          <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default" data-button-type="delete"><i class="fa fa-trash"></i> Delete</a>
+                          <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> {{ trans('crud.preview') }}</a>
+                          <a href="{{ Request::url().'/'.$entry->id }}/edit" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> {{ trans('crud.edit') }}</a>
+                          <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default" data-button-type="delete"><i class="fa fa-trash"></i> {{ trans('crud.delete') }}</a>
                         </td>
                       </tr>
                       @endforeach
@@ -85,7 +85,7 @@
                           <th>{{ $column['label'] }}</th>
                         @endforeach
 
-                        <th>Actions</th>
+                        <th>{{ trans('crud.actions') }}</th>
                       </tr>
                     </tfoot>
                   </table>
@@ -101,7 +101,31 @@
 
 	<script type="text/javascript">
 	  jQuery(document).ready(function($) {
-	  	$("#crudTable").dataTable();
+	  	$("#crudTable").dataTable({
+        "language": {
+              "emptyTable":     "{{ trans('crud.emptyTable') }}",
+              "info":           "{{ trans('crud.info') }}",
+              "infoEmpty":      "{{ trans('crud.infoEmpty') }}",
+              "infoFiltered":   "{{ trans('crud.infoFiltered') }}",
+              "infoPostFix":    "{{ trans('crud.infoPostFix') }}",
+              "thousands":      "{{ trans('crud.thousands') }}",
+              "lengthMenu":     "{{ trans('crud.lengthMenu') }}",
+              "loadingRecords": "{{ trans('crud.loadingRecords') }}",
+              "processing":     "{{ trans('crud.processing') }}",
+              "search":         "{{ trans('crud.search') }}",
+              "zeroRecords":    "{{ trans('crud.zeroRecords') }}",
+              "paginate": {
+                  "first":      "{{ trans('crud.paginate.first') }}",
+                  "last":       "{{ trans('crud.paginate.last') }}",
+                  "next":       "{{ trans('crud.paginate.next') }}",
+                  "previous":   "{{ trans('crud.paginate.previous') }}"
+              },
+              "aria": {
+                  "sortAscending":  "{{ trans('crud.aria.sortAscending') }}",
+                  "sortDescending": "{{ trans('crud.aria.sortDescending') }}"
+              }
+          }
+      });
 
       $.ajaxPrefilter(function(options, originalOptions, xhr) {
           var token = $('meta[name="csrf_token"]').attr('content');
@@ -118,16 +142,16 @@
         var delete_button = $(this);
         var delete_url = $(this).attr('href');
 
-        if (confirm("Are you sure you want to delete this item?") == true) {
+        if (confirm("{{ trans('crud.delete_confirm') }}") == true) {
             $.ajax({
                 url: delete_url,
                 type: 'DELETE',
                 success: function(result) {
                     // Show an alert with the result
                     new PNotify({
-                        title: 'Item Deleted',
-                        text: 'The item has been deleted successfully.',
-                        type: 'success'
+                        title: "{{ trans('crud.delete_confirmation_title') }}",
+                        text: "{{ trans('crud.delete_confirmation_message') }}",
+                        type: "success"
                     });
                     // delete the row from the table
                     delete_button.parentsUntil('tr').parent().remove();
@@ -135,17 +159,17 @@
                 error: function(result) {
                     // Show an alert with the result
                     new PNotify({
-                        title: 'NOT deleted',
-                        text: "There's been an error. Your item might not have been deleted.",
-                        type: 'warning'
+                        title: "{{ trans('crud.delete_confirmation_not_title') }}",
+                        text: "{{ trans('crud.delete_confirmation_not_message') }}",
+                        type: "warning"
                     });
                 }
             });
         } else {
             new PNotify({
-                title: 'Not deleted',
-                text: 'Nothing happened. Your item is safe.',
-                type: 'info'
+                title: "{{ trans('crud.delete_confirmation_not_deleted_title') }}",
+                text: "{{ trans('crud.delete_confirmation_not_deleted_message') }}",
+                type: "info"
             });
         }
       });
