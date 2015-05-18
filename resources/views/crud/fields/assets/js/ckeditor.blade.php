@@ -3,6 +3,8 @@
 <script src="{{ asset('adminLTE/plugins/ckeditor/adapters/jquery.js') }}"></script>
 <script>
     jQuery(document).ready(function($) {
-    	$('textarea.ckeditor' ).ckeditor();
+    	$('textarea.ckeditor' ).ckeditor({
+    		"filebrowserBrowseUrl": "{{ url('admin/elfinder/ckeditor') }}"
+    	});
     });
 </script>
