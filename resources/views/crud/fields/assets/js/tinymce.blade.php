@@ -5,7 +5,7 @@
 <script type="text/javascript">
 tinymce.init({
     selector: "textarea.tinymce",
-    // skin: "light",
+    skin: "dick-light",
     plugins: "image,link,media,anchor",
     file_browser_callback : elFinderBrowser,
  });
