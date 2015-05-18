@@ -1,4 +1,4 @@
-<!-- textarea -->
+<!-- default wysiwyg editor - summernote -->
   <div class="form-group">
     <label>{{ $field['label'] }}</label>
     <textarea
