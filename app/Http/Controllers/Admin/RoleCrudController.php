@@ -114,7 +114,8 @@ class RoleCrudController extends CrudController {
 												[
 													'name' => 'name',
 													'type' => 'text',
-													'label' => "Key"
+													'label' => "Key",
+													'disabled' => 'disabled'
 												],
 												[
 													'name' => 'display_name',
@@ -125,6 +126,16 @@ class RoleCrudController extends CrudController {
 													'name' => 'description',
 													'label' => "Description",
 													'type' => 'text'
+												],
+												[
+													// n-n relationship (with pivot table)
+													'label' => "Permissions",
+													'type' => 'select_multiple',
+													'name' => 'permissions', // the method that defines the relationship in your Model
+													'entity' => 'permissions', // the method that defines the relationship in your Model
+													'attribute' => 'display_name', // foreign key attribute that is shown to user
+													'model' => "App\Permission", // foreign key model
+													'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
 												],
 											],
 						//
