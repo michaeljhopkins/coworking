@@ -152,6 +152,7 @@ return [
 		'Prologue\Alerts\AlertsServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
+		'Barryvdh\Elfinder\ElfinderServiceProvider',
 
 	],
 
