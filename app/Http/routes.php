@@ -18,6 +18,10 @@ Route::get('home', 'Admin\AdminController@index');
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
 	Route::get('dashboard', 'Admin\AdminController@index');
+	Route::get('backup', 'Admin\BackupController@index');
+	Route::get('backup/create', 'Admin\BackupController@create');
+	Route::get('backup/download/{file_name}', 'Admin\BackupController@download');
+	Route::delete('backup/delete/{file_name}', 'Admin\BackupController@delete');
 
 	// Dick CRUD: Define the resources for the entities you want to CRUD.
 	Route::resource('article', 'Admin\ArticleCrudController');

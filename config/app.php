@@ -209,6 +209,7 @@ return [
 		'Form'=> 'Illuminate\Html\FormFacade',
 		'HTML'=> 'Illuminate\Html\HtmlFacade',
 		'Alert' => 'Prologue\Alerts\Facades\Alert',
+		'Carbon' => 'Carbon\Carbon',
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 

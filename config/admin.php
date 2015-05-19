@@ -95,6 +95,11 @@ return [
 								'route' => 'admin/elfinder',
 								'icon' => 'fa fa-files-o',
 							],
+							[
+								'label' => "Backups",
+								'route' => 'admin/backup',
+								'icon' => 'fa fa-hdd-o',
+							],
 						]
 		]
 	],

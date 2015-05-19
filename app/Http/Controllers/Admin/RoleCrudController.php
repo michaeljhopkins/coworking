@@ -130,7 +130,7 @@ class RoleCrudController extends CrudController {
 												[
 													// n-n relationship (with pivot table)
 													'label' => "Permissions",
-													'type' => 'select_multiple',
+													'type' => 'select2_multiple',
 													'name' => 'permissions', // the method that defines the relationship in your Model
 													'entity' => 'permissions', // the method that defines the relationship in your Model
 													'attribute' => 'display_name', // foreign key attribute that is shown to user
