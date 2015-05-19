@@ -153,6 +153,7 @@ return [
 		'Barryvdh\Debugbar\ServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Barryvdh\Elfinder\ElfinderServiceProvider',
+		'Spatie\Backup\BackupServiceProvider',
 
 	],
 

@@ -43,10 +43,15 @@ return [
 
 	'disks' => [
 
-		// the old "local" disk
+		// used for elFinder
 		'uploads' => [
 			'driver' => 'local',
 			'root'   => public_path().'/uploads',
+		],
+
+		'local' => [
+			'driver' => 'local',
+			'root'   => storage_path(),
 		],
 
 		's3' => [

@@ -10,7 +10,8 @@
 		"prologue/alerts": "dev-master",
 		"zizaco/entrust": "dev-laravel-5",
 		"barryvdh/laravel-debugbar": "~2.0",
-		"barryvdh/laravel-elfinder": "0.3.*"
+		"barryvdh/laravel-elfinder": "0.3.*",
+		"spatie/laravel-backup": "^2.4"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
@@ -36,8 +37,7 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
-			"php artisan optimize",
-			"php artisan elfinder:publish"
+			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
 			"php -r \"copy('.env.example', '.env');\"",
