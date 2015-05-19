@@ -138,6 +138,11 @@ class ArticleCrudController extends CrudController {
 													'type' => 'tinymce',
 													'placeholder' => 'Your textarea text here'
 												],
+												[	// Image
+													'name' => 'image',
+													'label' => 'Image',
+													'type' => 'filemanager'
+												],
 												[	// SELECT
 													'label' => "Category",
 													'type' => 'select',

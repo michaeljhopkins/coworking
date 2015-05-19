@@ -15,7 +15,7 @@ return [
 	|
 	*/
 
-	'default' => 'local',
+	'default' => 'uploads',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -43,9 +43,10 @@ return [
 
 	'disks' => [
 
-		'local' => [
+		// the old "local" disk
+		'uploads' => [
 			'driver' => 'local',
-			'root'   => storage_path().'/app',
+			'root'   => storage_path().'/app/uploads',
 		],
 
 		's3' => [

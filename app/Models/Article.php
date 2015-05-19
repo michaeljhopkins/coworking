@@ -7,7 +7,7 @@ class Article extends BaseModel {
 	// the name of the table in your database
 	protected $table = 'articles';
 	// the columns in the database that can be filled by a user - if they're not here, create&update will ignore those columns
-	protected $fillable = ['slug', 'title', 'content', 'status', 'category_id'];
+	protected $fillable = ['slug', 'title', 'content', 'image', 'status', 'category_id'];
 
 	public function category()
     {
