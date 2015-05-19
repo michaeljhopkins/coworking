@@ -71,7 +71,7 @@ return [
          * The path to the mysqldump binary. You can leave this empty
          * if the binary is installed in the default location.
          */
-        'dump_command_path' => '',
+        'dump_command_path' => env('MYSQL_DUMP_COMMAND_PATH'),
 
         /*
          * If your server supports it you can turn on extended insert.
