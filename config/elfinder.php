@@ -8,7 +8,9 @@ return array(
     | The dir where to store the images (relative from public)
     |
     */
-    'dir' => ['files'],
+    // 'dir' => ['files'], // use this to show the "public/files" folder, readonly
+    'dir' => [],
+
     /*
     |--------------------------------------------------------------------------
     | Filesystem disks (Flysytem)
@@ -35,7 +37,6 @@ return array(
     */
     'route' => [
         'prefix' => 'admin/elfinder',
-        // 'middleware' => 'replace-this-with-your-middleware', //Set to null to disable middleware filter
         'middleware' => 'auth', //Set to null to disable middleware filter
     ],
     /*
