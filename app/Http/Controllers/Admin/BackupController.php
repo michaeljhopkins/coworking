@@ -50,9 +50,7 @@ class BackupController extends Controller {
 	    }
 
 	    try {
-	      echo '<br>php artisan backup:run';
 	      Artisan::call('backup:run');
-	      // \Spatie\Backup\Console::run();
 	      echo 'done backup:run';
 	    } catch (Exception $e) {
 	      Response::make($e->getMessage(), 500);
