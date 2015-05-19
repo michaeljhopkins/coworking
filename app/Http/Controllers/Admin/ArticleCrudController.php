@@ -145,7 +145,7 @@ class ArticleCrudController extends CrudController {
 												],
 												[	// SELECT
 													'label' => "Category",
-													'type' => 'select',
+													'type' => 'select2',
 													'name' => 'category_id',
 													'entity' => 'category',
 													'attribute' => 'name',
@@ -153,7 +153,7 @@ class ArticleCrudController extends CrudController {
 												],
 												[	// SELECT_MULTIPLE
 													'label' => "Tags",
-													'type' => 'select_multiple',
+													'type' => 'select2_multiple',
 													'name' => 'tags',
 													'entity' => 'tag',
 													'attribute' => 'name',
