@@ -141,7 +141,7 @@ class ArticleCrudController extends CrudController {
 												[	// Image
 													'name' => 'image',
 													'label' => 'Image',
-													'type' => 'filemanager'
+													'type' => 'browse'
 												],
 												[	// SELECT
 													'label' => "Category",
