@@ -100,6 +100,11 @@ return [
 								'route' => 'admin/backup',
 								'icon' => 'fa fa-hdd-o',
 							],
+							[
+								'label' => "Logs",
+								'route' => 'admin/log',
+								'icon' => 'fa fa-terminal',
+							],
 						]
 		]
 	],

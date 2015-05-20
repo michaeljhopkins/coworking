@@ -136,7 +136,7 @@
         } else {
             new PNotify({
                 title: "{{ trans('backup.delete_cancel_title') }}",
-                text: "{{ trans('backup.delete_cancel_title') }}",
+                text: "{{ trans('backup.delete_cancel_message') }}",
                 type: "info"
             });
         }
