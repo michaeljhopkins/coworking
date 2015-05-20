@@ -52,8 +52,8 @@
 		        </div>
 
 			  <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-			  <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> {{ trans('crud.add') }}</button>
-		      <a href="{{ url($crud['route']) }}" class="btn btn-default">{{ trans('crud.cancel') }}</a>
+			  <button type="submit" class="btn btn-success ladda-button" data-style="zoom-in"><span class="ladda-label"><i class="fa fa-save"></i> {{ trans('crud.add') }}</span></button>
+		      <a href="{{ url($crud['route']) }}" class="btn btn-default ladda-button" data-style="zoom-in"><span class="ladda-label">{{ trans('crud.cancel') }}</span></a>
 		    </div><!-- /.box-footer-->
 
 		  </div><!-- /.box -->

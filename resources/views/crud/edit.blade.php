@@ -29,8 +29,8 @@
 		    </div><!-- /.box-body -->
 		    <div class="box-footer">
 
-			  <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> {{ trans('crud.save') }}</button>
-		      <a href="{{ url($crud['route']) }}" class="btn btn-default">{{ trans('crud.cancel') }}</a>
+			  <button type="submit" class="btn btn-success ladda-button" data-style="zoom-in"><span class="ladda-label"><i class="fa fa-save"></i> {{ trans('crud.save') }}</span></button>
+		      <a href="{{ url($crud['route']) }}" class="btn btn-default ladda-button" data-style="zoom-in"><span class="ladda-label">{{ trans('crud.cancel') }}</span></a>
 		    </div><!-- /.box-footer-->
 		  </div><!-- /.box -->
 		  {!! Form::close() !!}

@@ -23,7 +23,7 @@
 <!-- Default box -->
   <div class="box">
     <div class="box-header with-border">
-		<a href="{{ url($crud['route'].'/create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> {{ trans('crud.add') }} <span class="text-lowercase">{{ $crud['entity_name'] }}</span></a>
+		<a href="{{ url($crud['route'].'/create') }}" class="btn btn-primary ladda-button" data-style="zoom-in"><span class="ladda-label"><i class="fa fa-plus"></i> {{ trans('crud.add') }} {{ $crud['entity_name'] }}</span></a>
     </div>
     <div class="box-body">
 
@@ -70,7 +70,7 @@
 
                         @endforeach
                         <td>
-                          <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> {{ trans('crud.preview') }}</a>
+                          {{-- <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> {{ trans('crud.preview') }}</a> --}}
                           <a href="{{ Request::url().'/'.$entry->id }}/edit" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> {{ trans('crud.edit') }}</a>
                           <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default" data-button-type="delete"><i class="fa fa-trash"></i> {{ trans('crud.delete') }}</a>
                         </td>
