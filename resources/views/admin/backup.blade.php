@@ -16,7 +16,7 @@
 <!-- Default box -->
   <div class="box">
     <div class="box-body">
-      <button id="create-new-backup-button" href="{{ url('admin/backup/create') }}" class="btn btn-primary ladda-button" data-style="zoom-in" data-size="s"><span class="ladda-label"><i class="fa fa-plus"></i> {{ trans('backup.create_a_new_backup') }}</span></button>
+      <button id="create-new-backup-button" href="{{ url('admin/backup/create') }}" class="btn btn-primary ladda-button" data-style="zoom-in"><span class="ladda-label"><i class="fa fa-plus"></i> {{ trans('backup.create_a_new_backup') }}</span></button>
       <br>
       <h3>{{ trans('backup.existing_backups') }}:</h3>
       <table class="table table-hover table-condensed">

@@ -6,6 +6,6 @@ $.ajaxSetup({
     });
 
 // Automatically trigger the loading animation on submit buttons click
-Ladda.bind( 'input[type=submit]' );
-Ladda.bind( 'button[type=submit]' );
+Ladda.bind( 'input[type=submit].ladda-button' );
+Ladda.bind( 'button[type=submit].ladda-button' );
 Ladda.bind( 'a.ladda-button' );
