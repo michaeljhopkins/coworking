@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Dick Admin</title>
+    <title>{{ Config::get('admin.project_name') }} Admin</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     {{-- Encrypted CSRF token for Laravel, in order for Ajax requests to work --}}
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -55,7 +55,7 @@
         <nav class="navbar navbar-static-top">
           <div class="container-fluid">
           <div class="navbar-header">
-            <a href="{{ url('') }}" class="navbar-brand"><b>Dick</b>Admin</a>
+            <a href="{{ url('') }}" class="navbar-brand"><b>{{ Config::get('admin.project_name') }}</b>Admin</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
               <i class="fa fa-bars"></i>
             </button>

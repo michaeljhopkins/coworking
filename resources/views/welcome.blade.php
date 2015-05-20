@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Dick</title>
+		<title>{{ Config::get('admin.project_name') }}</title>
 
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
@@ -40,7 +40,7 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Dick</div>
+				<div class="title">{{ Config::get('admin.project_name') }}</div>
 				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
