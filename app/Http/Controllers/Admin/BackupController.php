@@ -40,6 +40,9 @@ class BackupController extends Controller {
 			}
 		}
 
+		// reverse the backups, so the newest one would be on top
+		$this->data['backups'] = array_reverse($this->data['backups']);
+
 		return view("admin/backup", $this->data);
 	}
 

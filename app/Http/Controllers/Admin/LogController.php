@@ -39,6 +39,9 @@ class LogController extends Controller {
 			}
 		}
 
+		// reverse the logs, so the newest one would be on top
+		$this->data['logs'] = array_reverse($this->data['logs']);
+
 		return view("admin/logs", $this->data);
 	}
 
