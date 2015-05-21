@@ -16,7 +16,7 @@ class CrudController extends Controller {
 						"entity_name_plural" => "entries",
 						"view_table_permission" => true,
 						"add_permission" => true,
-						"edit_permission" => false,
+						"edit_permission" => true,
 						"delete_permission" => true,
 						);
 

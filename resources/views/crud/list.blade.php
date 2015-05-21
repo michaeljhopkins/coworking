@@ -37,7 +37,9 @@
                           <th>{{ $column['label'] }}</th>
                         @endforeach
 
-                        <th>{{ trans('crud.actions') }}</th>
+                        @if ((!(isset($crud['edit_permission']) && !$crud['edit_permission'])) && (!(isset($crud['delete_permission']) && !$crud['delete_permission'])))
+                          <th>{{ trans('crud.actions') }}</th>
+                        @endif
                       </tr>
                     </thead>
                     <tbody>
@@ -71,6 +73,8 @@
                           @endif
 
                         @endforeach
+
+                        @if ((!(isset($crud['edit_permission']) && !$crud['edit_permission'])) && (!(isset($crud['delete_permission']) && !$crud['delete_permission'])))
                         <td>
                           {{-- <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> {{ trans('crud.preview') }}</a> --}}
                           @if (!(isset($crud['edit_permission']) && !$crud['edit_permission']))
@@ -80,6 +84,7 @@
                           <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default" data-button-type="delete"><i class="fa fa-trash"></i> {{ trans('crud.delete') }}</a>
                           @endif
                         </td>
+                        @endif
                       </tr>
                       @endforeach
 
@@ -91,7 +96,9 @@
                           <th>{{ $column['label'] }}</th>
                         @endforeach
 
-                        <th>{{ trans('crud.actions') }}</th>
+                        @if ((!(isset($crud['edit_permission']) && !$crud['edit_permission'])) && (!(isset($crud['delete_permission']) && !$crud['delete_permission'])))
+                          <th>{{ trans('crud.actions') }}</th>
+                        @endif
                       </tr>
                     </tfoot>
                   </table>

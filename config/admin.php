@@ -62,6 +62,11 @@ return [
 								'label' => "Roles",
 								'route' => 'admin/role',
 								'icon' => 'fa fa-folder-open-o',
+							],
+							[
+								'label' => "Permissions",
+								'route' => 'admin/permission',
+								'icon' => 'fa fa-key',
 							]
 						]
 		],

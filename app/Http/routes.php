@@ -37,6 +37,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 	Route::resource('tag', 'Admin\TagCrudController');
 	Route::resource('user', 'Admin\UserCrudController');
 	Route::resource('role', 'Admin\RoleCrudController');
+	Route::resource('permission', 'Admin\PermissionCrudController');
 });
 
 Route::controllers([

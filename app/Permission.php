@@ -13,4 +13,9 @@ class Permission extends EntrustPermission
 
         return ($answer->IS_NULLABLE == 'YES');
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany(\Config::get('entrust.role'), 'permission_role');
+    }
 }
