@@ -1,6 +1,8 @@
 ## Dick - The Admin Panel Builder for Laravel
 
-![Project maintained](https://stillmaintained.com/tabacitu/dick.png)
+[![Project Status](https://stillmaintained.com/tabacitu/dick.png)](https://stillmaintained.com/tabacitu/dick)
+[![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/tabacitu/dick/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/tabacitu/dick.svg)](https://github.com/tabacitu/dick/issues)
 
 Dick helps you kickstart your Laravel project, providing baseline code and interface for what any/many projects will need:
 - CRUD interface (client-friendly GUI for managing entities using Eloquent, inspired by Grocery Crud for CodeIgniter);
