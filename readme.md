@@ -1,6 +1,6 @@
 ## Dick - The Admin Panel Builder for Laravel
 
-[![Project Status](https://stillmaintained.com/tabacitu/dick.png)](https://stillmaintained.com/tabacitu/dick)
+[![Project Status](https://img.shields.io/badge/project-maintained-green.svg)](https://stillmaintained.com/tabacitu/dick)
 [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/tabacitu/dick/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/tabacitu/dick.svg)](https://github.com/tabacitu/dick/issues)
 
