@@ -42,7 +42,7 @@ return [
 	'menu' => [
 		[
 			'label' => "Dashboard",
-			'route' => "admin/dashboard",
+			'route' => "admin",
 			// 'url' => null,
 			'icon' => 'fa fa-dashboard',
 		],

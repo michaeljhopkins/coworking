@@ -12,12 +12,12 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::get('home', 'Admin\AdminController@index');
+Route::get('home', 'HomeController@index');
 
 // Admin Interface Routes
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
-	Route::get('dashboard', 'Admin\AdminController@index');
+	Route::get('', 'Admin\AdminController@index');
 
 	// Backup
 	Route::get('backup', 'Admin\BackupController@index');
