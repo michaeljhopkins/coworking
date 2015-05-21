@@ -10,6 +10,7 @@ Dick helps you kickstart your Laravel project, providing baseline code and inter
     + log file viewer;
     + file manager;
 
+![Example generated CRUD interface](https://dl.dropboxusercontent.com/u/2431352/Screen%20Shot%202015-05-21%20at%2011.42.40.png)
 
 Version: 0.5 (alpha)
 
