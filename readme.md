@@ -1,14 +1,15 @@
 ## Dick - The Admin Panel Builder for Laravel
 
+![Project maintained]
+(https://stillmaintained.com/tabacitu/dick.png)
 
 Dick helps you kickstart your Laravel project, providing baseline code and interface for what any/many projects will need:
-- CRUD interface (inspired by Grocery Crud for CodeIgniter);
+- CRUD interface (client-friendly GUI for managing entities using Eloquent, inspired by Grocery Crud for CodeIgniter);
 - Authentication, user, role and permission management (using Laravel Auth & Entrust);
 - Superadmin tools:
     + file & database backup;
     + log file viewer;
     + file manager;
-
 
 
 Version: 0.5 (alpha)
@@ -25,6 +26,10 @@ It's heavily opinionated and uses:
 - jQuery
 - AdminLTE theme
 
+
+Future versions will provide each component as separate packages.
+
+STABLE, BUT UNDER HEAVY DEVELOPMENT
 
 ------------
 
