@@ -10,9 +10,13 @@ Dick helps you kickstart your Laravel project, providing baseline code and inter
     + file manager;
 
 
+
 Version: 0.5 (alpha)
+
 Website: http://usedick.com
+
 Documentation: http://usedick.com/docs
+
 
 
 It's heavily opinionated and uses:
