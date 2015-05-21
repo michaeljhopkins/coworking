@@ -17,7 +17,9 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<!-- Default box -->
-		<a href="{{ url($crud['route']) }}"><i class="fa fa-angle-double-left"></i> {{ trans('crud.back_to_all') }} <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span></a><br><br>
+		@if (!(isset($crud['view_table_permission']) && !$crud['view_table_permission']))
+			<a href="{{ url($crud['route']) }}"><i class="fa fa-angle-double-left"></i> {{ trans('crud.back_to_all') }} <span class="text-lowercase">{{ $crud['entity_name_plural'] }}</span></a><br><br>
+		@endif
 
 		  {!! Form::open(array('url' => $crud['route'].'/'.$entry->id, 'method' => 'put')) !!}
 		  <div class="box">

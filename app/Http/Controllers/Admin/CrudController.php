@@ -14,6 +14,10 @@ class CrudController extends Controller {
 						"model" => "\App\Models\Entity",
 						"entity_name" => "entry",
 						"entity_name_plural" => "entries",
+						"view_table_permission" => true,
+						"add_permission" => true,
+						"edit_permission" => false,
+						"delete_permission" => true,
 						);
 
 	public function __construct()
@@ -33,6 +37,11 @@ class CrudController extends Controller {
 	 */
 	public function index()
 	{
+		// if view_table_permission is false, abort
+		if (isset($this->crud['view_table_permission']) && !$this->crud['view_table_permission']) {
+			abort(403, 'Not allowed.');
+		}
+
 		// get all results for that entity
 		$model = $this->crud['model'];
 		$this->data['entries'] = $model::all();
@@ -50,6 +59,11 @@ class CrudController extends Controller {
 	 */
 	public function create()
 	{
+		// if add_permission is false, abort
+		if (isset($this->crud['add_permission']) && !$this->crud['add_permission']) {
+			abort(403, 'Not allowed.');
+		}
+
 		// get the fields you need to show
 		if (isset($this->data['crud']['create_fields']))
 		{
@@ -69,6 +83,11 @@ class CrudController extends Controller {
 	 */
 	public function store_crud(StoreRequest $request = null)
 	{
+		// if add_permission is false, abort
+		if (isset($this->crud['add_permission']) && !$this->crud['add_permission']) {
+			abort(403, 'Not allowed.');
+		}
+
 		$model = $this->crud['model'];
 		$item = $model::create(\Request::all());
 
@@ -104,6 +123,11 @@ class CrudController extends Controller {
 	 */
 	public function edit($id)
 	{
+		// if edit_permission is false, abort
+		if (isset($this->crud['edit_permission']) && !$this->crud['edit_permission']) {
+			abort(403, 'Not allowed.');
+		}
+
 		// get the info for that entry
 		$model = $this->crud['model'];
 		$this->data['entry'] = $model::find($id);
@@ -126,6 +150,11 @@ class CrudController extends Controller {
 	 */
 	public function update_crud(UpdateRequest $request = null)
 	{
+		// if edit_permission is false, abort
+		if (isset($this->crud['edit_permission']) && !$this->crud['edit_permission']) {
+			abort(403, 'Not allowed.');
+		}
+
 		$model = $this->crud['model'];
 		$this->_prepare_fields($model::find(\Request::input('id')));
 
@@ -170,6 +199,11 @@ class CrudController extends Controller {
 	 */
 	public function destroy($id)
 	{
+		// if delete_permission is false, abort
+		if (isset($this->crud['delete_permission']) && !$this->crud['delete_permission']) {
+			abort(403, 'Not allowed.');
+		}
+
 		$model = $this->crud['model'];
 		$item = $model::find($id);
 		$item->delete();

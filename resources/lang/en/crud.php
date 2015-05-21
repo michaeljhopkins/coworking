@@ -56,7 +56,7 @@ return [
 	    "lengthMenu" =>     "_MENU_ records per page",
 	    "loadingRecords" => "Loading...",
 	    "processing" =>     "Processing...",
-	    "search" =>         "Search:",
+	    "search" =>         "Search: ",
 	    "zeroRecords" =>    "No matching records found",
 	    "paginate" => [
 	        "first" =>      "First",
