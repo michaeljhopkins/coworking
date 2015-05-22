@@ -17,11 +17,11 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link href="{{ asset('AdminLTE/dist/css/skins/_all-skins.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('admin/main.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dick/main.css') }}" rel="stylesheet" type="text/css" />
     <!-- Pines Notify -->
-    <link href="{{ asset('admin/js/vendor/pnotify/pnotify.custom.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dick/js/vendor/pnotify/pnotify.custom.css') }}" rel="stylesheet" type="text/css" />
     <!-- Ladda Buttons (loading buttons) -->
-    <link href="{{ asset('admin/js/vendor/ladda/ladda-themeless.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dick/js/vendor/ladda/ladda-themeless.min.css') }}" rel="stylesheet" type="text/css" />
 
     @yield('head')
 
@@ -98,18 +98,18 @@
     <!-- SlimScroll -->
     <script src="{{ asset('AdminLTE/plugins/slimScroll/jquery.slimScroll.min.js') }}" type="text/javascript"></script>
     <!-- Pines Notify -->
-    <script src="{{ asset('admin/js/vendor/pnotify/pnotify.custom.js') }}"></script>
+    <script src="{{ asset('dick/js/vendor/pnotify/pnotify.custom.js') }}"></script>
     <!-- FastClick -->
     <script src="{{ asset('AdminLTE/plugins/fastclick/fastclick.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('AdminLTE/dist/js/app.min.js') }}" type="text/javascript"></script>
 
     <!-- Ladda Buttons (loading buttons) -->
-    <script src="{{ asset('admin/js/vendor/ladda/spin.js') }}"></script>
-    <script src="{{ asset('admin/js/vendor/ladda/ladda.js') }}"></script>
+    <script src="{{ asset('dick/js/vendor/ladda/spin.js') }}"></script>
+    <script src="{{ asset('dick/js/vendor/ladda/ladda.js') }}"></script>
 
     <!-- Main js file for admin interface -->
-    <script src="{{ asset('admin/js/main.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('dick/js/main.js') }}" type="text/javascript"></script>
 
     {{-- Bootstrap Notifications using Prologue Alerts --}}
     <script type="text/javascript">
