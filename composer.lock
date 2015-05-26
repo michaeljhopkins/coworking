@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "37a33ffc3d1f3b18ea078b5a702f1fd8",
+    "hash": "452933e7b98d42f4b16d1b89aa48149f",
     "packages": [
         {
             "name": "barryvdh/elfinder-builds",
@@ -1358,16 +1358,16 @@
         },
         {
             "name": "spatie/laravel-backup",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/freekmurze/laravel-backup.git",
-                "reference": "91c1f4bedfa7a3ff6bb130a8d2facaf4209cb7b7"
+                "url": "https://github.com/spatie/laravel-backup.git",
+                "reference": "a978c0db01a28ca80545ad50519ae2f0526e17d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freekmurze/laravel-backup/zipball/91c1f4bedfa7a3ff6bb130a8d2facaf4209cb7b7",
-                "reference": "91c1f4bedfa7a3ff6bb130a8d2facaf4209cb7b7",
+                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/a978c0db01a28ca80545ad50519ae2f0526e17d3",
+                "reference": "a978c0db01a28ca80545ad50519ae2f0526e17d3",
                 "shasum": ""
             },
             "require": {
@@ -1402,7 +1402,7 @@
                 }
             ],
             "description": "Backup command for Laravel 5 applications",
-            "homepage": "https://github.com/freekmurze/laravel-backup",
+            "homepage": "https://github.com/spatie/laravel-backup",
             "keywords": [
                 "backup",
                 "database",
@@ -1411,7 +1411,7 @@
                 "mysql",
                 "spatie"
             ],
-            "time": "2015-04-30 20:05:19"
+            "time": "2015-05-22 21:02:48"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2234,12 +2234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zizaco/entrust.git",
-                "reference": "305916c40ed35dd6ebb81379db51ec582df19623"
+                "reference": "804000c1c535221792b4e173ecdcc02b5681f5ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/305916c40ed35dd6ebb81379db51ec582df19623",
-                "reference": "305916c40ed35dd6ebb81379db51ec582df19623",
+                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/804000c1c535221792b4e173ecdcc02b5681f5ec",
+                "reference": "804000c1c535221792b4e173ecdcc02b5681f5ec",
                 "shasum": ""
             },
             "require": {
@@ -2293,7 +2293,7 @@
                 "permission",
                 "roles"
             ],
-            "time": "2015-03-20 15:05:21"
+            "time": "2015-05-25 00:17:51"
         }
     ],
     "packages-dev": [
@@ -2574,16 +2574,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.0.16",
+            "version": "2.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "934fd03eb6840508231a7f73eb8940cf32c3b66c"
+                "reference": "c4e8e7725e351184a76544634855b8a9c405a6e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/934fd03eb6840508231a7f73eb8940cf32c3b66c",
-                "reference": "934fd03eb6840508231a7f73eb8940cf32c3b66c",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c4e8e7725e351184a76544634855b8a9c405a6e3",
+                "reference": "c4e8e7725e351184a76544634855b8a9c405a6e3",
                 "shasum": ""
             },
             "require": {
@@ -2632,7 +2632,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-04-11 04:35:00"
+            "time": "2015-05-25 05:11:59"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2820,16 +2820,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.6.6",
+            "version": "4.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3afe303d873a4d64c62ef84de491b97b006fbdac"
+                "reference": "57bf06dd4eebe2a5ced79a8de71509e7d5c18b25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3afe303d873a4d64c62ef84de491b97b006fbdac",
-                "reference": "3afe303d873a4d64c62ef84de491b97b006fbdac",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/57bf06dd4eebe2a5ced79a8de71509e7d5c18b25",
+                "reference": "57bf06dd4eebe2a5ced79a8de71509e7d5c18b25",
                 "shasum": ""
             },
             "require": {
@@ -2888,7 +2888,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-04-29 15:18:52"
+            "time": "2015-05-25 05:18:18"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

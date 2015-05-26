@@ -6,8 +6,8 @@ return [
 	//
 	// Used in the menu & other places.
 	// With this changed, there will be no trace of the word "Dick" in the admin interface.
-	'project_name' => 'Dick',
-
+	'project_name' => 'Doctor France ',
+	'language_ignore' => ['admin', 'pagination', 'reminders', 'validation'],
 	/*
 	|--------------------------------------------------------------------------
 	| Admin menu
@@ -94,7 +94,23 @@ return [
 							],
 						]
 		],
-
+		[
+			'label' => "Languages",
+			'route' => "",
+			'icon' => 'fa fa-language',
+			'children' => [
+				[
+					'label' => "Languages list",
+					'route' => 'admin/language',
+					'icon' => 'fa fa-file',
+				],
+				[
+					'label' => "Site texts",
+					'route' => 'admin/language/texts',
+					'icon' => 'fa fa-file',
+				],
+			]
+		],
 		[
 			'label' => "Advanced",
 			'route' => "",

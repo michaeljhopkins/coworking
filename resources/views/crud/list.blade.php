@@ -67,6 +67,11 @@
                                 echo $entry->{$column['entity']}()->getResults()->{$column['attribute']};
                               }
                              ?></td>
+                          @elseif (isset($column['type']) && $column['type']=='boolean')
+                            {{-- single relationships (1-1, 1-n) --}}
+                            <td><?php
+                              echo ($entry->{$column['name']} ? 'Yes' : 'No' );
+                             ?></td>
                           @else
                             {{-- regular object attribute --}}
                             <td>{{ str_limit(strip_tags($entry->$column['name']), 80, "[...]") }}</td>

@@ -15,29 +15,34 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 // Admin Interface Routes
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
+Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function()
 {
-	Route::get('', 'Admin\AdminController@index');
+	Route::get('', 'AdminController@index');
 
 	// Backup
-	Route::get('backup', 'Admin\BackupController@index');
-	Route::put('backup/create', 'Admin\BackupController@create');
-	Route::get('backup/download/{file_name}', 'Admin\BackupController@download');
-	Route::delete('backup/delete/{file_name}', 'Admin\BackupController@delete');
+	Route::get('backup', 'BackupController@index');
+	Route::put('backup/create', 'BackupController@create');
+	Route::get('backup/download/{file_name}', 'BackupController@download');
+	Route::delete('backup/delete/{file_name}', 'BackupController@delete');
 
 	// Logs
-	Route::get('log', 'Admin\LogController@index');
-	Route::get('log/preview/{file_name}', 'Admin\LogController@preview');
-	Route::get('log/download/{file_name}', 'Admin\LogController@download');
-	Route::delete('log/delete/{file_name}', 'Admin\LogController@delete');
+	Route::get('log', 'LogController@index');
+	Route::get('log/preview/{file_name}', 'LogController@preview');
+	Route::get('log/download/{file_name}', 'LogController@download');
+	Route::delete('log/delete/{file_name}', 'LogController@delete');
 
 	// Dick CRUD: Define the resources for the entities you want to CRUD.
-	Route::resource('article', 'Admin\ArticleCrudController');
-	Route::resource('category', 'Admin\CategoryCrudController');
-	Route::resource('tag', 'Admin\TagCrudController');
-	Route::resource('user', 'Admin\UserCrudController');
-	Route::resource('role', 'Admin\RoleCrudController');
-	Route::resource('permission', 'Admin\PermissionCrudController');
+	Route::resource('article', 'ArticleCrudController');
+	Route::resource('category', 'CategoryCrudController');
+	Route::resource('tag', 'TagCrudController');
+	Route::resource('user', 'UserCrudController');
+	Route::resource('role', 'RoleCrudController');
+	Route::resource('permission', 'PermissionCrudController');
+
+	// Language
+	Route::get('language/texts/{lang?}/{file?}', 'LanguageCrudController@showTexts');
+	Route::post('language/texts/{lang}/{file}', 'LanguageCrudController@updateTexts');
+	Route::resource('language', 'LanguageCrudController');
 });
 
 Route::controllers([
