@@ -4,7 +4,8 @@
 <script>
     jQuery(document).ready(function($) {
     	$('textarea.ckeditor' ).ckeditor({
-    		"filebrowserBrowseUrl": "{{ url('admin/elfinder/ckeditor') }}"
+    		"filebrowserBrowseUrl": "{{ url('admin/elfinder/ckeditor') }}",
+    		"extraPlugins" : 'oembed,widget'
     	});
     });
 </script>

@@ -135,7 +135,7 @@ class ArticleCrudController extends CrudController {
 												[	// WYSIWYG
 													'name' => 'content',
 													'label' => 'Content',
-													'type' => 'tinymce',
+													'type' => 'ckeditor',
 													'placeholder' => 'Your textarea text here'
 												],
 												[	// Image
