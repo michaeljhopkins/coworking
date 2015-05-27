@@ -69,4 +69,13 @@ return [
 	        "sortDescending" => ": activate to sort column descending"
 	    ],
 
+	// global crud - errors
+	"unauthorized_access" => "Unauthorized access - you do not have the necessary permissions to see this page.",
+
+	// global crud - success / error notification bubbles
+	"insert_success" => "The item has been added successfully.",
+	"update_success" => "The item has been modified successfully.",
+
+
+
 ];

@@ -69,4 +69,10 @@ return [
 	        "sortDescending" => ": activează petnru a ordona descendent coloana"
 	    ],
 
+	// global crud - errors
+	"unauthorized_access" => "Acces neautorizat - Nu ai permisiunea necesară pentru a accesa pagina.",
+
+	// global crud - success / error notification bubbles
+	"insert_success" => "Intrarea a fost adăugată cu succes.",
+	"update_success" => "Intrarea a fost modificată cu succes.",
 ];
