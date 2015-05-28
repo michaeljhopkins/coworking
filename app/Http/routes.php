@@ -43,4 +43,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+	'user' => 'Auth\UserController',
 ]);

@@ -61,12 +61,12 @@ return [
 							[
 								'label' => "Roles",
 								'route' => 'admin/role',
-								'icon' => 'fa fa-folder-open-o',
+								'icon' => 'fa fa-group',
 							],
 							[
 								'label' => "Permissions",
 								'route' => 'admin/permission',
-								'icon' => 'fa fa-key',
+								'icon' => 'fa fa-lock',
 							]
 						]
 		],

@@ -13,6 +13,7 @@ return [
 	|
 	*/
 
+	"whoops"			   => "Whoops! There were some problems with your input.",
 	"please_fix"		   => "Please fix the following errors:",
 	"accepted"             => "The :attribute must be accepted.",
 	"active_url"           => "The :attribute is not a valid URL.",

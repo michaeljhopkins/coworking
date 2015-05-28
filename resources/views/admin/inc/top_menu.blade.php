@@ -57,13 +57,15 @@
       <ul class="nav navbar-nav navbar-right">
         {{-- <li><a href="#">Link</a></li> --}}
         @if (Auth::guest())
-        	<li><a href="{{ url('/auth/login') }}">Login</a></li>
-        	<li><a href="{{ url('/auth/register') }}">Register</a></li>
+        	<li><a href="{{ url('/auth/login') }}">{{ trans('auth.login') }}</a></li>
+        	<li><a href="{{ url('/auth/register') }}">{{ trans('auth.register') }}</a></li>
         @else
         	<li class="dropdown">
         		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
         		<ul class="dropdown-menu" role="menu">
-        			<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+              <li><a href="{{ url('/user/account-info') }}"><i class="fa fa-info"></i> {{ trans('auth.account_info') }}</a></li>
+              <li><a href="{{ url('/user/change-password') }}"><i class="fa fa-key"></i> {{ trans('auth.change_password') }}</a></li>
+        			<li><a href="{{ url('/auth/logout') }}"><i class="fa fa-sign-out"></i> {{ trans('auth.logout') }}</a></li>
         		</ul>
         	</li>
         @endif
