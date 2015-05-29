@@ -31,6 +31,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 	Route::get('log/download/{file_name}', 'Admin\LogController@download');
 	Route::delete('log/delete/{file_name}', 'Admin\LogController@delete');
 
+	// CRUD reorders
+	Route::get('category/reorder', 'Admin\CategoryCrudController@reorder');
+	Route::post('category/reorder', 'Admin\CategoryCrudController@saveReorder');
+
 	// Dick CRUD: Define the resources for the entities you want to CRUD.
 	Route::resource('article', 'Admin\ArticleCrudController');
 	Route::resource('category', 'Admin\CategoryCrudController');

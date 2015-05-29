@@ -211,6 +211,63 @@ class CrudController extends Controller {
 		return 'true';
 	}
 
+	/**
+	 *  Reorder the items in the database using the Nested Set pattern.
+	 *
+	 *	Database columns needed: id, parent_id, lft, rgt, depth, name/title
+	 *
+	 *  @return Response
+	 */
+	public function reorder()
+	{
+		// if reorder_table_permission is false, abort
+		if (isset($this->crud['reorder_table_permission']) && !$this->crud['reorder_table_permission']) {
+			abort(403, 'Not allowed.');
+		}
+
+		// get all results for that entity
+		$model = $this->crud['model'];
+		$this->data['entries'] = $model::all();
+		$this->data['crud'] = $this->crud;
+
+		return view('crud/reorder', $this->data);
+	}
+
+	/**
+	 * Save the new order, using the Nested Set pattern.
+	 *
+	 * Database columns needed: id, parent_id, lft, rgt, depth, name/title
+	 *
+	 * @return
+	 */
+	public function saveReorder()
+	{
+		$model = $this->crud['model'];
+		$count = 0;
+		$all_entries = \Request::input('tree');
+
+		if (count($all_entries)) {
+			foreach ($all_entries as $key => $entry) {
+				if ($entry['item_id'] != "" && $entry['item_id'] != null) {
+					$item = $model::find($entry['item_id']);
+					$item->parent_id = $entry['parent_id'];
+					$item->depth = $entry['depth'];
+					$item->lft = $entry['left'];
+					$item->rgt = $entry['right'];
+					$item->save();
+
+					$count++;
+				}
+			}
+		}
+		else
+		{
+			return false;
+		}
+
+		return 'success for '.$count." items";
+	}
+
 
 
 	/**

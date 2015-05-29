@@ -76,6 +76,12 @@ return [
 	"insert_success" => "The item has been added successfully.",
 	"update_success" => "The item has been modified successfully.",
 
-
+	// CRUD reorder view
+	'reorder'     				=> 'Reorder',
+	'reorder_text'     			=> 'Use drag&drop to reorder.',
+	'reorder_success_title'     => 'Done',
+	'reorder_success_message'   => 'Your order has been saved.',
+	'reorder_error_title'   	=> 'Error',
+	'reorder_error_message'   	=> 'Your order has not been saved.',
 
 ];

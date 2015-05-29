@@ -17,6 +17,8 @@ class CategoryCrudController extends CrudController {
 						"entity_name" => "category",
 						"entity_name_plural" => "categories",
 						"route" => "admin/category",
+						"reorder" => true,
+						"reorder_label" => "name",
 
 						// *****
 						// COLUMNS
