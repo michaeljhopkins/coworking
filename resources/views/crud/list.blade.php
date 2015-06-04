@@ -75,6 +75,7 @@
                         @endforeach
 
                         @if ((!(isset($crud['edit_permission']) && !$crud['edit_permission'])) && (!(isset($crud['delete_permission']) && !$crud['delete_permission'])))
+                        @if ( !( isset($crud['edit_permission']) && $crud['edit_permission'] === false && isset($crud['delete_permission']) && $crud['delete_permission'] === false ) )
                         <td>
                           {{-- <a href="{{ Request::url().'/'.$entry->id }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i> {{ trans('crud.preview') }}</a> --}}
                           @if (!(isset($crud['edit_permission']) && !$crud['edit_permission']))
