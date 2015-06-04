@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class UpdateTagRequest extends CrudRequest {
+class SettingRequest extends CrudRequest {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -23,9 +23,9 @@ class UpdateTagRequest extends CrudRequest {
 	public function rules()
 	{
 		return [
-			'key' => 'required|min:3|max:255',
-			'name' => 'required|min:3|max:255',
-			'field' => 'required'
+			// 'key' => 'required|min:3|max:255',
+			// 'name' => 'required|min:3|max:255',
+			// 'field' => 'required'
 		];
 	}
 
