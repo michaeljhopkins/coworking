@@ -96,7 +96,7 @@
     <!-- Bootstrap 3.3.2 JS -->
     <script src="{{ asset('AdminLTE/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
     <!-- SlimScroll -->
-    <script src="{{ asset('AdminLTE/plugins/slimScroll/jquery.slimScroll.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
     <!-- Pines Notify -->
     <script src="{{ asset('dick/js/vendor/pnotify/pnotify.custom.js') }}"></script>
     <!-- FastClick -->
