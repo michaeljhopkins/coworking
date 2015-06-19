@@ -116,6 +116,11 @@ return [
 								'route' => 'admin/log',
 								'icon' => 'fa fa-terminal',
 							],
+							[
+								'label' => "Settings",
+								'route' => 'admin/setting',
+								'icon' => 'fa fa-cog',
+							],
 						]
 		]
 	],

@@ -64,6 +64,30 @@ class SettingCrudController extends CrudController {
 						);
 
 	/**
+	 * Display all rows in the database for this entity.
+	 * This overwrites the default CrudController behaviour:
+	 * - instead of showing all entries, only show the "active" ones
+	 *
+	 * @return Response
+	 */
+	public function index()
+	{
+		// if view_table_permission is false, abort
+		if (isset($this->crud['view_table_permission']) && !$this->crud['view_table_permission']) {
+			abort(403, 'Not allowed.');
+		}
+
+		// get all results for that entity
+		$model = $this->crud['model'];
+		$this->data['entries'] = $model::where('active', 1)->get(); // <---- this is where it's different
+
+		$this->_prepare_columns(); // checks that the columns are defined and makes sure the response is proper
+
+		$this->data['crud'] = $this->crud;
+		return view('crud/list', $this->data);
+	}
+
+	/**
 	 * Show the form for editing the specified setting.
 	 * This overwrites the default CrudController behaviour:
 	 * - instead of showing the same field type for all settings, show the field type from the "field" db column
