@@ -31,6 +31,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 	Route::get('log/download/{file_name}', 'Admin\LogController@download');
 	Route::delete('log/delete/{file_name}', 'Admin\LogController@delete');
 
+	// Settings
+	Route::resource('setting', 'Admin\SettingCrudController');
+
 	// CRUD reorders
 	Route::get('category/reorder', 'Admin\CategoryCrudController@reorder');
 	Route::post('category/reorder', 'Admin\CategoryCrudController@saveReorder');

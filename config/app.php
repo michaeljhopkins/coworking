@@ -155,6 +155,11 @@ return [
 		'Barryvdh\Elfinder\ElfinderServiceProvider',
 		'Spatie\Backup\BackupServiceProvider',
 
+		/*
+		 * Custom Dick Service Providers...
+		 */
+		'App\Providers\SettingsServiceProvider',
+
 	],
 
 	/*
