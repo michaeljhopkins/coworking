@@ -53,7 +53,7 @@
                             $results = $entry->{$column['entity']}()->getResults();
                             if ($results && $results->count()) {
                                 $results_array = $results->lists($column['attribute'], 'id');
-                                echo implode(', ', $results_array);
+                                echo implode(', ', $results_array->toArray());
                               }
                               else
                               {
