@@ -25,12 +25,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 	Route::get('backup/download/{file_name}', 'Admin\BackupController@download');
 	Route::delete('backup/delete/{file_name}', 'Admin\BackupController@delete');
 
-	// Logs
-	Route::get('log', 'Admin\LogController@index');
-	Route::get('log/preview/{file_name}', 'Admin\LogController@preview');
-	Route::get('log/download/{file_name}', 'Admin\LogController@download');
-	Route::delete('log/delete/{file_name}', 'Admin\LogController@delete');
-
 	// Settings
 	Route::resource('setting', 'Admin\SettingCrudController');
 

@@ -159,6 +159,12 @@ return [
 		 * Custom Dick Service Providers...
 		 */
 		'App\Providers\SettingsServiceProvider',
+		// 'Dick\LogManager\LogManagerServiceProvider',
+
+		/*
+		 * Package Building Service Providers...
+		 */
+		'JeroenG\Packager\PackagerServiceProvider',
 
 	],
 
