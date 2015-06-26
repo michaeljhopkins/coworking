@@ -34,6 +34,7 @@
         "Barryvdh\\Elfinder\\ElfinderServiceProvider",
         "Spatie\\Backup\\BackupServiceProvider",
         "App\\Providers\\SettingsServiceProvider",
+        "Dick\\LogManager\\LogManagerServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "eager": [
@@ -58,6 +59,7 @@
         "Zizaco\\Entrust\\EntrustServiceProvider",
         "Barryvdh\\Elfinder\\ElfinderServiceProvider",
         "App\\Providers\\SettingsServiceProvider",
+        "Dick\\LogManager\\LogManagerServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "deferred": {
