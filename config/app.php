@@ -160,6 +160,7 @@ return [
 		 */
 		'App\Providers\SettingsServiceProvider',
 		'Dick\LogManager\LogManagerServiceProvider',
+		'Dick\BackupManager\BackupManagerServiceProvider',
 
 		/*
 		 * Package Building Service Providers...

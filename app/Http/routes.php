@@ -19,12 +19,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
 	Route::get('', 'Admin\AdminController@index');
 
-	// Backup
-	Route::get('backup', 'Admin\BackupController@index');
-	Route::put('backup/create', 'Admin\BackupController@create');
-	Route::get('backup/download/{file_name}', 'Admin\BackupController@download');
-	Route::delete('backup/delete/{file_name}', 'Admin\BackupController@delete');
-
 	// Settings
 	Route::resource('setting', 'Admin\SettingCrudController');
 

@@ -35,6 +35,7 @@
         "Spatie\\Backup\\BackupServiceProvider",
         "App\\Providers\\SettingsServiceProvider",
         "Dick\\LogManager\\LogManagerServiceProvider",
+        "Dick\\BackupManager\\BackupManagerServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "eager": [
@@ -60,6 +61,7 @@
         "Barryvdh\\Elfinder\\ElfinderServiceProvider",
         "App\\Providers\\SettingsServiceProvider",
         "Dick\\LogManager\\LogManagerServiceProvider",
+        "Dick\\BackupManager\\BackupManagerServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "deferred": {
