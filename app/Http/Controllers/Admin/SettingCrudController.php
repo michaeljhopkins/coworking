@@ -84,7 +84,7 @@ class SettingCrudController extends CrudController {
 		$this->_prepare_columns(); // checks that the columns are defined and makes sure the response is proper
 
 		$this->data['crud'] = $this->crud;
-		return view('crud/list', $this->data);
+		return view('crud::list', $this->data);
 	}
 
 	/**
@@ -122,7 +122,7 @@ class SettingCrudController extends CrudController {
 		$this->_prepare_fields($this->data['entry']); // prepare the fields you need to show and prepopulate the values
 
 		$this->data['crud'] = $this->crud;
-		return view('crud/edit', $this->data);
+		return view('crud::edit', $this->data);
 	}
 
 	public function store(StoreRequest $request)
