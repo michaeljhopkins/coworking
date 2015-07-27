@@ -158,10 +158,10 @@ return [
 		/*
 		 * Custom Dick Service Providers...
 		 */
-		'App\Providers\SettingsServiceProvider',
 		'Dick\LogManager\LogManagerServiceProvider',
 		'Dick\BackupManager\BackupManagerServiceProvider',
 		'Dick\CRUD\CrudServiceProvider',
+		'Dick\Settings\SettingsServiceProvider',
 
 		/*
 		 * Package Building Service Providers...

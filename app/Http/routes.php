@@ -19,9 +19,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
 	Route::get('', 'Admin\AdminController@index');
 
-	// Settings
-	Route::resource('setting', 'Admin\SettingCrudController');
-
 	// CRUD reorders
 	Route::get('category/reorder', 'Admin\CategoryCrudController@reorder');
 	Route::post('category/reorder', 'Admin\CategoryCrudController@saveReorder');

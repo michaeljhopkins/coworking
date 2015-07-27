@@ -25,6 +25,7 @@
 			"database"
 		],
 		"psr-4": {
+            "Dick\\Settings\\": "packages/dick/settings/src",
 			"App\\": "app/"
 		}
 	},

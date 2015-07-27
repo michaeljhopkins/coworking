@@ -33,10 +33,10 @@
         "Zizaco\\Entrust\\EntrustServiceProvider",
         "Barryvdh\\Elfinder\\ElfinderServiceProvider",
         "Spatie\\Backup\\BackupServiceProvider",
-        "App\\Providers\\SettingsServiceProvider",
         "Dick\\LogManager\\LogManagerServiceProvider",
         "Dick\\BackupManager\\BackupManagerServiceProvider",
         "Dick\\CRUD\\CrudServiceProvider",
+        "Dick\\Settings\\SettingsServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "eager": [
@@ -60,10 +60,10 @@
         "Barryvdh\\Debugbar\\ServiceProvider",
         "Zizaco\\Entrust\\EntrustServiceProvider",
         "Barryvdh\\Elfinder\\ElfinderServiceProvider",
-        "App\\Providers\\SettingsServiceProvider",
         "Dick\\LogManager\\LogManagerServiceProvider",
         "Dick\\BackupManager\\BackupManagerServiceProvider",
         "Dick\\CRUD\\CrudServiceProvider",
+        "Dick\\Settings\\SettingsServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "deferred": {
