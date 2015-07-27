@@ -1,8 +1,11 @@
 <?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Dick\CRUD\CrudTrait;
 
-class Article extends BaseModel {
+class Article extends Model {
+
+    use CrudTrait;
 
 	// the name of the table in your database
 	protected $table = 'articles';

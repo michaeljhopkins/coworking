@@ -161,6 +161,7 @@ return [
 		'App\Providers\SettingsServiceProvider',
 		'Dick\LogManager\LogManagerServiceProvider',
 		'Dick\BackupManager\BackupManagerServiceProvider',
+		'Dick\CRUD\CrudServiceProvider',
 
 		/*
 		 * Package Building Service Providers...

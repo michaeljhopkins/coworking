@@ -6,11 +6,11 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
-use App\Models\BaseModel;
+use Dick\CRUD\CrudTrait;
 
-class User extends BaseModel implements AuthenticatableContract, CanResetPasswordContract {
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
-	use Authenticatable, CanResetPassword, EntrustUserTrait;
+	use Authenticatable, CanResetPassword, EntrustUserTrait, CrudTrait;
 
 	/**
 	 * The database table used by the model.

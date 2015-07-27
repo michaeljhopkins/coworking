@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Admin\CrudController;
+use Dick\CRUD\Http\Controllers\CrudController;
 
 use Illuminate\Http\Request;
 

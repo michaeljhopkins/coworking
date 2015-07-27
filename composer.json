@@ -12,6 +12,7 @@
 		"barryvdh/laravel-debugbar": "~2.0",
 		"barryvdh/laravel-elfinder": "0.3.*",
 		"jeroen-g/laravel-packager": "^0.2.1",
+		"dick/crud": "^1.0",
 		"dick/logmanager": "^1.0",
 		"dick/backupmanager": "^1.0"
 	},
@@ -24,6 +25,7 @@
 			"database"
 		],
 		"psr-4": {
+            "Dick\\CRUD\\": "packages/Dick/CRUD/src",
 			"App\\": "app/"
 		}
 	},

@@ -36,6 +36,7 @@
         "App\\Providers\\SettingsServiceProvider",
         "Dick\\LogManager\\LogManagerServiceProvider",
         "Dick\\BackupManager\\BackupManagerServiceProvider",
+        "Dick\\CRUD\\CrudServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "eager": [
@@ -62,6 +63,7 @@
         "App\\Providers\\SettingsServiceProvider",
         "Dick\\LogManager\\LogManagerServiceProvider",
         "Dick\\BackupManager\\BackupManagerServiceProvider",
+        "Dick\\CRUD\\CrudServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "deferred": {

@@ -1,8 +1,11 @@
 <?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Dick\CRUD\CrudTrait;
 
-class Category extends BaseModel {
+class Category extends Model {
+
+    use CrudTrait;
 
 	protected $table = 'categories';
 	protected $fillable = ['name', 'parent_id'];
