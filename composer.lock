@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "afd876f4e8dc698debc86aab411aef55",
+    "hash": "6c0f70ab049587808297423f7fb0827b",
     "packages": [
         {
             "name": "barryvdh/elfinder-builds",
@@ -390,22 +390,22 @@
         },
         {
             "name": "dick/crud",
-            "version": "0.5.0",
+            "version": "0.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/crud.git",
-                "reference": "51d4942914709edefcc9212d39cb90e3b181349e"
+                "reference": "40907275421a0b3d6b54653d64df4a746cb0024b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/crud/zipball/51d4942914709edefcc9212d39cb90e3b181349e",
-                "reference": "51d4942914709edefcc9212d39cb90e3b181349e",
+                "url": "https://api.github.com/repos/tabacitu/crud/zipball/40907275421a0b3d6b54653d64df4a746cb0024b",
+                "reference": "40907275421a0b3d6b54653d64df4a746cb0024b",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1",
                 "php": ">=5.3.0",
-                "prologue/alerts": "dev-master",
+                "prologue/alerts": "0.*",
                 "zizaco/entrust": "dev-laravel-5"
             },
             "require-dev": {
@@ -447,7 +447,7 @@
                 "read",
                 "update"
             ],
-            "time": "2015-07-27 14:16:53"
+            "time": "2015-07-27 18:24:07"
         },
         {
             "name": "dick/logmanager",
@@ -504,6 +504,64 @@
                 "logs"
             ],
             "time": "2015-06-26 15:26:26"
+        },
+        {
+            "name": "dick/settings",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tabacitu/settings.git",
+                "reference": "9654606d9353b63b1f17b4d090337705e05bb6fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tabacitu/settings/zipball/9654606d9353b63b1f17b4d090337705e05bb6fe",
+                "reference": "9654606d9353b63b1f17b4d090337705e05bb6fe",
+                "shasum": ""
+            },
+            "require": {
+                "dick/crud": "0.*",
+                "illuminate/support": "~5.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dick\\Settings\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "hello@tabacitu.ro",
+                    "homepage": "http://www.tabacitu.ro",
+                    "role": "Dick Master"
+                }
+            ],
+            "description": "Application settings interface for Laravel 5 using Dick CRUD.",
+            "homepage": "https://github.com/tabacitu/settings",
+            "keywords": [
+                "dick",
+                "dick settings",
+                "manage settings",
+                "settings admin",
+                "tabacitu",
+                "updivision"
+            ],
+            "time": "2015-07-27 18:07:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1556,16 +1614,16 @@
         },
         {
             "name": "prologue/alerts",
-            "version": "dev-master",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:driesvints/Alerts.git",
-                "reference": "a05899bba79317d46478160f571184ef56f2b3e2"
+                "reference": "f4ea1e784070f43ddd12dab732552809e54ff7d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/driesvints/Alerts/zipball/a05899bba79317d46478160f571184ef56f2b3e2",
-                "reference": "a05899bba79317d46478160f571184ef56f2b3e2",
+                "url": "https://api.github.com/repos/driesvints/Alerts/zipball/f4ea1e784070f43ddd12dab732552809e54ff7d5",
+                "reference": "f4ea1e784070f43ddd12dab732552809e54ff7d5",
                 "shasum": ""
             },
             "require": {
@@ -1602,7 +1660,7 @@
                 "laravel",
                 "messages"
             ],
-            "time": "2015-06-20 20:40:50"
+            "time": "2015-04-13 17:27:18"
         },
         {
             "name": "psr/http-message",
@@ -3758,7 +3816,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "prologue/alerts": 20,
         "zizaco/entrust": 20
     },
     "prefer-stable": false,
