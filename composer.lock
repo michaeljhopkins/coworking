@@ -390,16 +390,16 @@
         },
         {
             "name": "dick/crud",
-            "version": "0.5.10",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/crud.git",
-                "reference": "40907275421a0b3d6b54653d64df4a746cb0024b"
+                "reference": "6b45d7e2017fdf9279bbb1c101c9bdaef7356b0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/crud/zipball/40907275421a0b3d6b54653d64df4a746cb0024b",
-                "reference": "40907275421a0b3d6b54653d64df4a746cb0024b",
+                "url": "https://api.github.com/repos/tabacitu/crud/zipball/6b45d7e2017fdf9279bbb1c101c9bdaef7356b0c",
+                "reference": "6b45d7e2017fdf9279bbb1c101c9bdaef7356b0c",
                 "shasum": ""
             },
             "require": {
@@ -447,7 +447,7 @@
                 "read",
                 "update"
             ],
-            "time": "2015-07-27 18:24:07"
+            "time": "2015-07-29 05:45:34"
         },
         {
             "name": "dick/logmanager",
@@ -1265,16 +1265,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "3475ce0b1b5cab41f012905c4c58ad645088f7c9"
+                "reference": "c16222fdc02467eaa12cb6d6d0e65527741f6040"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3475ce0b1b5cab41f012905c4c58ad645088f7c9",
-                "reference": "3475ce0b1b5cab41f012905c4c58ad645088f7c9",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c16222fdc02467eaa12cb6d6d0e65527741f6040",
+                "reference": "c16222fdc02467eaa12cb6d6d0e65527741f6040",
                 "shasum": ""
             },
             "require": {
@@ -1342,7 +1342,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-07-21 19:35:53"
+            "time": "2015-07-28 20:41:58"
         },
         {
             "name": "maximebf/debugbar",
