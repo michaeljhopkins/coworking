@@ -29,12 +29,25 @@
 				font-size: 72px;
 				margin-bottom: 40px;
 			}
+
+			p {
+				font-size: 2em;
+			}
+
+			p.small {
+				font-size: 1.2em;
+				font-weight: 100;
+				margin-top: -20px;
+				/*color: red;*/
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Be right back.</div>
+				<div class="title">503</div>
+				<p>Be right back.</p>
+				<p class="small">{{ $e->getMessage()?$e->getMessage():'' }}</small></p>
 			</div>
 		</div>
 	</body>

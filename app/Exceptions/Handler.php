@@ -2,6 +2,8 @@
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\Debug\ExceptionHandler as SymfonyDisplayer;
 
 class Handler extends ExceptionHandler {
 
@@ -38,5 +40,22 @@ class Handler extends ExceptionHandler {
 	{
 		return parent::render($request, $e);
 	}
+
+	/**
+	 * Render a HTTP exception, including a custom error message.
+	 *
+	 * @param  \HttpException  $e
+	 * @return \Illuminate\Http\Response
+	 */
+	protected function renderHttpException(HttpException $e) {
+	    $status = $e->getStatusCode();
+
+	    if (!config('app.debug') && view()->exists("errors.{$status}")) {
+	      return response()->view("errors.{$status}", compact('e'), $status);
+	    }
+	    else {
+	      return (new SymfonyDisplayer(config('app.debug')))->createResponse($e);
+	    }
+	  }
 
 }

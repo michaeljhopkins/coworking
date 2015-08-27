@@ -29,7 +29,6 @@
 				font-size: 92px;
 				margin-bottom: 40px;
 			}
-
 			p {
 				font-size: 2em;
 			}
@@ -45,8 +44,8 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">404</div>
-				<p>The page cannot be found.</p>
+				<div class="title">403</div>
+				<p>Unauthorized action.</p>
 				<p class="small">{{ $e->getMessage()?$e->getMessage():'' }}</small></p>
 			</div>
 		</div>
