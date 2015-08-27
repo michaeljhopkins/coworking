@@ -58,7 +58,9 @@
         {{-- <li><a href="#">Link</a></li> --}}
         @if (Auth::guest())
         	<li><a href="{{ url('/auth/login') }}">{{ trans('auth.login') }}</a></li>
-        	<li><a href="{{ url('/auth/register') }}">{{ trans('auth.register') }}</a></li>
+          @if (Config::get('auth.registration_open'))
+          	<li><a href="{{ url('/auth/register') }}">{{ trans('auth.register') }}</a></li>
+          @endif
         @else
         	<li class="dropdown">
         		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>

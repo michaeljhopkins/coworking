@@ -5,6 +5,7 @@ use Validator;
 use App\User;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Config;
 
 class AuthController extends Controller {
 
@@ -51,11 +52,31 @@ class AuthController extends Controller {
 	 */
 	public function create(array $data)
 	{
+		if (!Config::get('auth.registration_open'))
+		{
+			abort(403, trans('auth.registration_closed'));
+		}
+
 		return User::create([
 			'name' 		=> $data['name'],
 			'email' 	=> $data['email'],
 			'password' 	=> bcrypt($data['password']),
 		]);
 	}
+
+	/**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getRegister()
+    {
+    	if (!Config::get('auth.registration_open'))
+		{
+			abort(403, trans('auth.registration_closed'));
+		}
+
+        return view('auth.register');
+    }
 
 }

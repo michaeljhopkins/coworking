@@ -32,4 +32,5 @@ return [
 	'forgot_password_question'		=> 'Forgot your password?',
 	'wrong_password'				=> 'The old password your entered is wrong.',
 	'password_updated'				=> 'Your password has been changed.',
+	'registration_closed'			=> 'Unauthorized action. Registration is closed.',
 ];

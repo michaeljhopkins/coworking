@@ -32,4 +32,5 @@ return [
 	'forgot_password_question'		=> 'Ți-ai uitat parola?',
 	'wrong_password'				=> 'Parola veche introdusă este greșită.',
 	'password_updated'				=> 'Parola a fost schimbată.',
+	'registration_closed'			=> 'Actiune interzisa. Inregistrarea este inchisa pentru utilizatori noi.',
 ];
