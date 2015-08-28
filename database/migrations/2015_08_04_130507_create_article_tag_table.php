@@ -14,8 +14,8 @@ class CreateArticleTagTable extends Migration
     {
         Schema::create('article_tag', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('article_id');
-            $table->integer('tag_id');
+            $table->integer('article_id')->unsigned();
+            $table->integer('tag_id')->unsigned();
             $table->nullableTimestamps();
             $table->softDeletes();
         });
