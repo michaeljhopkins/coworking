@@ -38,18 +38,20 @@ STABLE, BUT UNDER HEAVY DEVELOPMENT
 ### Installation
 (for alpha version)
 
+0. Composer install
+
+    composer install
 
 1. Like any Laravel 5 installation, run:
 
     chmod -R o+w storage
     chmod -R o+w vendor
 
-2. Run the migration to get the users table:
+2. Run the migrations and seeds:
 
+    php artisan vendor:publish --provider="Dick\Settings\SettingsServiceProvider"
     php artisan migrate
-
-3. Create a user for yourself at:
-http://localhost/dick/public/auth/register
+    php artisan db:seed
 
 
 ------------
