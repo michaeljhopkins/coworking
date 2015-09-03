@@ -29,10 +29,6 @@ It's heavily opinionated and uses:
 - AdminLTE theme
 
 
-Future versions will provide each component as separate packages.
-
-STABLE, BUT UNDER HEAVY DEVELOPMENT
-
 ------------
 
 ### Installation
@@ -50,7 +46,9 @@ STABLE, BUT UNDER HEAVY DEVELOPMENT
 2. Run the migrations and seeds:
 
     php artisan vendor:publish --provider="Dick\Settings\SettingsServiceProvider"
+
     php artisan migrate
+    
     php artisan db:seed
 
 
