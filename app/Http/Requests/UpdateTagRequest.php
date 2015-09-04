@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class UpdateTagRequest extends CrudRequest {
+class UpdateTagRequest extends \Dick\CRUD\Http\Requests\CrudRequest {
 
 	/**
 	 * Determine if the user is authorized to make this request.
