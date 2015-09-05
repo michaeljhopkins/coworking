@@ -80,13 +80,13 @@ class ArticleCrudController extends CrudController {
 						// "create_fields" => [
 						// 						[
 						// 							'name' => 'title',
-						// 							'title' => 'Title',
+						// 							'label' => 'Title',
 						// 							'type' => 'text',
 						// 							'placeholder' => 'Your title here'
 						// 						],
 						// 						[
 						// 							'name' => 'content',
-						// 							'title' => 'Content',
+						// 							'label' => 'Content',
 						// 							'type' => 'textarea',
 						// 							'placeholder' => 'Your textarea text here'
 						// 						],
@@ -104,13 +104,13 @@ class ArticleCrudController extends CrudController {
 						// "update_fields" => [
 						// 						[
 						// 							'name' => 'title',
-						// 							'title' => 'Title',
+						// 							'label' => 'Title',
 						// 							'type' => 'text',
 						// 							'placeholder' => 'Your title here'
 						// 						],
 						// 						[
 						// 							'name' => 'content',
-						// 							'title' => 'Content',
+						// 							'label' => 'Content',
 						// 							'type' => 'textarea',
 						// 							'placeholder' => 'Your textarea text here'
 						// 						],

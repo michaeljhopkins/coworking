@@ -54,6 +54,11 @@ return [
 			'root'   => storage_path(),
 		],
 
+		'config' => [
+			'driver' => 'local',
+			'root'   => config_path(),
+		],
+
 		's3' => [
 			'driver' => 's3',
 			'key'    => 'your-key',

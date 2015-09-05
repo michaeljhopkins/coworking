@@ -30,6 +30,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 	Route::resource('user', 'Admin\UserCrudController');
 	Route::resource('role', 'Admin\RoleCrudController');
 	Route::resource('permission', 'Admin\PermissionCrudController');
+	Route::resource('page', 'Admin\PageCrudController');
+
+	// TODO: move these in the Dick\PageManager package
+	Route::get('page/create/{template}', 'Admin\PageCrudController@create');
+	Route::get('page/{id}/edit/{template}', 'Admin\PageCrudController@edit');
 });
 
 Route::controllers([

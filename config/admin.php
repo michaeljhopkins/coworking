@@ -78,9 +78,14 @@ return [
 			'icon' => 'fa fa-table',
 			'children' => [
 							[
+								'label' => "Pages",
+								'route' => 'admin/page',
+								'icon' => 'fa fa-file-text',
+							],
+							[
 								'label' => "Articles",
 								'route' => 'admin/article',
-								'icon' => 'fa fa-file',
+								'icon' => 'fa fa-newspaper-o',
 							],
 							[
 								'label' => "Categories",
