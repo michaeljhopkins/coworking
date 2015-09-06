@@ -7,8 +7,8 @@ use Dick\CRUD\Http\Controllers\CrudController;
 use Illuminate\Http\Request;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\CrudRequest as StoreRequest;
-use App\Http\Requests\CrudRequest as UpdateRequest;
+use Dick\CRUD\Http\Requests\CrudRequest as StoreRequest;
+use Dick\CRUD\Http\Requests\CrudRequest as UpdateRequest;
 
 class ArticleCrudController extends CrudController {
 

@@ -6,8 +6,8 @@ use Dick\CRUD\Http\Controllers\CrudController;
 use Illuminate\Http\Request;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\StoreTagRequest as StoreRequest;
-use App\Http\Requests\UpdateTagRequest as UpdateRequest;
+use Dick\CRUD\Http\Requests\StoreTagRequest as StoreRequest;
+use Dick\CRUD\Http\Requests\UpdateTagRequest as UpdateRequest;
 
 class PermissionCrudController extends CrudController {
 
