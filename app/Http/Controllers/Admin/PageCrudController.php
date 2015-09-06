@@ -45,7 +45,7 @@ class PageCrudController extends CrudController {
                                                     'name' => 'template',
                                                     'label' => "Template",
                                                     'type' => 'select_template',
-                                                    'options' => [], // populated automatically in the use_template method
+                                                    'options' => [], // populated automatically in the useTemplate method
                                                     'allows_null' => false
                                                 ],
                                     ],
@@ -56,7 +56,7 @@ class PageCrudController extends CrudController {
     // Overwrites the CrudController create() method to add template usage.
     public function create($template = false)
     {
-        $this->use_template($template);
+        $this->useTemplate($template);
 
         return parent::create();
     }
@@ -65,8 +65,8 @@ class PageCrudController extends CrudController {
     // Overwrites the CrudController store() method to add template usage.
     public function store(StoreRequest $request)
     {
-        $this->use_template(\Request::input('template'));
-        return parent::store_crud();
+        $this->useTemplate(\Request::input('template'));
+        return parent::storeCrud();
     }
 
 
@@ -75,14 +75,14 @@ class PageCrudController extends CrudController {
     {
         // use the template in the GET parameter if it exists
         if ($template) {
-            $this->use_template($template);
+            $this->useTemplate($template);
         }
         // otherwise use the template value stored in the database
         else
         {
             $model = $this->crud['model'];
             $this->data['entry'] = $model::findOrFail($id);
-            $this->use_template($this->data['entry']->template);
+            $this->useTemplate($this->data['entry']->template);
         }
 
         return parent::edit($id);
@@ -92,8 +92,8 @@ class PageCrudController extends CrudController {
     // Overwrites the CrudController update() method to add template usage.
     public function update(UpdateRequest $request)
     {
-        $this->use_template(\Request::input('template'));
-        return parent::update_crud();
+        $this->useTemplate(\Request::input('template'));
+        return parent::updateCrud();
     }
 
 
@@ -102,7 +102,7 @@ class PageCrudController extends CrudController {
     // -----------------------------------------------
 
 
-    private function get_templates()
+    private function getTemplates()
     {
         // get the files from config/dick/page_templates
         $template_files = \Storage::disk('config')->files('dick/page_templates');
@@ -124,9 +124,9 @@ class PageCrudController extends CrudController {
         return $templates;
     }
 
-    private function use_template($file_name = false) {
+    private function useTemplate($file_name = false) {
         if (!$file_name) {
-            $file_name = array_keys($this->get_templates())[0];
+            $file_name = array_keys($this->getTemplates())[0];
         }
 
         // merge the fields defined above and the ones set in the template file
@@ -136,7 +136,7 @@ class PageCrudController extends CrudController {
         foreach ($this->crud['fields'] as $key => $field) {
             if ($field['name'] == 'template') {
                 $this->crud['fields'][$key]['value'] = $file_name;
-                $this->crud['fields'][$key]['options'] = $this->get_templates();
+                $this->crud['fields'][$key]['options'] = $this->getTemplates();
             }
         }
     }

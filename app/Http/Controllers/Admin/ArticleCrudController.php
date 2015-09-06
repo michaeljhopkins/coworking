@@ -174,11 +174,11 @@ class ArticleCrudController extends CrudController {
 
 	public function store(StoreRequest $request)
 	{
-		return parent::store_crud();
+		return parent::storeCrud();
 	}
 
 	public function update(UpdateRequest $request)
 	{
-		return parent::update_crud();
+		return parent::updateCrud();
 	}
 }
