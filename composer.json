@@ -9,7 +9,6 @@
 		"illuminate/html": "5.*",
 		"prologue/alerts": "0.*",
 		"zizaco/entrust": "dev-laravel-5",
-		"barryvdh/laravel-debugbar": "~2.0",
 		"barryvdh/laravel-elfinder": "0.3.*",
 		"jeroen-g/laravel-packager": "^0.2.1",
 		"dick/crud": "0.*",

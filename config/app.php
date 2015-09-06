@@ -150,7 +150,6 @@ return [
 		 */
 		'Illuminate\Html\HtmlServiceProvider',
 		'Prologue\Alerts\AlertsServiceProvider',
-		'Barryvdh\Debugbar\ServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Barryvdh\Elfinder\ElfinderServiceProvider',
 		'Spatie\Backup\BackupServiceProvider',
@@ -225,7 +224,6 @@ return [
 		'Alert' => 'Prologue\Alerts\Facades\Alert',
 		'Carbon' => 'Carbon\Carbon',
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
-		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 	],
 
