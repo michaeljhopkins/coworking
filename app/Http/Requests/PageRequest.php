@@ -25,7 +25,7 @@ class PageRequest extends \Dick\CRUD\Http\Requests\CrudRequest {
         return [
             'name' => 'required|min:4|max:255',
             'content' => 'required|min:4',
-            'slug' => 'unique:pages'
+            'slug' => 'unique:pages,slug,'.\Request::get('id')
         ];
     }
 
