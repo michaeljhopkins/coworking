@@ -154,6 +154,7 @@ return [
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Barryvdh\Elfinder\ElfinderServiceProvider',
 		'Spatie\Backup\BackupServiceProvider',
+		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 
 		/*
 		 * Custom Dick Service Providers...

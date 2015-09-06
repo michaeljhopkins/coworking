@@ -15,7 +15,8 @@
 		"dick/crud": "0.*",
 		"dick/logmanager": "^1.0",
 		"dick/backupmanager": "^1.0",
-		"dick/settings": "^1.0"
+		"dick/settings": "^1.0",
+		"cviebrock/eloquent-sluggable": "^3.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

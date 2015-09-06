@@ -32,6 +32,10 @@ class PageCrudController extends CrudController {
                                                 'name' => 'name',
                                                 'label' => "Page name"
                                             ],
+                                            [
+                                                'name' => 'slug',
+                                                'label' => "Slug"
+                                            ],
                                     ],
 
                         // *****
@@ -47,6 +51,12 @@ class PageCrudController extends CrudController {
                                                     'type' => 'select_template',
                                                     'options' => [], // populated automatically in the useTemplate method
                                                     'allows_null' => false
+                                                ],
+                                                [
+                                                    'name' => 'slug',
+                                                    'label' => "Slug",
+                                                    'type' => 'text',
+                                                    // 'disabled' => 'disabled'
                                                 ],
                                     ],
 
