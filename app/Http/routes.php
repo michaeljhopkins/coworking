@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('home', 'HomeController@index');
+Route::get('/', 'PublicController@index');
+Route::get('home', 'Auth\UserController@index');
 
 // Admin Interface Routes
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
@@ -42,3 +42,9 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 	'user' => 'Auth\UserController',
 ]);
+
+// Dick Page Manager slugs
+// NOTICE: Keep this at the end of the routes file.
+// It will catch any slugs that have not been defined in the above routes and send it to PublicController@page.
+// There, we check for the slug in the database. If it doesn't exist, we'll throw a 404.
+Route::get('{slug}', ['uses' => 'PublicController@page'])->where('slug', '([A-z\d-\/_.]+)?');
