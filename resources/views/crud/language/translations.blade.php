@@ -48,8 +48,7 @@
 		<section class="lang-inputs">
 		@if (!empty($fileArray))
 			{!! Form::open(array('url' => url("admin/language/texts/{$currentLang}/{$currentFile}"), 'method' => 'post', 'id' => 'lang-form', 'class' => 'form-horizontal', 'data-required' => trans('admin.language.fields_required'))) !!}
-				{!! Form::button(trans('crud.save'), array('type' => 'submit', 'class' => 'btn btn-success submit')) !!}
-				<div class="clearfix"></div><br>
+				{!! Form::button(trans('crud.save'), array('type' => 'submit', 'class' => 'btn btn-success submit pull-right hidden-xs hidden-sm', 'style' => "margin-top: -60px;")) !!}
 				<div class="form-group hidden-sm hidden-xs">
 					<div class="col-sm-2 text-right">
 						<h4>Key</h4>
@@ -63,7 +62,9 @@
 				</div>
 				{!! $langfile->displayInputs($fileArray) !!}
 				<hr>
-				{!! Form::button(trans('crud.save'), array('type' => 'submit', 'class' => 'btn btn-success submit')) !!}
+				<div class="text-center">
+					{!! Form::button(trans('crud.save'), array('type' => 'submit', 'class' => 'btn btn-success submit')) !!}
+				</div>
 			{!! Form::close() !!}
 		@else
 			<em>{{{ trans('crud.empty_file') }}}</em>

@@ -80,7 +80,7 @@ class LanguageCrudController extends CrudController {
 		return parent::update_crud();
 	}
 
-	public function showTexts(LangFiles $langfile, Language $languages, $lang = '', $file = 'log'){
+	public function showTexts(LangFiles $langfile, Language $languages, $lang = '', $file = 'site') {
 		// SECURITY
 		// check if that file isn't forbidden in the config file
 		if (in_array($file, config('admin.language_ignore'))) {
