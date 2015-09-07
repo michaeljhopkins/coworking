@@ -52,4 +52,4 @@ Route::controllers([
 // NOTICE: Keep this at the end of the routes file.
 // It will catch any slugs that have not been defined in the above routes and send it to PublicController@page.
 // There, we check for the slug in the database. If it doesn't exist, we'll throw a 404.
-// Route::get('{slug}', ['uses' => 'PublicController@page'])->where('slug', '([A-z\d-\/_.]+)?');
+Route::get('{slug}', ['uses' => 'PublicController@page'])->where('slug', '([A-z\d-\/_.]+)?');

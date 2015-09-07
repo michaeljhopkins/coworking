@@ -145,6 +145,7 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		'App\Providers\LangFilesServiceProvider',
+		'App\Providers\FileManagerServiceProvider',
 
 		/*
 		 * Dick Service Providers...
@@ -152,7 +153,6 @@ return [
 		'Illuminate\Html\HtmlServiceProvider',
 		'Prologue\Alerts\AlertsServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
-		'Barryvdh\Elfinder\ElfinderServiceProvider',
 		'Spatie\Backup\BackupServiceProvider',
 		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 
