@@ -81,6 +81,12 @@ class LanguageCrudController extends CrudController {
 	}
 
 	public function showTexts(LangFiles $langfile, Language $languages, $lang = '', $file = 'log'){
+		// SECURITY
+		// check if that file isn't forbidden in the config file
+		if (in_array($file, config('admin.language_ignore'))) {
+			abort('403', 'This language file cannot be edited online.');
+		}
+
 		if($lang){
 			$langfile->setLanguage($lang);
 		}
@@ -100,6 +106,12 @@ class LanguageCrudController extends CrudController {
 	}
 
 	public function updateTexts(LangFiles $langfile, Request $request, $lang = '', $file = 'site'){
+		// SECURITY
+		// check if that file isn't forbidden in the config file
+		if (in_array($file, config('admin.language_ignore'))) {
+			abort('403', 'This language file cannot be edited online.');
+		}
+
 		$message = trans('error.error_general');
 		$status = false;
 
