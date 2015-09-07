@@ -7,7 +7,7 @@ return [
 	// Used in the menu & other places.
 	// With this changed, there will be no trace of the word "Dick" in the admin interface.
 	'project_name' => 'Dick',
-
+	'language_ignore' => ['admin', 'pagination', 'reminders', 'validation', 'log', 'crud'],
 	/*
 	|--------------------------------------------------------------------------
 	| Admin menu
@@ -99,7 +99,23 @@ return [
 							],
 						]
 		],
-
+		[
+			'label' => "Translations",
+			'route' => "",
+			'icon' => 'fa fa-globe',
+			'children' => [
+				[
+					'label' => "Languages",
+					'route' => 'admin/language',
+					'icon' => 'fa fa-flag-checkered',
+				],
+				[
+					'label' => "Site texts",
+					'route' => 'admin/language/texts',
+					'icon' => 'fa fa-language',
+				],
+			]
+		],
 		[
 			'label' => "Advanced",
 			'route' => "",

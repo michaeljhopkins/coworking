@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "747e74681258f1fda0f6c7ba4d5ee6b5",
+    "hash": "0f77fab4a933fb5fd56c6b64d8756c07",
     "packages": [
         {
             "name": "barryvdh/elfinder-builds",
@@ -448,23 +448,23 @@
         },
         {
             "name": "dick/crud",
-            "version": "0.6.4",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/crud.git",
-                "reference": "5c207b8a43ef46b20456f2c028089e8c9d96965d"
+                "reference": "8381ee9a60be8c83ac592bbdab5750c721ff93bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/crud/zipball/5c207b8a43ef46b20456f2c028089e8c9d96965d",
-                "reference": "5c207b8a43ef46b20456f2c028089e8c9d96965d",
+                "url": "https://api.github.com/repos/tabacitu/crud/zipball/8381ee9a60be8c83ac592bbdab5750c721ff93bd",
+                "reference": "8381ee9a60be8c83ac592bbdab5750c721ff93bd",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1",
                 "php": ">=5.3.0",
                 "prologue/alerts": "0.*",
-                "zizaco/entrust": "dev-laravel-5"
+                "zizaco/entrust": "dev-master"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*",
@@ -505,7 +505,7 @@
                 "read",
                 "update"
             ],
-            "time": "2015-09-04 16:00:45"
+            "time": "2015-09-06 09:58:53"
         },
         {
             "name": "dick/logmanager",
@@ -2684,16 +2684,16 @@
         },
         {
             "name": "zizaco/entrust",
-            "version": "dev-laravel-5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zizaco/entrust.git",
-                "reference": "3a768eb52300ec4efe9d6a6685b9bf0db6a50ffd"
+                "reference": "3aa6e7923c5beea3fb0a5e57e902ae1d6beed173"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/3a768eb52300ec4efe9d6a6685b9bf0db6a50ffd",
-                "reference": "3a768eb52300ec4efe9d6a6685b9bf0db6a50ffd",
+                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/3aa6e7923c5beea3fb0a5e57e902ae1d6beed173",
+                "reference": "3aa6e7923c5beea3fb0a5e57e902ae1d6beed173",
                 "shasum": ""
             },
             "require": {
@@ -2747,7 +2747,7 @@
                 "permission",
                 "roles"
             ],
-            "time": "2015-07-09 16:32:53"
+            "time": "2015-08-07 18:05:40"
         }
     ],
     "packages-dev": [
@@ -2890,16 +2890,16 @@
         },
         {
             "name": "phpspec/phpspec",
-            "version": "2.2.1",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "e9a40577323e67f1de2e214abf32976a0352d8f8"
+                "reference": "36635a903bdeb54899d7407bc95610501fd98559"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/e9a40577323e67f1de2e214abf32976a0352d8f8",
-                "reference": "e9a40577323e67f1de2e214abf32976a0352d8f8",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/36635a903bdeb54899d7407bc95610501fd98559",
+                "reference": "36635a903bdeb54899d7407bc95610501fd98559",
                 "shasum": ""
             },
             "require": {
@@ -2911,15 +2911,14 @@
                 "symfony/console": "~2.3",
                 "symfony/event-dispatcher": "~2.1",
                 "symfony/finder": "~2.1",
-                "symfony/process": "~2.1",
+                "symfony/process": "^2.6",
                 "symfony/yaml": "~2.1"
             },
             "require-dev": {
                 "behat/behat": "^3.0.11",
                 "bossa/phpspec2-expect": "~1.0",
                 "phpunit/phpunit": "~4.4",
-                "symfony/filesystem": "~2.1",
-                "symfony/process": "~2.1"
+                "symfony/filesystem": "~2.1"
             },
             "suggest": {
                 "phpspec/nyan-formatters": "~1.0 – Adds Nyan formatters"
@@ -2964,7 +2963,7 @@
                 "testing",
                 "tests"
             ],
-            "time": "2015-05-30 15:21:40"
+            "time": "2015-09-07 07:07:37"
         },
         {
             "name": "phpspec/prophecy",

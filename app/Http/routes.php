@@ -15,26 +15,31 @@ Route::get('/', 'PublicController@index');
 Route::get('home', 'Auth\UserController@index');
 
 // Admin Interface Routes
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
+Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function()
 {
-	Route::get('', 'Admin\AdminController@index');
+	Route::get('', 'AdminController@index');
 
 	// CRUD reorders
-	Route::get('category/reorder', 'Admin\CategoryCrudController@reorder');
-	Route::post('category/reorder', 'Admin\CategoryCrudController@saveReorder');
+	Route::get('category/reorder', 'CategoryCrudController@reorder');
+	Route::post('category/reorder', 'CategoryCrudController@saveReorder');
 
 	// Dick CRUD: Define the resources for the entities you want to CRUD.
-	Route::resource('article', 'Admin\ArticleCrudController');
-	Route::resource('category', 'Admin\CategoryCrudController');
-	Route::resource('tag', 'Admin\TagCrudController');
-	Route::resource('user', 'Admin\UserCrudController');
-	Route::resource('role', 'Admin\RoleCrudController');
-	Route::resource('permission', 'Admin\PermissionCrudController');
-	Route::resource('page', 'Admin\PageCrudController');
+	Route::resource('article', 'ArticleCrudController');
+	Route::resource('category', 'CategoryCrudController');
+	Route::resource('tag', 'TagCrudController');
+	Route::resource('user', 'UserCrudController');
+	Route::resource('role', 'RoleCrudController');
+	Route::resource('permission', 'PermissionCrudController');
+	Route::resource('page', 'PageCrudController');
 
-	// Dick Page Manager routes
-	Route::get('page/create/{template}', 'Admin\PageCrudController@create');
-	Route::get('page/{id}/edit/{template}', 'Admin\PageCrudController@edit');
+// Dick Page Manager routes
+	Route::get('page/create/{template}', 'PageCrudController@create');
+	Route::get('page/{id}/edit/{template}', 'PageCrudController@edit');
+
+	// Language
+	Route::get('language/texts/{lang?}/{file?}', 'LanguageCrudController@showTexts');
+	Route::post('language/texts/{lang}/{file}', 'LanguageCrudController@updateTexts');
+	Route::resource('language', 'LanguageCrudController');
 });
 
 Route::controllers([
@@ -47,4 +52,4 @@ Route::controllers([
 // NOTICE: Keep this at the end of the routes file.
 // It will catch any slugs that have not been defined in the above routes and send it to PublicController@page.
 // There, we check for the slug in the database. If it doesn't exist, we'll throw a 404.
-Route::get('{slug}', ['uses' => 'PublicController@page'])->where('slug', '([A-z\d-\/_.]+)?');
+// Route::get('{slug}', ['uses' => 'PublicController@page'])->where('slug', '([A-z\d-\/_.]+)?');

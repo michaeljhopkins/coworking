@@ -9,3 +9,14 @@ $.ajaxSetup({
 Ladda.bind( 'input[type=submit].ladda-button' );
 Ladda.bind( 'button[type=submit].ladda-button' );
 Ladda.bind( 'a.ladda-button' );
+
+jQuery(document).ready(function($) {
+	$('.toggle-inputs').click(function(e) {
+		e.preventDefault();
+
+		$(this).find('i').toggleClass('glyphicon-minus-sign');
+		$(this).parent().next().slideToggle();
+
+		return false;
+	});
+});
