@@ -16,16 +16,27 @@
 @section('content')
 <!-- Default box -->
   <div class="box">
+  	<div class="box-header with-border">
+	  <h3 class="box-title">Language:
+		@foreach ($languages as $lang)
+			@if ($currentLang == $lang->abbr)
+				{{{ $lang->name }}}
+			@endif
+		@endforeach
+		<small>
+			 &nbsp; Switch to:
+			<select name="language_switch" id="language_switch">
+				@foreach ($languages as $lang)
+				<option value="{{ url("admin/language/texts/{$lang->abbr}") }}" {{ $currentLang == $lang->abbr ? 'selected' : ''}}>{{{ $lang->name }}}</option>
+				@endforeach
+			</select>
+		</small>
+	  </h3>
+	</div>
     <div class="box-body">
-    	<ul id="lang-nav" class="nav nav-tabs">
-			@foreach ($languages as $lang)
-			<li class="{{ $currentLang == $lang->abbr ? 'active' : ''}}">
-				<a href='{{ url("admin/language/texts/{$lang->abbr}") }}'>{{{ $lang->name }}}</a>
-			</li>
-			@endforeach
-		</ul>
-		<br>
-		<ul class="nav nav-pills pull-right">
+    	<p><em>{!! trans('crud.rules_text') !!}</em></p>
+    	<br>
+		<ul class="nav nav-tabs">
 			@foreach ($langFiles as $file)
 			<li class="{{ $file['active'] ? 'active' : '' }}">
 				<a href="{{ $file['url'] }}">{{{ $file['name'] }}}</a>
@@ -35,15 +46,24 @@
 		<div class="clearfix"></div>
 		<br>
 		<section class="lang-inputs">
-		<p><em>{!! trans('crud.rules_text') !!}</em></p>
-		<br>
 		@if (!empty($fileArray))
-			{!! Form::open(array('url' => url("admin/language/texts/{$currentLang}/{$currentFile}"), 'method' => 'post', 'id' => 'lang-form', 'data-required' => trans('admin.language.fields_required'))) !!}
-				{!! Form::button(trans('crud.save'), array('type' => 'submit', 'class' => 'btn btn-primary submit')) !!}
+			{!! Form::open(array('url' => url("admin/language/texts/{$currentLang}/{$currentFile}"), 'method' => 'post', 'id' => 'lang-form', 'class' => 'form-horizontal', 'data-required' => trans('admin.language.fields_required'))) !!}
+				{!! Form::button(trans('crud.save'), array('type' => 'submit', 'class' => 'btn btn-success submit')) !!}
 				<div class="clearfix"></div><br>
+				<div class="form-group hidden-sm hidden-xs">
+					<div class="col-sm-2 text-right">
+						<h4>Key</h4>
+					</div>
+					<div class="hidden-sm hidden-xs col-md-5">
+						<h4>{{{ $browsingLangObj->name }}} text</h4>
+					</div>
+					<div class="col-sm-10 col-md-5">
+						<h4>{{{ $currentLangObj->name }}} translation</h4>
+					</div>
+				</div>
 				{!! $langfile->displayInputs($fileArray) !!}
-				<br>
-				{!! Form::button(trans('crud.save'), array('type' => 'submit', 'class' => 'btn btn-primary submit')) !!}
+				<hr>
+				{!! Form::button(trans('crud.save'), array('type' => 'submit', 'class' => 'btn btn-success submit')) !!}
 			{!! Form::close() !!}
 		@else
 			<em>{{{ trans('crud.empty_file') }}}</em>
@@ -51,4 +71,14 @@
 	</section>
     </div><!-- /.box-body -->
   </div><!-- /.box -->
+@endsection
+
+@section('scripts')
+	<script>
+		jQuery(document).ready(function($) {
+			$("#language_switch").change(function() {
+				window.location.href = $(this).val();
+			})
+		});
+	</script>
 @endsection

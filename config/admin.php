@@ -6,7 +6,7 @@ return [
 	//
 	// Used in the menu & other places.
 	// With this changed, there will be no trace of the word "Dick" in the admin interface.
-	'project_name' => 'Doctor France ',
+	'project_name' => 'Dick',
 	'language_ignore' => ['admin', 'pagination', 'reminders', 'validation'],
 	/*
 	|--------------------------------------------------------------------------

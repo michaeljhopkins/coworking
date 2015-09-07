@@ -121,9 +121,9 @@ class LangFiles {
 		}
 		foreach ($fileArray as $key => $item) {
 			if (is_array($item)) {
-				echo view()->make('crud.language.language_headers', ['header' => $key, 'parents' => $parents, 'level' => $level, 'item' => $item, 'langfile'=>$this])->render();
+				echo view()->make('crud.language.language_headers', ['header' => $key, 'parents' => $parents, 'level' => $level, 'item' => $item, 'langfile'=>$this, 'lang_file_name' => $this->file])->render();
 			} else {
-				echo view()->make('crud.language.language_inputs', ['key' => $key, 'item' => $item, 'parents' => $parents])->render();
+				echo view()->make('crud.language.language_inputs', ['key' => $key, 'item' => $item, 'parents' => $parents, 'lang_file_name' => $this->file])->render();
 			}
 		}
 	}
