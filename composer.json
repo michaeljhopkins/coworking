@@ -15,6 +15,7 @@
 		"dick/logmanager": "^1.0",
 		"dick/backupmanager": "^1.0",
 		"dick/settings": "^1.0",
+		"dick/translationmanager": "^1.0",
 		"cviebrock/eloquent-sluggable": "^3.0"
 	},
 	"require-dev": {

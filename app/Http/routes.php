@@ -32,14 +32,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 	Route::resource('permission', 'PermissionCrudController');
 	Route::resource('page', 'PageCrudController');
 
-// Dick Page Manager routes
+	// Dick Page Manager routes
 	Route::get('page/create/{template}', 'PageCrudController@create');
 	Route::get('page/{id}/edit/{template}', 'PageCrudController@edit');
 
-	// Language
-	Route::get('language/texts/{lang?}/{file?}', 'LanguageCrudController@showTexts');
-	Route::post('language/texts/{lang}/{file}', 'LanguageCrudController@updateTexts');
-	Route::resource('language', 'LanguageCrudController');
 });
 
 Route::controllers([

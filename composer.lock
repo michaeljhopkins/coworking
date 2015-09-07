@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0f77fab4a933fb5fd56c6b64d8756c07",
+    "hash": "1481508faaf6a5dfd0350a239eeea7a3",
     "packages": [
         {
             "name": "barryvdh/elfinder-builds",
@@ -392,16 +392,16 @@
         },
         {
             "name": "dick/backupmanager",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/backupmanager.git",
-                "reference": "a5b9390fc127e939562d75c63a6c1fdd6d9a81d2"
+                "reference": "73dcff932d85e473206fa8d4c9c13f923def6c59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/backupmanager/zipball/a5b9390fc127e939562d75c63a6c1fdd6d9a81d2",
-                "reference": "a5b9390fc127e939562d75c63a6c1fdd6d9a81d2",
+                "url": "https://api.github.com/repos/tabacitu/backupmanager/zipball/73dcff932d85e473206fa8d4c9c13f923def6c59",
+                "reference": "73dcff932d85e473206fa8d4c9c13f923def6c59",
                 "shasum": ""
             },
             "require": {
@@ -444,20 +444,20 @@
                 "laravel",
                 "tabacitu"
             ],
-            "time": "2015-06-26 18:53:43"
+            "time": "2015-09-07 13:59:27"
         },
         {
             "name": "dick/crud",
-            "version": "0.7.1",
+            "version": "0.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/crud.git",
-                "reference": "8381ee9a60be8c83ac592bbdab5750c721ff93bd"
+                "reference": "22f1be45d101c6243e04dabe811777489d85b16c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/crud/zipball/8381ee9a60be8c83ac592bbdab5750c721ff93bd",
-                "reference": "8381ee9a60be8c83ac592bbdab5750c721ff93bd",
+                "url": "https://api.github.com/repos/tabacitu/crud/zipball/22f1be45d101c6243e04dabe811777489d85b16c",
+                "reference": "22f1be45d101c6243e04dabe811777489d85b16c",
                 "shasum": ""
             },
             "require": {
@@ -505,20 +505,20 @@
                 "read",
                 "update"
             ],
-            "time": "2015-09-06 09:58:53"
+            "time": "2015-09-07 20:08:52"
         },
         {
             "name": "dick/logmanager",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/logmanager.git",
-                "reference": "1a0d58d3ad884ca864130dd163c51758cda10c53"
+                "reference": "01398dd4ec6eb7f3b2bb022b271023e53c5c095e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/logmanager/zipball/1a0d58d3ad884ca864130dd163c51758cda10c53",
-                "reference": "1a0d58d3ad884ca864130dd163c51758cda10c53",
+                "url": "https://api.github.com/repos/tabacitu/logmanager/zipball/01398dd4ec6eb7f3b2bb022b271023e53c5c095e",
+                "reference": "01398dd4ec6eb7f3b2bb022b271023e53c5c095e",
                 "shasum": ""
             },
             "require": {
@@ -561,20 +561,20 @@
                 "log manager",
                 "logs"
             ],
-            "time": "2015-06-26 15:26:26"
+            "time": "2015-09-07 14:01:29"
         },
         {
             "name": "dick/settings",
-            "version": "1.1",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/settings.git",
-                "reference": "e705c38a3d4022326405a4aaad23b8e0c0cacee1"
+                "reference": "ecc441f06bcdac63a94f77d7e2ef5a38a6a94515"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/settings/zipball/e705c38a3d4022326405a4aaad23b8e0c0cacee1",
-                "reference": "e705c38a3d4022326405a4aaad23b8e0c0cacee1",
+                "url": "https://api.github.com/repos/tabacitu/settings/zipball/ecc441f06bcdac63a94f77d7e2ef5a38a6a94515",
+                "reference": "ecc441f06bcdac63a94f77d7e2ef5a38a6a94515",
                 "shasum": ""
             },
             "require": {
@@ -619,7 +619,71 @@
                 "tabacitu",
                 "updivision"
             ],
-            "time": "2015-09-06 09:01:59"
+            "time": "2015-09-07 14:04:58"
+        },
+        {
+            "name": "dick/translationmanager",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tabacitu/translationmanager.git",
+                "reference": "8821c61a62c2213082dbf3bf3c76b4c366ed5c70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tabacitu/translationmanager/zipball/8821c61a62c2213082dbf3bf3c76b4c366ed5c70",
+                "reference": "8821c61a62c2213082dbf3bf3c76b4c366ed5c70",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dick\\Translationmanager\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alin Ghitu",
+                    "email": "alin@updivision.com",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "hello@tabacitu.ro",
+                    "homepage": "http://www.tabacitu.ro",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "An interface to edit Laravel language files, for Dick Admin.",
+            "homepage": "https://github.com/tabacitu/translationmanager",
+            "keywords": [
+                "admin panel",
+                "dick",
+                "dick admin",
+                "dickadmin",
+                "laravel",
+                "tabacitu",
+                "translationmanager",
+                "updivision"
+            ],
+            "time": "2015-09-07 19:51:31"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

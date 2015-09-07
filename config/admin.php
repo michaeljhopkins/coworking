@@ -7,7 +7,13 @@ return [
 	// Used in the menu & other places.
 	// With this changed, there will be no trace of the word "Dick" in the admin interface.
 	'project_name' => 'Dick',
+
+
+	// Language files to NOT show in the Translation Manager
+	//
 	'language_ignore' => ['admin', 'pagination', 'reminders', 'validation', 'log', 'crud'],
+
+
 	/*
 	|--------------------------------------------------------------------------
 	| Admin menu

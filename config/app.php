@@ -144,7 +144,6 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-		'App\Providers\LangFilesServiceProvider',
 		'App\Providers\FileManagerServiceProvider',
 
 		/*
@@ -163,6 +162,7 @@ return [
 		'Dick\BackupManager\BackupManagerServiceProvider',
 		'Dick\CRUD\CrudServiceProvider',
 		'Dick\Settings\SettingsServiceProvider',
+		'Dick\TranslationManager\TranslationManagerServiceProvider',
 
 		/*
 		 * Package Building Service Providers...
