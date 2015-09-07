@@ -30,7 +30,7 @@
     "delete_confirmation_message" => "The item has been deleted successfully.",
     "delete_confirmation_not_message" => "There&#039;s been an error. Your item might not have been deleted.",
     "empty_file" => "This file is empty",
-    "rules_text" => "<strong>Notice:</strong> Prefixed words, like &quot;:word&quot; must not be translated, that word will be replaced with a certain value inside the application.",
+    "rules_text" => "<strong>Notice:</strong> Words prefixed with a colon (&quot;:word&quot;) must not be translated, that word will be replaced with a certain value inside the application.",
     "lengthMenu" => "_MENU_ records per page",
     "edit_the_new_item" => "edit the new item",
     "go_to_the_table_view" => "go to the table view",
