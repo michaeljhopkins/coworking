@@ -3,7 +3,7 @@
 @section('content-header')
 	<section class="content-header">
 	  <h1>
-	    {{ trans('crud.edit') }} <span class="text-lowercase">site texts</span>
+	    Translate <span class="text-lowercase">site texts</span>
 	  </h1>
 	  <ol class="breadcrumb">
 	    <li><a href="{{ url('admin/dashboard') }}">Admin</a></li>
