@@ -84,6 +84,11 @@ return [
 			'icon' => 'fa fa-table',
 			'children' => [
 							[
+								'label' => "Menu Items",
+								'route' => 'admin/menu-item',
+								'icon' => 'fa fa-bars',
+							],
+							[
 								'label' => "Pages",
 								'route' => 'admin/page',
 								'icon' => 'fa fa-file-text',
