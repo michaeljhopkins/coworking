@@ -163,6 +163,7 @@ return [
 		'Dick\CRUD\CrudServiceProvider',
 		'Dick\Settings\SettingsServiceProvider',
 		'Dick\TranslationManager\TranslationManagerServiceProvider',
+		'Dick\MenuManager\MenuManagerServiceProvider',
 
 		/*
 		 * Package Building Service Providers...

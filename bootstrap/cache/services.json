@@ -38,6 +38,7 @@
         "Dick\\CRUD\\CrudServiceProvider",
         "Dick\\Settings\\SettingsServiceProvider",
         "Dick\\TranslationManager\\TranslationManagerServiceProvider",
+        "Dick\\MenuManager\\MenuManagerServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "eager": [
@@ -66,6 +67,7 @@
         "Dick\\CRUD\\CrudServiceProvider",
         "Dick\\Settings\\SettingsServiceProvider",
         "Dick\\TranslationManager\\TranslationManagerServiceProvider",
+        "Dick\\MenuManager\\MenuManagerServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "deferred": {

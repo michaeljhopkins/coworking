@@ -32,11 +32,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 	Route::resource('permission', 'PermissionCrudController');
 	Route::resource('page', 'PageCrudController');
 
-	// Dick Menu Manager routes
-	Route::get('menu-item/reorder', 'MenuItemCrudController@reorder');
-	Route::post('menu-item/reorder', 'MenuItemCrudController@saveReorder');
-	Route::resource('menu-item', 'MenuItemCrudController');
-
 	// Dick Page Manager routes
 	Route::get('page/create/{template}', 'PageCrudController@create');
 	Route::get('page/{id}/edit/{template}', 'PageCrudController@edit');
