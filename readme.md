@@ -71,3 +71,20 @@ Route::resource('article', 'ArticleController');
 
 
 See detailed installation&use of the CRUD panel here: http://usedick.com/docs
+
+------------
+
+### Extra packages
+
+Dick's extra functionality is separated into composer packages, that you may choose not to install:
+- [Dick\CRUD](https://github.com/tabacitu/crud) - add, edit, delete interfaces for eloquent models;
+- [Dick\TranslationManager](https://github.com/tabacitu/translationmanager) - online Laravel lang file editing;
+- [Dick\Settings](https://github.com/tabacitu/settings) - config variables, stored in the db and CRUD interface;
+- [Dick\LogManager](https://github.com/tabacitu/logmanager) - preview, download and delete log files online;
+- [Dick\BackupManager](https://github.com/tabacitu/backupmanager) - backup db & files, download and delete backups;
+
+Soon:
+- Dick\MenuManager - add, edit, delete interface for your front-side menu;
+- Dick\MultiLanguage - multi-language Eloquent models & multi-language routes system;
+
+More details on http://usedick.com
