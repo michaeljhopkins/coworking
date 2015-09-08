@@ -19,6 +19,10 @@ All Notable changes to `Dick` will be documented in this file
 ### Security
 - Nothing
 
+## [0.6.3] - 2015-09-08
+
+### Added
+- Dick\MenuManager package, an interface to add/edit/delete/reorder/nest menu items;
 
 ## [0.6.2] - 2015-09-08
 
