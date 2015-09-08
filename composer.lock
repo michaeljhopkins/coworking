@@ -623,16 +623,16 @@
         },
         {
             "name": "dick/translationmanager",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/translationmanager.git",
-                "reference": "8821c61a62c2213082dbf3bf3c76b4c366ed5c70"
+                "reference": "eb3db4536c3216be878c5f1d8c9428cda7b135d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/translationmanager/zipball/8821c61a62c2213082dbf3bf3c76b4c366ed5c70",
-                "reference": "8821c61a62c2213082dbf3bf3c76b4c366ed5c70",
+                "url": "https://api.github.com/repos/tabacitu/translationmanager/zipball/eb3db4536c3216be878c5f1d8c9428cda7b135d1",
+                "reference": "eb3db4536c3216be878c5f1d8c9428cda7b135d1",
                 "shasum": ""
             },
             "require": {
@@ -651,7 +651,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Dick\\Translationmanager\\": "src"
+                    "Dick\\TranslationManager\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -683,7 +683,7 @@
                 "translationmanager",
                 "updivision"
             ],
-            "time": "2015-09-07 19:51:31"
+            "time": "2015-09-08 07:24:44"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

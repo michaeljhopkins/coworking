@@ -37,6 +37,7 @@
         "Dick\\BackupManager\\BackupManagerServiceProvider",
         "Dick\\CRUD\\CrudServiceProvider",
         "Dick\\Settings\\SettingsServiceProvider",
+        "Dick\\TranslationManager\\TranslationManagerServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "eager": [
@@ -64,6 +65,7 @@
         "Dick\\BackupManager\\BackupManagerServiceProvider",
         "Dick\\CRUD\\CrudServiceProvider",
         "Dick\\Settings\\SettingsServiceProvider",
+        "Dick\\TranslationManager\\TranslationManagerServiceProvider",
         "JeroenG\\Packager\\PackagerServiceProvider"
     ],
     "deferred": {
