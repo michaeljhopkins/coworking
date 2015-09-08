@@ -42,7 +42,7 @@
 			<div class="content">
 				<div class="title">{{ Config::get('admin.project_name') }}</div>
 				<div class="quote">{{ Inspiring::quote() }}</div>
-				<div class="quote"><br><small><a href="{{ url('admin') }}">Admin Panel</a></small></div>
+				<div class="quote"><br><small><a href="{{ url('admin') }}">{{ trans('site.admin_panel') }}</a></small></div>
 			</div>
 		</div>
 	</body>
