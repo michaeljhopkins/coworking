@@ -19,6 +19,11 @@ All Notable changes to `Dick` will be documented in this file
 ### Security
 - Nothing
 
+## [0.6.4] - 2015-09-09
+
+### Fixed
+- Passed the $page variable to the view by default, in admin created pages using PageManager.
+
 ## [0.6.3] - 2015-09-08
 
 ### Added

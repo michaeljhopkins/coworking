@@ -50,7 +50,7 @@ class PublicController extends Controller {
 		// if there is such a page
 		if ($page) {
 			// load the proper template
-			return view('page_templates.'.$page->template);
+			return view('page_templates.'.$page->template, ['page' => $page]);
 		}
 
 		abort(404);
