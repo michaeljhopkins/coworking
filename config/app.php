@@ -226,6 +226,7 @@ return [
 		'Alert' => 'Prologue\Alerts\Facades\Alert',
 		'Carbon' => 'Carbon\Carbon',
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
+		'CRUD' => 'Dick\CRUD\CrudServiceProvider',
 
 	],
 

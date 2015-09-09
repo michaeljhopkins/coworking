@@ -20,6 +20,7 @@ class PageCrudController extends CrudController {
                         "entity_name_plural" => "pages",
                         // what route have you defined for your entity? used for links.
                         "route" => "admin/page",
+                        "details_row" => true,
 
                         // *****
                         // COLUMNS

@@ -20,6 +20,12 @@
 	}
 
 
+	/*		CURSOR HELPERS		*/
+	.cursor-pointer {
+		cursor: pointer;
+	}
+
+
 	/*		MARGIN HELPERS		*/
 	.m-t-0 {
 	  margin-top: 0px;
@@ -764,4 +770,15 @@
 
 	.bg-none {
 		background: none;
+	}
+
+
+	/*		DICK CRUD STYLES	*/
+
+	.table_row_slider {
+		display: none;
+	}
+
+	table.dataTable tbody td.no-padding {
+	    padding: 0;
 	}

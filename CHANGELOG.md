@@ -19,6 +19,14 @@ All Notable changes to `Dick` will be documented in this file
 ### Security
 - Nothing
 
+## [0.6.5] - 2015-09-09
+
+### Added
+- Page entity is now multi-language, to show how that works. Added migration for the extra columns needed for multi-language.
+- CRUD alias: 'CRUD' => 'Dick\CRUD\CrudServiceProvider'
+- CRUD resource routes can now be defined with CRUD::resource() instead of Route::resource() and a bunch of other routes if reorder/translation was needed.
+- Small CSS additions for the CRUD multi-language scenario.
+
 ## [0.6.4] - 2015-09-09
 
 ### Fixed

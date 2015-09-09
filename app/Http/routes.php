@@ -19,18 +19,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 {
 	Route::get('', 'AdminController@index');
 
-	// CRUD reorders
-	Route::get('category/reorder', 'CategoryCrudController@reorder');
-	Route::post('category/reorder', 'CategoryCrudController@saveReorder');
-
 	// Dick CRUD: Define the resources for the entities you want to CRUD.
-	Route::resource('article', 'ArticleCrudController');
-	Route::resource('category', 'CategoryCrudController');
-	Route::resource('tag', 'TagCrudController');
-	Route::resource('user', 'UserCrudController');
-	Route::resource('role', 'RoleCrudController');
-	Route::resource('permission', 'PermissionCrudController');
-	Route::resource('page', 'PageCrudController');
+	CRUD::resource('article', 'ArticleCrudController');
+	CRUD::resource('category', 'CategoryCrudController');
+	CRUD::resource('tag', 'TagCrudController');
+	CRUD::resource('user', 'UserCrudController');
+	CRUD::resource('role', 'RoleCrudController');
+	CRUD::resource('permission', 'PermissionCrudController');
+	CRUD::resource('page', 'PageCrudController');
 
 	// Dick Page Manager routes
 	Route::get('page/create/{template}', 'PageCrudController@create');
