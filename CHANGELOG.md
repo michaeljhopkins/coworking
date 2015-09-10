@@ -19,6 +19,12 @@ All Notable changes to `Dick` will be documented in this file
 ### Security
 - Nothing
 
+## [0.7.0] - 2015-09-10
+
+### Fixed
+- polished routes and seeders for no errors on dick installation;
+- tested and working installation process;
+- bumped version;
 
 ## [0.6.7] - 2015-09-10
 
