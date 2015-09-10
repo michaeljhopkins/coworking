@@ -11,14 +11,15 @@ class Page extends Model implements SluggableInterface {
 	use SluggableTrait;
 
 	protected $table = 'pages';
+    protected $fakeColumns = ['extras'];
 	protected $fillable = ['name', 'slug', 'content', 'extras', 'template', 'translation_lang', 'translation_of'];
+    protected $translatable = ['name', 'slug', 'content', 'extras'];
 	protected $sluggable = [
         'build_from' => 'slug_or_name',
         'save_to'    => 'slug',
         'on_update'  => true,
         'unique'	 => true
     ];
-    protected $translatable = ['name', 'slug', 'content', 'extras'];
 
     // The slug is created automatically from the "name" field if no slug exists.
     public function getSlugOrNameAttribute() {

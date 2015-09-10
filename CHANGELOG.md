@@ -20,11 +20,16 @@ All Notable changes to `Dick` will be documented in this file
 - Nothing
 
 
+## [0.6.7] - 2015-09-10
+
+### Added
+- Front-end routing according to the language locale; // TODO
+
+
 ## [0.6.6] - 2015-09-10
 
 ### Added
 - Front-end layout view;
-- Front-end routing according to the language locale; // TODO
 
 ### Fixed
 - Default page templates now more realistic: home_page, about_us, services, simple_page, contact and using the default front-end layout;

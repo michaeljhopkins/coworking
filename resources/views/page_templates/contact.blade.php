@@ -13,15 +13,15 @@
 		<div class="col-md-6">
 			<p>
 				<strong>Address: </strong>
-				{{ $page['address'] or 'none defined' }}
+				{{ $page->address or 'none defined' }}
 				<br>
 
 				<strong>Email: </strong>
-				{{ $page['email'] or 'none defined' }}
+				{{ $page->email or 'none defined' }}
 				<br>
 
 				<strong>Phone: </strong>
-				{{ $page['phone'] or 'none defined' }}
+				{{ $page->phone or 'none defined' }}
 				<br>
 
 			</p>

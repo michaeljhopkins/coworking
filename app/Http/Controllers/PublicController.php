@@ -45,7 +45,7 @@ class PublicController extends Controller {
 	public function page($slug)
 	{
 		// get the corresponding page for that slug
-		$page = Page::findBySlugOrId($slug);
+		$page = Page::findBySlugOrId($slug)->withFakes();
 
 		// if there is such a page
 		if ($page) {
