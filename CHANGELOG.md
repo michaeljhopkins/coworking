@@ -23,8 +23,8 @@ All Notable changes to `Dick` will be documented in this file
 ## [0.6.7] - 2015-09-10
 
 ### Added
-- Front-end routing according to the language locale; // TODO
-
+- Front-end routing according to the language locale;
+- Front-end language switcher example;
 
 ## [0.6.6] - 2015-09-10
 

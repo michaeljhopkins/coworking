@@ -31,7 +31,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 	// Dick Page Manager routes
 	Route::get('page/create/{template}', 'PageCrudController@create');
 	Route::get('page/{id}/edit/{template}', 'PageCrudController@edit');
-
 });
 
 Route::controllers([
@@ -40,8 +39,17 @@ Route::controllers([
 	'user' => 'Auth\UserController',
 ]);
 
-// Dick Page Manager slugs
+// Dick Page Manager public slugs (multi-language)
 // NOTICE: Keep this at the end of the routes file.
 // It will catch any slugs that have not been defined in the above routes and send it to PublicController@page.
 // There, we check for the slug in the database. If it doesn't exist, we'll throw a 404.
-Route::get('{slug}', ['uses' => 'PublicController@page'])->where('slug', '([A-z\d-\/_.]+)?');
+Route::group(
+[
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
+],
+function()
+{
+    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+    Route::get('{slug}', ['uses' => 'PublicController@page'])->where('slug', '([A-z\d-\/_.]+)?');
+});

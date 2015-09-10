@@ -154,6 +154,7 @@ return [
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Spatie\Backup\BackupServiceProvider',
 		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+		Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
 		/*
 		 * Custom Dick Service Providers...
@@ -227,6 +228,12 @@ return [
 		'Carbon' => 'Carbon\Carbon',
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 		'CRUD' => 'Dick\CRUD\CrudServiceProvider',
+
+		/*
+		 * Other Aliases...
+		 */
+
+		'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
 	],
 

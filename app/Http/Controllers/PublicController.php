@@ -48,7 +48,7 @@ class PublicController extends Controller {
 		$page = Page::findBySlugOrId($slug)->withFakes();
 
 		// if there is such a page
-		if ($page) {
+		if ($page && $page->translation_lang == \App::getLocale()) {
 			// load the proper template
 			return view('page_templates.'.$page->template, ['page' => $page]);
 		}
