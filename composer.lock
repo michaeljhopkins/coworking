@@ -627,16 +627,16 @@
         },
         {
             "name": "dick/settings",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/settings.git",
-                "reference": "ecc441f06bcdac63a94f77d7e2ef5a38a6a94515"
+                "reference": "9895f9b2acd4a9e61e8f8c9e28873a093303671b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/settings/zipball/ecc441f06bcdac63a94f77d7e2ef5a38a6a94515",
-                "reference": "ecc441f06bcdac63a94f77d7e2ef5a38a6a94515",
+                "url": "https://api.github.com/repos/tabacitu/settings/zipball/9895f9b2acd4a9e61e8f8c9e28873a093303671b",
+                "reference": "9895f9b2acd4a9e61e8f8c9e28873a093303671b",
                 "shasum": ""
             },
             "require": {
@@ -681,7 +681,7 @@
                 "tabacitu",
                 "updivision"
             ],
-            "time": "2015-09-07 14:04:58"
+            "time": "2015-09-10 17:16:43"
         },
         {
             "name": "dick/translationmanager",
