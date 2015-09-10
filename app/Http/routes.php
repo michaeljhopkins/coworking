@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 	CRUD::resource('permission', 'PermissionCrudController');
 	CRUD::resource('page', 'PageCrudController');
 
-	// Dick Page Manager routes
+	// Dick Page Manager admin routes
 	Route::get('page/create/{template}', 'PageCrudController@create');
 	Route::get('page/{id}/edit/{template}', 'PageCrudController@edit');
 });
@@ -39,14 +39,21 @@ Route::controllers([
 	'user' => 'Auth\UserController',
 ]);
 
-// Dick Page Manager public slugs (multi-language)
-// NOTICE: Keep this at the end of the routes file.
-// It will catch any slugs that have not been defined in the above routes and send it to PublicController@page.
-// There, we check for the slug in the database. If it doesn't exist, we'll throw a 404.
+
+/*
+|--------------------------------------------------------------------------
+| Page Manager public slugs
+|--------------------------------------------------------------------------
+| Multi-language
+|
+| NOTICE: Keep this at the end of the routes file.
+| Catches any slugs that have not been defined in the above routes and sends the user to PublicController@page
+*/
+
 Route::group(
 [
     'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
+    'middleware' => [ /* 'localeSessionRedirect', */ 'localizationRedirect' ]
 ],
 function()
 {
