@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4d29827087bf78654a3158571c55f191",
+    "hash": "b3b75725a0e2e76fc00fc3f7992ebbec",
     "packages": [
         {
             "name": "barryvdh/elfinder-builds",
@@ -448,16 +448,16 @@
         },
         {
             "name": "dick/crud",
-            "version": "0.7.8",
+            "version": "0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/crud.git",
-                "reference": "d93e8dd9974042c6597bebdea9a5752cfedcb9b8"
+                "reference": "13e05ec9a5bdc3d834e626be5e19b525e46183d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/crud/zipball/d93e8dd9974042c6597bebdea9a5752cfedcb9b8",
-                "reference": "d93e8dd9974042c6597bebdea9a5752cfedcb9b8",
+                "url": "https://api.github.com/repos/tabacitu/crud/zipball/13e05ec9a5bdc3d834e626be5e19b525e46183d6",
+                "reference": "13e05ec9a5bdc3d834e626be5e19b525e46183d6",
                 "shasum": ""
             },
             "require": {
@@ -505,7 +505,7 @@
                 "read",
                 "update"
             ],
-            "time": "2015-09-08 17:35:54"
+            "time": "2015-09-10 11:44:39"
         },
         {
             "name": "dick/logmanager",
@@ -565,20 +565,20 @@
         },
         {
             "name": "dick/menumanager",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/menumanager.git",
-                "reference": "711200100bc2149cc4d87feb3e3980a1dae0a298"
+                "reference": "d9ff2e47ec8faec4dd2cd5410618e466a26855ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/menumanager/zipball/711200100bc2149cc4d87feb3e3980a1dae0a298",
-                "reference": "711200100bc2149cc4d87feb3e3980a1dae0a298",
+                "url": "https://api.github.com/repos/tabacitu/menumanager/zipball/d9ff2e47ec8faec4dd2cd5410618e466a26855ad",
+                "reference": "d9ff2e47ec8faec4dd2cd5410618e466a26855ad",
                 "shasum": ""
             },
             "require": {
-                "dick/crud": "^0.7.6",
+                "dick/crud": ">=0.7.6",
                 "illuminate/support": "~5.1",
                 "php": ">=5.3.0"
             },
@@ -623,7 +623,7 @@
                 "tabacitu",
                 "updivision"
             ],
-            "time": "2015-09-08 17:32:00"
+            "time": "2015-09-10 12:00:50"
         },
         {
             "name": "dick/settings",
@@ -849,16 +849,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.0.2",
+            "version": "6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "a8dfeff00eb84616a17fea7a4d72af35e750410f"
+                "reference": "66fd14b4d0b8f2389eaf37c5458608c7cb793a81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a8dfeff00eb84616a17fea7a4d72af35e750410f",
-                "reference": "a8dfeff00eb84616a17fea7a4d72af35e750410f",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/66fd14b4d0b8f2389eaf37c5458608c7cb793a81",
+                "reference": "66fd14b4d0b8f2389eaf37c5458608c7cb793a81",
                 "shasum": ""
             },
             "require": {
@@ -874,7 +874,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.0-dev"
+                    "dev-master": "6.1-dev"
                 }
             },
             "autoload": {
@@ -907,7 +907,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-07-04 20:09:24"
+            "time": "2015-09-08 17:36:26"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1527,6 +1527,54 @@
                 "storage"
             ],
             "time": "2015-09-05 12:06:41"
+        },
+        {
+            "name": "mcamara/laravel-localization",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mcamara/laravel-localization.git",
+                "reference": "a988746e18aa90fbdbbcfc13c3c17ee74d128e06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/a988746e18aa90fbdbbcfc13c3c17ee74d128e06",
+                "reference": "a988746e18aa90fbdbbcfc13c3c17ee74d128e06",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [],
+                "psr-0": {
+                    "Mcamara\\LaravelLocalization": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Cámara",
+                    "email": "mcamara88@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easy localization for Laravel",
+            "homepage": "https://github.com/mcamara/laravel-localization",
+            "keywords": [
+                "laravel",
+                "localization",
+                "php"
+            ],
+            "time": "2015-06-28 12:06:58"
         },
         {
             "name": "monolog/monolog",
