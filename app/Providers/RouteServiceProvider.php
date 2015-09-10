@@ -2,6 +2,8 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 use Config;
 
 class RouteServiceProvider extends ServiceProvider {
@@ -25,7 +27,10 @@ class RouteServiceProvider extends ServiceProvider {
 	{
 		// set the supported languages, as defined in the admin panel
 		// falls back to the configuration in laravellocalization.supportedLocales
-		Config::set('laravellocalization.supportedLocales', \Dick\TranslationManager\Models\Language::getActiveLanguagesArray());
+		if (count(DB::select("SHOW TABLES LIKE 'languages'")))
+        {
+			Config::set('laravellocalization.supportedLocales', \Dick\TranslationManager\Models\Language::getActiveLanguagesArray());
+		}
 
 		parent::boot($router);
 

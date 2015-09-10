@@ -448,16 +448,16 @@
         },
         {
             "name": "dick/crud",
-            "version": "0.8.3",
+            "version": "0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/crud.git",
-                "reference": "13e05ec9a5bdc3d834e626be5e19b525e46183d6"
+                "reference": "3477e1a1b0148167dc9020a88fbde42837bf5e3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/crud/zipball/13e05ec9a5bdc3d834e626be5e19b525e46183d6",
-                "reference": "13e05ec9a5bdc3d834e626be5e19b525e46183d6",
+                "url": "https://api.github.com/repos/tabacitu/crud/zipball/3477e1a1b0148167dc9020a88fbde42837bf5e3c",
+                "reference": "3477e1a1b0148167dc9020a88fbde42837bf5e3c",
                 "shasum": ""
             },
             "require": {
@@ -505,7 +505,7 @@
                 "read",
                 "update"
             ],
-            "time": "2015-09-10 11:44:39"
+            "time": "2015-09-10 13:36:05"
         },
         {
             "name": "dick/logmanager",
@@ -685,16 +685,16 @@
         },
         {
             "name": "dick/translationmanager",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabacitu/translationmanager.git",
-                "reference": "eb3db4536c3216be878c5f1d8c9428cda7b135d1"
+                "reference": "019defad5dec7f911490760cd2879a15a6bf3a11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabacitu/translationmanager/zipball/eb3db4536c3216be878c5f1d8c9428cda7b135d1",
-                "reference": "eb3db4536c3216be878c5f1d8c9428cda7b135d1",
+                "url": "https://api.github.com/repos/tabacitu/translationmanager/zipball/019defad5dec7f911490760cd2879a15a6bf3a11",
+                "reference": "019defad5dec7f911490760cd2879a15a6bf3a11",
                 "shasum": ""
             },
             "require": {
@@ -745,7 +745,7 @@
                 "translationmanager",
                 "updivision"
             ],
-            "time": "2015-09-08 07:24:44"
+            "time": "2015-09-10 13:38:37"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

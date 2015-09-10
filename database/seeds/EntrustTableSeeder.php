@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use App\Role;
 use App\Permission;
+use App\User;
 
 class EntrustTableSeeder extends Seeder
 {
@@ -93,22 +94,31 @@ class EntrustTableSeeder extends Seeder
 		$preview_logs->save();
 
 		$superadmin->attachPermissions(array(
-			$view_admin_panel, 
-			$view_account_permissions, 
-			$use_file_manager, 
-			$view_backups, 
-			$make_backups, 
-			$download_backups, 
-			$delete_backups, 
-			$view_logs, 
-			$download_logs, 
-			$delete_logs, 
+			$view_admin_panel,
+			$view_account_permissions,
+			$use_file_manager,
+			$view_backups,
+			$make_backups,
+			$download_backups,
+			$delete_backups,
+			$view_logs,
+			$download_logs,
+			$delete_logs,
 			$preview_logs
 		));
 
 		$admin->attachPermissions(array(
-			$view_admin_panel, 
+			$view_admin_panel,
 			$use_file_manager
 		));
+
+		//Create a user
+        $admin_user 			  = new User();
+		$admin_user->name         = 'Admin';
+		$admin_user->email 		  = 'admin@example.com';
+		$admin_user->password     = bcrypt('admin');
+		$admin_user->save();
+
+		$admin_user->attachRole($superadmin);
     }
 }
