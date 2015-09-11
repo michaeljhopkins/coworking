@@ -19,7 +19,7 @@ All Notable changes to `Dick` will be documented in this file
 ### Security
 - Nothing
 
-## [0.7.1] - 2015-09-11
+## [0.7.2] - 2015-09-11
 
 ### Fixed
 - Admin > Authentication > Users > Add User interface did not have a password field;
