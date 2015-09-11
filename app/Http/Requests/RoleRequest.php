@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class RoleRequest extends CrudRequest {
+class RoleRequest extends \Dick\CRUD\Http\Requests\CrudRequest {
 
 	/**
 	 * Determine if the user is authorized to make this request.

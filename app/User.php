@@ -39,4 +39,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->belongsToMany(\Config::get('entrust.role'), 'role_user');
     }
 
+    public function setPasswordAttribute($value)
+    {
+    	$this->attributes['password'] = bcrypt($value);
+    }
+
 }

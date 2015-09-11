@@ -19,6 +19,12 @@ All Notable changes to `Dick` will be documented in this file
 ### Security
 - Nothing
 
+## [0.7.1] - 2015-09-11
+
+### Fixed
+- Admin > Authentication > Users > Add User interface did not have a password field;
+- There was no mutator for setting bcrypt() on passwords automatically when creating a new user;
+
 ## [0.7.0] - 2015-09-10
 
 ### Fixed

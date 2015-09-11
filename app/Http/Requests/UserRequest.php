@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class UserRequest extends CrudRequest {
+class UserRequest extends \Dick\CRUD\Http\Requests\CrudRequest {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -25,6 +25,7 @@ class UserRequest extends CrudRequest {
 		return [
 			'name' => 'required|min:3|max:255',
 			'email' => 'required|email|min:3|max:255',
+			'password' => 'required|confirmed|min:4|max:255',
 		];
 	}
 

@@ -115,6 +115,16 @@ class UserCrudController extends CrudController {
 													'label' => "Email address"
 												],
 												[
+													'name' => 'password',
+													'type' => 'password',
+													'label' => "Password"
+												],
+												[
+													'name' => 'password_confirmation',
+													'type' => 'password',
+													'label' => "Confirm password"
+												],
+												[
 													// n-n relationship (with pivot table)
 													'label' => "Roles",
 													'type' => 'select_multiple',

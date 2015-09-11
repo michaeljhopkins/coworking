@@ -116,7 +116,7 @@ class EntrustTableSeeder extends Seeder
         $admin_user 			  = new User();
 		$admin_user->name         = 'Admin';
 		$admin_user->email 		  = 'admin@example.com';
-		$admin_user->password     = bcrypt('admin');
+		$admin_user->password     = 'admin';
 		$admin_user->save();
 
 		$admin_user->attachRole($superadmin);
